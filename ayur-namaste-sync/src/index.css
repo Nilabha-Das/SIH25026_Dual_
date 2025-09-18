@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AYUSH EMR Dark Medical Theme - HSL only */
+
+@layer base {
+  :root {
+    --background: 220 13% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 6%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 220 13% 8%;
+
+    --popover: 220 13% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 100% 35%;
+    --primary-foreground: 220 13% 4%;
+    --primary-glow: 174 100% 45%;
+
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 220 13% 4%;
+    --secondary-glow: 45 100% 70%;
+
+    --muted: 220 13% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 174 60% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+    --warning: 45 100% 60%;
+    --warning-foreground: 220 13% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --info: 200 100% 50%;
+    --error: 0 84% 60%;
+
+    --confidence-high: 142 76% 36%;
+    --confidence-medium: 45 100% 60%;
+    --confidence-low: 0 84% 60%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 10%;
+    --input-focus: 174 60% 25%;
+    --ring: 174 100% 35%;
+
+    --gradient-medical: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-wisdom: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+
+    --shadow-medical: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(220 13% 2% / 0.8);
+
+    --transition-medical: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s ease-out;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 13% 3%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 174 100% 35%;
+    --sidebar-primary-foreground: 220 13% 4%;
+    --sidebar-accent: 220 13% 8%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 174 100% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .medical-card {
+    @apply bg-card border border-border rounded-xl shadow-lg;
+    background: var(--gradient-surface);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-medical);
+  }
+  .medical-card:hover {
+    @apply border-primary/30;
+    box-shadow: var(--shadow-medical);
+    transform: translateY(-2px);
+  }
+
+  .medical-button {
+    @apply px-4 py-2 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200;
+    background: var(--gradient-medical);
+    color: hsl(var(--primary-foreground));
+  }
+
+  .wisdom-button {
+    @apply px-4 py-2 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200;
+    background: var(--gradient-wisdom);
+    color: hsl(var(--secondary-foreground));
+  }
+
+  .confidence-high {
+    background: hsl(var(--confidence-high));
+    color: hsl(var(--success-foreground));
+  }
+  .confidence-medium {
+    background: hsl(var(--confidence-medium));
+    color: hsl(var(--warning-foreground));
+  }
+  .confidence-low {
+    background: hsl(var(--confidence-low));
+    color: hsl(var(--destructive-foreground));
+  }
+
+  .medical-input {
+    @apply rounded-lg px-3 py-2 border border-border transition-all duration-200;
+    background: hsl(var(--input));
+    color: hsl(var(--foreground));
+  }
+  .medical-input:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: var(--shadow-glow);
+  }
+
+  .medical-pulse {
+    @apply animate-pulse;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  .medical-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .medical-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 9999px;
+  }
+  .medical-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 9999px;
+  }
+  .medical-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
+  }
+}

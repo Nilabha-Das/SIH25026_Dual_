@@ -1,0 +1,151 @@
+code,display,system,synonyms
+NAM001,Diabetes (Siddha),Siddha,Diabetes;Diabetes Disorder;Diabetes Syndrome
+NAM002,Asthma (Unani),Unani,Asthma;Asthma Disorder;Asthma Syndrome
+NAM003,Hypertension (Ayurveda),Ayurveda,Hypertension;Hypertension Disorder;Hypertension Syndrome
+NAM004,Anemia (Siddha),Siddha,Anemia;Anemia Disorder;Anemia Syndrome
+NAM005,Headache (Unani),Unani,Headache;Headache Disorder;Headache Syndrome
+NAM006,Migraine (Ayurveda),Ayurveda,Migraine;Migraine Disorder;Migraine Syndrome
+NAM007,Cough (Siddha),Siddha,Cough;Cough Disorder;Cough Syndrome
+NAM008,Cold (Unani),Unani,Cold;Cold Disorder;Cold Syndrome
+NAM009,Arthritis (Ayurveda),Ayurveda,Arthritis;Arthritis Disorder;Arthritis Syndrome
+NAM010,Back Pain (Siddha),Siddha,Back Pain;Back Pain Disorder;Back Pain Syndrome
+NAM011,Obesity (Unani),Unani,Obesity;Obesity Disorder;Obesity Syndrome
+NAM012,Jaundice (Ayurveda),Ayurveda,Jaundice;Jaundice Disorder;Jaundice Syndrome
+NAM013,Epilepsy (Siddha),Siddha,Epilepsy;Epilepsy Disorder;Epilepsy Syndrome
+NAM014,Skin Rash (Unani),Unani,Skin Rash;Skin Rash Disorder;Skin Rash Syndrome
+NAM015,Eczema (Ayurveda),Ayurveda,Eczema;Eczema Disorder;Eczema Syndrome
+NAM016,Psoriasis (Siddha),Siddha,Psoriasis;Psoriasis Disorder;Psoriasis Syndrome
+NAM017,Constipation (Unani),Unani,Constipation;Constipation Disorder;Constipation Syndrome
+NAM018,Diarrhea (Ayurveda),Ayurveda,Diarrhea;Diarrhea Disorder;Diarrhea Syndrome
+NAM019,Gastritis (Siddha),Siddha,Gastritis;Gastritis Disorder;Gastritis Syndrome
+NAM020,Bronchitis (Unani),Unani,Bronchitis;Bronchitis Disorder;Bronchitis Syndrome
+NAM021,Insomnia (Ayurveda),Ayurveda,Insomnia;Insomnia Disorder;Insomnia Syndrome
+NAM022,Anxiety (Siddha),Siddha,Anxiety;Anxiety Disorder;Anxiety Syndrome
+NAM023,Depression (Unani),Unani,Depression;Depression Disorder;Depression Syndrome
+NAM024,Ulcer (Ayurveda),Ayurveda,Ulcer;Ulcer Disorder;Ulcer Syndrome
+NAM025,Piles (Siddha),Siddha,Piles;Piles Disorder;Piles Syndrome
+NAM026,Gallstones (Unani),Unani,Gallstones;Gallstones Disorder;Gallstones Syndrome
+NAM027,Kidney Stones (Ayurveda),Ayurveda,Kidney Stones;Kidney Stones Disorder;Kidney Stones Syndrome
+NAM028,Liver Disorder (Siddha),Siddha,Liver Disorder;Liver Disorder Disorder;Liver Disorder Syndrome
+NAM029,Thyroid Disorder (Unani),Unani,Thyroid Disorder;Thyroid Disorder Disorder;Thyroid Disorder Syndrome
+NAM030,Sinusitis (Ayurveda),Ayurveda,Sinusitis;Sinusitis Disorder;Sinusitis Syndrome
+NAM031,Allergy (Siddha),Siddha,Allergy;Allergy Disorder;Allergy Syndrome
+NAM032,Acidity (Unani),Unani,Acidity;Acidity Disorder;Acidity Syndrome
+NAM033,Indigestion (Ayurveda),Ayurveda,Indigestion;Indigestion Disorder;Indigestion Syndrome
+NAM034,Flatulence (Siddha),Siddha,Flatulence;Flatulence Disorder;Flatulence Syndrome
+NAM035,Acne (Unani),Unani,Acne;Acne Disorder;Acne Syndrome
+NAM036,Hair Loss (Ayurveda),Ayurveda,Hair Loss;Hair Loss Disorder;Hair Loss Syndrome
+NAM037,Dandruff (Siddha),Siddha,Dandruff;Dandruff Disorder;Dandruff Syndrome
+NAM038,Menstrual Pain (Unani),Unani,Menstrual Pain;Menstrual Pain Disorder;Menstrual Pain Syndrome
+NAM039,Infertility (Ayurveda),Ayurveda,Infertility;Infertility Disorder;Infertility Syndrome
+NAM040,PCOS (Siddha),Siddha,PCOS;PCOS Disorder;PCOS Syndrome
+NAM041,Low Immunity (Unani),Unani,Low Immunity;Low Immunity Disorder;Low Immunity Syndrome
+NAM042,Fatigue (Ayurveda),Ayurveda,Fatigue;Fatigue Disorder;Fatigue Syndrome
+NAM043,Stroke Recovery (Siddha),Siddha,Stroke Recovery;Stroke Recovery Disorder;Stroke Recovery Syndrome
+NAM044,Paralysis (Unani),Unani,Paralysis;Paralysis Disorder;Paralysis Syndrome
+NAM045,Parkinsonism (Ayurveda),Ayurveda,Parkinsonism;Parkinsonism Disorder;Parkinsonism Syndrome
+NAM046,Alzheimer’s (Siddha),Siddha,Alzheimer’s;Alzheimer’s Disorder;Alzheimer’s Syndrome
+NAM047,Memory Loss (Unani),Unani,Memory Loss;Memory Loss Disorder;Memory Loss Syndrome
+NAM048,Joint Pain (Ayurveda),Ayurveda,Joint Pain;Joint Pain Disorder;Joint Pain Syndrome
+NAM049,Sciatica (Siddha),Siddha,Sciatica;Sciatica Disorder;Sciatica Syndrome
+NAM050,Gout (Unani),Unani,Gout;Gout Disorder;Gout Syndrome
+NAM051,Eye Strain (Ayurveda),Ayurveda,Eye Strain;Eye Strain Disorder;Eye Strain Syndrome
+NAM052,Cataract (Siddha),Siddha,Cataract;Cataract Disorder;Cataract Syndrome
+NAM053,Glaucoma (Unani),Unani,Glaucoma;Glaucoma Disorder;Glaucoma Syndrome
+NAM054,Ear Infection (Ayurveda),Ayurveda,Ear Infection;Ear Infection Disorder;Ear Infection Syndrome
+NAM055,Hearing Loss (Siddha),Siddha,Hearing Loss;Hearing Loss Disorder;Hearing Loss Syndrome
+NAM056,Nasal Polyp (Unani),Unani,Nasal Polyp;Nasal Polyp Disorder;Nasal Polyp Syndrome
+NAM057,Tonsillitis (Ayurveda),Ayurveda,Tonsillitis;Tonsillitis Disorder;Tonsillitis Syndrome
+NAM058,Sore Throat (Siddha),Siddha,Sore Throat;Sore Throat Disorder;Sore Throat Syndrome
+NAM059,Laryngitis (Unani),Unani,Laryngitis;Laryngitis Disorder;Laryngitis Syndrome
+NAM060,Whooping Cough (Ayurveda),Ayurveda,Whooping Cough;Whooping Cough Disorder;Whooping Cough Syndrome
+NAM061,Tuberculosis (Siddha),Siddha,Tuberculosis;Tuberculosis Disorder;Tuberculosis Syndrome
+NAM062,Pneumonia (Unani),Unani,Pneumonia;Pneumonia Disorder;Pneumonia Syndrome
+NAM063,Breathlessness (Ayurveda),Ayurveda,Breathlessness;Breathlessness Disorder;Breathlessness Syndrome
+NAM064,Chest Pain (Siddha),Siddha,Chest Pain;Chest Pain Disorder;Chest Pain Syndrome
+NAM065,Palpitation (Unani),Unani,Palpitation;Palpitation Disorder;Palpitation Syndrome
+NAM066,Varicose Veins (Ayurveda),Ayurveda,Varicose Veins;Varicose Veins Disorder;Varicose Veins Syndrome
+NAM067,Hemorrhage (Siddha),Siddha,Hemorrhage;Hemorrhage Disorder;Hemorrhage Syndrome
+NAM068,Burn Injury (Unani),Unani,Burn Injury;Burn Injury Disorder;Burn Injury Syndrome
+NAM069,Wound Healing (Ayurveda),Ayurveda,Wound Healing;Wound Healing Disorder;Wound Healing Syndrome
+NAM070,Snake Bite (Siddha),Siddha,Snake Bite;Snake Bite Disorder;Snake Bite Syndrome
+NAM071,Food Poisoning (Unani),Unani,Food Poisoning;Food Poisoning Disorder;Food Poisoning Syndrome
+NAM072,Malaria (Ayurveda),Ayurveda,Malaria;Malaria Disorder;Malaria Syndrome
+NAM073,Typhoid (Siddha),Siddha,Typhoid;Typhoid Disorder;Typhoid Syndrome
+NAM074,Dengue (Unani),Unani,Dengue;Dengue Disorder;Dengue Syndrome
+NAM075,Chikungunya (Ayurveda),Ayurveda,Chikungunya;Chikungunya Disorder;Chikungunya Syndrome
+NAM076,Viral Fever (Siddha),Siddha,Viral Fever;Viral Fever Disorder;Viral Fever Syndrome
+NAM077,Chickenpox (Unani),Unani,Chickenpox;Chickenpox Disorder;Chickenpox Syndrome
+NAM078,Measles (Ayurveda),Ayurveda,Measles;Measles Disorder;Measles Syndrome
+NAM079,Mumps (Siddha),Siddha,Mumps;Mumps Disorder;Mumps Syndrome
+NAM080,Polio (Unani),Unani,Polio;Polio Disorder;Polio Syndrome
+NAM081,Smallpox (Ayurveda),Ayurveda,Smallpox;Smallpox Disorder;Smallpox Syndrome
+NAM082,Leprosy (Siddha),Siddha,Leprosy;Leprosy Disorder;Leprosy Syndrome
+NAM083,Ringworm (Unani),Unani,Ringworm;Ringworm Disorder;Ringworm Syndrome
+NAM084,Fungal Infection (Ayurveda),Ayurveda,Fungal Infection;Fungal Infection Disorder;Fungal Infection Syndrome
+NAM085,Scabies (Siddha),Siddha,Scabies;Scabies Disorder;Scabies Syndrome
+NAM086,Warts (Unani),Unani,Warts;Warts Disorder;Warts Syndrome
+NAM087,Herpes (Ayurveda),Ayurveda,Herpes;Herpes Disorder;Herpes Syndrome
+NAM088,Hepatitis A (Siddha),Siddha,Hepatitis A;Hepatitis A Disorder;Hepatitis A Syndrome
+NAM089,Hepatitis B (Unani),Unani,Hepatitis B;Hepatitis B Disorder;Hepatitis B Syndrome
+NAM090,Hepatitis C (Ayurveda),Ayurveda,Hepatitis C;Hepatitis C Disorder;Hepatitis C Syndrome
+NAM091,HIV Infection (Siddha),Siddha,HIV Infection;HIV Infection Disorder;HIV Infection Syndrome
+NAM092,STD (Unani),Unani,STD;STD Disorder;STD Syndrome
+NAM093,UTI (Ayurveda),Ayurveda,UTI;UTI Disorder;UTI Syndrome
+NAM094,Prostate Enlargement (Siddha),Siddha,Prostate Enlargement;Prostate Enlargement Disorder;Prostate Enlargement Syndrome
+NAM095,Bladder Stone (Unani),Unani,Bladder Stone;Bladder Stone Disorder;Bladder Stone Syndrome
+NAM096,Bedwetting (Ayurveda),Ayurveda,Bedwetting;Bedwetting Disorder;Bedwetting Syndrome
+NAM097,Colic (Siddha),Siddha,Colic;Colic Disorder;Colic Syndrome
+NAM098,Appendicitis (Unani),Unani,Appendicitis;Appendicitis Disorder;Appendicitis Syndrome
+NAM099,Pancreatitis (Ayurveda),Ayurveda,Pancreatitis;Pancreatitis Disorder;Pancreatitis Syndrome
+NAM100,GERD (Siddha),Siddha,GERD;GERD Disorder;GERD Syndrome
+NAM101,IBS (Unani),Unani,IBS;IBS Disorder;IBS Syndrome
+NAM102,Crohn’s Disease (Ayurveda),Ayurveda,Crohn’s Disease;Crohn’s Disease Disorder;Crohn’s Disease Syndrome
+NAM103,Colitis (Siddha),Siddha,Colitis;Colitis Disorder;Colitis Syndrome
+NAM104,Anorexia (Unani),Unani,Anorexia;Anorexia Disorder;Anorexia Syndrome
+NAM105,Bulimia (Ayurveda),Ayurveda,Bulimia;Bulimia Disorder;Bulimia Syndrome
+NAM106,Obstructive Sleep Apnea (Siddha),Siddha,Obstructive Sleep Apnea;Obstructive Sleep Apnea Disorder;Obstructive Sleep Apnea Syndrome
+NAM107,Snoring (Unani),Unani,Snoring;Snoring Disorder;Snoring Syndrome
+NAM108,Night Sweats (Ayurveda),Ayurveda,Night Sweats;Night Sweats Disorder;Night Sweats Syndrome
+NAM109,Heat Stroke (Siddha),Siddha,Heat Stroke;Heat Stroke Disorder;Heat Stroke Syndrome
+NAM110,Hypothermia (Unani),Unani,Hypothermia;Hypothermia Disorder;Hypothermia Syndrome
+NAM111,Motion Sickness (Ayurveda),Ayurveda,Motion Sickness;Motion Sickness Disorder;Motion Sickness Syndrome
+NAM112,Vertigo (Siddha),Siddha,Vertigo;Vertigo Disorder;Vertigo Syndrome
+NAM113,Tinnitus (Unani),Unani,Tinnitus;Tinnitus Disorder;Tinnitus Syndrome
+NAM114,Seizures (Ayurveda),Ayurveda,Seizures;Seizures Disorder;Seizures Syndrome
+NAM115,Neuralgia (Siddha),Siddha,Neuralgia;Neuralgia Disorder;Neuralgia Syndrome
+NAM116,Trigeminal Neuralgia (Unani),Unani,Trigeminal Neuralgia;Trigeminal Neuralgia Disorder;Trigeminal Neuralgia Syndrome
+NAM117,Phobia (Ayurveda),Ayurveda,Phobia;Phobia Disorder;Phobia Syndrome
+NAM118,OCD (Siddha),Siddha,OCD;OCD Disorder;OCD Syndrome
+NAM119,Bipolar Disorder (Unani),Unani,Bipolar Disorder;Bipolar Disorder Disorder;Bipolar Disorder Syndrome
+NAM120,Schizophrenia (Ayurveda),Ayurveda,Schizophrenia;Schizophrenia Disorder;Schizophrenia Syndrome
+NAM121,Autism (Siddha),Siddha,Autism;Autism Disorder;Autism Syndrome
+NAM122,ADHD (Unani),Unani,ADHD;ADHD Disorder;ADHD Syndrome
+NAM123,Learning Disorder (Ayurveda),Ayurveda,Learning Disorder;Learning Disorder Disorder;Learning Disorder Syndrome
+NAM124,Speech Disorder (Siddha),Siddha,Speech Disorder;Speech Disorder Disorder;Speech Disorder Syndrome
+NAM125,Stammering (Unani),Unani,Stammering;Stammering Disorder;Stammering Syndrome
+NAM126,Skin Burn (Ayurveda),Ayurveda,Skin Burn;Skin Burn Disorder;Skin Burn Syndrome
+NAM127,Vitiligo (Siddha),Siddha,Vitiligo;Vitiligo Disorder;Vitiligo Syndrome
+NAM128,Leukoderma (Unani),Unani,Leukoderma;Leukoderma Disorder;Leukoderma Syndrome
+NAM129,Sunburn (Ayurveda),Ayurveda,Sunburn;Sunburn Disorder;Sunburn Syndrome
+NAM130,Dark Circles (Siddha),Siddha,Dark Circles;Dark Circles Disorder;Dark Circles Syndrome
+NAM131,Wrinkles (Unani),Unani,Wrinkles;Wrinkles Disorder;Wrinkles Syndrome
+NAM132,Premature Aging (Ayurveda),Ayurveda,Premature Aging;Premature Aging Disorder;Premature Aging Syndrome
+NAM133,Obesity-Related Disorder (Siddha),Siddha,Obesity-Related Disorder;Obesity-Related Disorder Disorder;Obesity-Related Disorder Syndrome
+NAM134,Lifestyle Disorder (Unani),Unani,Lifestyle Disorder;Lifestyle Disorder Disorder;Lifestyle Disorder Syndrome
+NAM135,Fever (Ayurveda),Ayurveda,Fever;Fever Disorder;Fever Syndrome
+NAM136,Diabetes (Siddha),Siddha,Diabetes;Diabetes Disorder;Diabetes Syndrome
+NAM137,Asthma (Unani),Unani,Asthma;Asthma Disorder;Asthma Syndrome
+NAM138,Hypertension (Ayurveda),Ayurveda,Hypertension;Hypertension Disorder;Hypertension Syndrome
+NAM139,Anemia (Siddha),Siddha,Anemia;Anemia Disorder;Anemia Syndrome
+NAM140,Headache (Unani),Unani,Headache;Headache Disorder;Headache Syndrome
+NAM141,Migraine (Ayurveda),Ayurveda,Migraine;Migraine Disorder;Migraine Syndrome
+NAM142,Cough (Siddha),Siddha,Cough;Cough Disorder;Cough Syndrome
+NAM143,Cold (Unani),Unani,Cold;Cold Disorder;Cold Syndrome
+NAM144,Arthritis (Ayurveda),Ayurveda,Arthritis;Arthritis Disorder;Arthritis Syndrome
+NAM145,Back Pain (Siddha),Siddha,Back Pain;Back Pain Disorder;Back Pain Syndrome
+NAM146,Obesity (Unani),Unani,Obesity;Obesity Disorder;Obesity Syndrome
+NAM147,Jaundice (Ayurveda),Ayurveda,Jaundice;Jaundice Disorder;Jaundice Syndrome
+NAM148,Epilepsy (Siddha),Siddha,Epilepsy;Epilepsy Disorder;Epilepsy Syndrome
+NAM149,Skin Rash (Unani),Unani,Skin Rash;Skin Rash Disorder;Skin Rash Syndrome
+NAM150,Eczema (Ayurveda),Ayurveda,Eczema;Eczema Disorder;Eczema Syndrome
