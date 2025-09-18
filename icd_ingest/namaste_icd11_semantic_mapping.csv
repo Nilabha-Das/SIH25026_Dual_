@@ -1,0 +1,151 @@
+namaste_code,namaste_display,icd_code,icd_title,module,confidence
+NAM001,Diabetes (Siddha),TM2-003,Prameha (Diabetes pattern),TM2,0.579
+NAM002,Asthma (Unani),CA23,Asthma,MMS,0.77
+NAM003,Hypertension (Ayurveda),5A72,Hyperaldosteronism,MMS,0.495
+NAM004,Anemia (Siddha),MB41.0,Anosmia,MMS,0.481
+NAM005,Headache (Unani),8A81.Z,"Tension-type headache,unspecified",MMS,0.634
+NAM006,Migraine (Ayurveda),8A80,Migraine,MMS,0.712
+NAM007,Cough (Siddha),TM2-013,Siddha Peenisam (Cold),TM2,0.549
+NAM008,Cold (Unani),4A84.31,Cold-induced Anaphylaxis,MMS,0.495
+NAM009,Arthritis (Ayurveda),TM2-009,Sandhivata (Osteoarthritis),TM2,0.482
+NAM010,Back Pain (Siddha),TM2-012,Siddha Prameha,TM2,0.47
+NAM011,Obesity (Unani),5B81,Obesity,MMS,0.627
+NAM012,Jaundice (Ayurveda),5C58.00,Crigler-Najjar syndrome,MMS,0.445
+NAM013,Epilepsy (Siddha),8A66.1Z,"Non-convulsive status epilepticus,unspecified",MMS,0.55
+NAM014,Skin Rash (Unani),ME66.6,Rash,MMS,0.664
+NAM015,Eczema (Ayurveda),1B73,Ecthyma,MMS,0.522
+NAM016,Psoriasis (Siddha),EA90,Psoriasis,MMS,0.775
+NAM017,Constipation (Unani),ME05.0,Constipation,MMS,0.684
+NAM018,Diarrhea (Ayurveda),ME05.1,Diarrhoea,MMS,0.637
+NAM019,Gastritis (Siddha),DA42,Gastritis,MMS,0.695
+NAM020,Bronchitis (Unani),CA20,Bronchitis,MMS,0.691
+NAM021,Insomnia (Ayurveda),7A01,Short-term insomnia,MMS,0.662
+NAM022,Anxiety (Siddha),MB24.3,anxiety,MMS,0.701
+NAM023,Depression (Unani),6C43.70,Opioid-induced mood disorder,MMS,0.442
+NAM024,Ulcer (Ayurveda),DA60.60,Alcohol-induced gastric ulcer,MMS,0.566
+NAM025,Piles (Siddha),DB60,Haemorrhoids,MMS,0.444
+NAM026,Gallstones (Unani),XA8KL9,gallbladder,MMS,0.601
+NAM027,Kidney Stones (Ayurveda),MF98.1,Hyperkaluria,MMS,0.489
+NAM028,Liver Disorder (Siddha),DB92.Z,"Non-alcoholic fatty liver disease,unspecified",MMS,0.573
+NAM029,Thyroid Disorder (Unani),5A00.1Z,"Iodine-deficiency-related thyroid disorders or allied conditions,unspecified",MMS,0.636
+NAM030,Sinusitis (Ayurveda),GC00.0,Trigonitis,MMS,0.519
+NAM031,Allergy (Siddha),CA08.1Z,"Non-allergic rhinitis,unspecified",MMS,0.566
+NAM032,Acidity (Unani),5C73,Acidosis,MMS,0.664
+NAM033,Indigestion (Ayurveda),DA22.Z,"Gastro-oesophageal reflux disease,unspecified",MMS,0.497
+NAM034,Flatulence (Siddha),DA22.Z,"Gastro-oesophageal reflux disease,unspecified",MMS,0.508
+NAM035,Acne (Unani),ED80,Acne,MMS,0.678
+NAM036,Hair Loss (Ayurveda),EH72.00,Drug-induced telogen hair loss,MMS,0.557
+NAM037,Dandruff (Siddha),LD28.1,Ehlers-Danlos syndrome,MMS,0.473
+NAM038,Menstrual Pain (Unani),MB40.8,Analgesia,MMS,0.431
+NAM039,Infertility (Ayurveda),MB41.0,Anosmia,MMS,0.377
+NAM040,PCOS (Siddha),TM2-012,Siddha Prameha,TM2,0.446
+NAM041,Low Immunity (Unani),4A20.0,Adult-onset Immunodeficiency,MMS,0.432
+NAM042,Fatigue (Ayurveda),MG22,Fatigue,MMS,0.671
+NAM043,Stroke Recovery (Siddha),TM2-012,Siddha Prameha,TM2,0.368
+NAM044,Paralysis (Unani),TM2-005,Ardita (Facial paralysis),TM2,0.537
+NAM045,Parkinsonism (Ayurveda),8A00,Parkinsonism,MMS,0.674
+NAM046,Alzheimer’s (Siddha),TM2-012,Siddha Prameha,TM2,0.528
+NAM047,Memory Loss (Unani),MB21.1,Amnesia,MMS,0.455
+NAM048,Joint Pain (Ayurveda),FB56.2,Myalgia,MMS,0.436
+NAM049,Sciatica (Siddha),ME84.3,Sciatica,MMS,0.774
+NAM050,Gout (Unani),FA25,Gout,MMS,0.69
+NAM051,Eye Strain (Ayurveda),SC73,Non-inflammatory eyelid disorder (#REF!),MMS,0.516
+NAM052,Cataract (Siddha),9B10,Cataract,MMS,0.733
+NAM053,Glaucoma (Unani),9C61,Glaucoma,MMS,0.702
+NAM054,Ear Infection (Ayurveda),XA01U5,Ear,MMS,0.442
+NAM055,Hearing Loss (Siddha),TM2-012,Siddha Prameha,TM2,0.43
+NAM056,Nasal Polyp (Unani),MA82.2,Nasality,MMS,0.545
+NAM057,Tonsillitis (Ayurveda),CA08.1Z,"Non-allergic rhinitis,unspecified",MMS,0.483
+NAM058,Sore Throat (Siddha),TM2-013,Siddha Peenisam (Cold),TM2,0.491
+NAM059,Laryngitis (Unani),XA2RH5,Larynx,MMS,0.649
+NAM060,Whooping Cough (Ayurveda),8.00E+41,Pachymeningitis,MMS,0.414
+NAM061,Tuberculosis (Siddha),TM2-011,Siddha Viral Fever Pattern,TM2,0.536
+NAM062,Pneumonia (Unani),CA40,Pneumonia,MMS,0.739
+NAM063,Breathlessness (Ayurveda),7A4Z,"Sleep-related breathing disorders,unspecified",MMS,0.523
+NAM064,Chest Pain (Siddha),BC42,Myocarditis,MMS,0.488
+NAM065,Palpitation (Unani),MC81.2,Palpitations,MMS,0.6
+NAM066,Varicose Veins (Ayurveda),XA5J49,Veins,MMS,0.555
+NAM067,Hemorrhage (Siddha),DB60,Haemorrhoids,MMS,0.57
+NAM068,Burn Injury (Unani),EJ40,Sunburn,MMS,0.42
+NAM069,Wound Healing (Ayurveda),TM2-006,Kustha (Skin disorder),TM2,0.412
+NAM070,Snake Bite (Siddha),XE44L,Non-venomous snake,MMS,0.488
+NAM071,Food Poisoning (Unani),MG43.7,Anorexia,MMS,0.487
+NAM072,Malaria (Ayurveda),XN5FW,Plasmodium,MMS,0.536
+NAM073,Typhoid (Siddha),AB16,Tympanosclerosis,MMS,0.495
+NAM074,Dengue (Unani),1D0Z,"Non-viral and unspecified infections of the central nervous system,unspecified",MMS,0.451
+NAM075,Chikungunya (Ayurveda),DB98.5,Budd-Chiari syndrome,MMS,0.522
+NAM076,Viral Fever (Siddha),TM2-011,Siddha Viral Fever Pattern,TM2,0.845
+NAM077,Chickenpox (Unani),XM0UW4,Hexaminolevulinate,MMS,0.434
+NAM078,Measles (Ayurveda),1F03,Measles,MMS,0.609
+NAM079,Mumps (Siddha),1D80,Mumps,MMS,0.706
+NAM080,Polio (Unani),XN3M0,Poliovirus,MMS,0.608
+NAM081,Smallpox (Ayurveda),1.00E+70,Smallpox,MMS,0.642
+NAM082,Leprosy (Siddha),1B20,Leprosy,MMS,0.709
+NAM083,Ringworm (Unani),XN69Y,Hookworm,MMS,0.438
+NAM084,Fungal Infection (Ayurveda),1F20,Aspergillosis,MMS,0.569
+NAM085,Scabies (Siddha),1G04,Scabies,MMS,0.753
+NAM086,Warts (Unani),LD28.1,Ehlers-Danlos syndrome,MMS,0.485
+NAM087,Herpes (Ayurveda),LD24.23,Yunis-Varon disease,MMS,0.432
+NAM088,Hepatitis A (Siddha),TM2-011,Siddha Viral Fever Pattern,TM2,0.504
+NAM089,Hepatitis B (Unani),DB95.1Z,"Drug-induced or toxic liver disease with chronic hepatitis,unspecified",MMS,0.444
+NAM090,Hepatitis C (Ayurveda),DB95.1Z,"Drug-induced or toxic liver disease with chronic hepatitis,unspecified",MMS,0.432
+NAM091,HIV Infection (Siddha),TM2-011,Siddha Viral Fever Pattern,TM2,0.598
+NAM092,STD (Unani),4B03,Eosinophilia,MMS,0.468
+NAM093,UTI (Ayurveda),MF98.1,Hyperkaluria,MMS,0.443
+NAM094,Prostate Enlargement (Siddha),TM2-012,Siddha Prameha,TM2,0.427
+NAM095,Bladder Stone (Unani),MB46.2,Athetosis,MMS,0.437
+NAM096,Bedwetting (Ayurveda),LA31.2,Ankyloglossia,MMS,0.453
+NAM097,Colic (Siddha),XM6510,Colistin,MMS,0.532
+NAM098,Appendicitis (Unani),DB10,Appendicitis,MMS,0.827
+NAM099,Pancreatitis (Ayurveda),XA3QC5,pancreas,MMS,0.601
+NAM100,GERD (Siddha),DA22.Z,"Gastro-oesophageal reflux disease,unspecified",MMS,0.564
+NAM101,IBS (Unani),XA0QT6,Ileum,MMS,0.496
+NAM102,Crohn’s Disease (Ayurveda),EE01,Hypohidrosis,MMS,0.487
+NAM103,Colitis (Siddha),DB33.43,Drug-induced colitis,MMS,0.537
+NAM104,Anorexia (Unani),MG43.7,Anorexia,MMS,0.764
+NAM105,Bulimia (Ayurveda),MG43.7,Anorexia,MMS,0.507
+NAM106,Obstructive Sleep Apnea (Siddha),7A4Z,"Sleep-related breathing disorders,unspecified",MMS,0.507
+NAM107,Snoring (Unani),7A4Z,"Sleep-related breathing disorders,unspecified",MMS,0.504
+NAM108,Night Sweats (Ayurveda),EE00,Hyperhidrosis,MMS,0.443
+NAM109,Heat Stroke (Siddha),TM2-011,Siddha Viral Fever Pattern,TM2,0.5
+NAM110,Hypothermia (Unani),NF02,Hypothermia,MMS,0.764
+NAM111,Motion Sickness (Ayurveda),MB48.0,Vertigo,MMS,0.463
+NAM112,Vertigo (Siddha),MB48.0,Vertigo,MMS,0.756
+NAM113,Tinnitus (Unani),MC41,Tinnitus,MMS,0.781
+NAM114,Seizures (Ayurveda),8A66.1Z,"Non-convulsive status epilepticus,unspecified",MMS,0.507
+NAM115,Neuralgia (Siddha),FB56.2,Myalgia,MMS,0.486
+NAM116,Trigeminal Neuralgia (Unani),FB56.2,Myalgia,MMS,0.48
+NAM117,Phobia (Ayurveda),MB24.3,anxiety,MMS,0.558
+NAM118,OCD (Siddha),6B2Z,"Obsessive-compulsive or related disorders,unspecified",MMS,0.555
+NAM119,Bipolar Disorder (Unani),XM3GA2,Manidipine,MMS,0.366
+NAM120,Schizophrenia (Ayurveda),6A20,Schizophrenia,MMS,0.661
+NAM121,Autism (Siddha),TM2-012,Siddha Prameha,TM2,0.47
+NAM122,ADHD (Unani),MG43.7,Anorexia,MMS,0.43
+NAM123,Learning Disorder (Ayurveda),6B20,Obsessive-compulsive disorder,MMS,0.42
+NAM124,Speech Disorder (Siddha),TM2-012,Siddha Prameha,TM2,0.464
+NAM125,Stammering (Unani),6B20.1,Obsessive-compulsive disorder with poor to absent insight,MMS,0.478
+NAM126,Skin Burn (Ayurveda),TM2-006,Kustha (Skin disorder),TM2,0.53
+NAM127,Vitiligo (Siddha),ED63.0,Vitiligo,MMS,0.658
+NAM128,Leukoderma (Unani),8A44,Leukodystrophies,MMS,0.497
+NAM129,Sunburn (Ayurveda),EJ40,Sunburn,MMS,0.736
+NAM130,Dark Circles (Siddha),5C58.00,Crigler-Najjar syndrome,MMS,0.437
+NAM131,Wrinkles (Unani),SC73,Non-inflammatory eyelid disorder (#REF!),MMS,0.446
+NAM132,Premature Aging (Ayurveda),XT9T,Ageing-related,MMS,0.535
+NAM133,Obesity-Related Disorder (Siddha),5B81,Obesity,MMS,0.568
+NAM134,Lifestyle Disorder (Unani),XT8W,chronic,MMS,0.482
+NAM135,Fever (Ayurveda),TM2-007,Jwara (Fever),TM2,0.594
+NAM136,Diabetes (Siddha),TM2-003,Prameha (Diabetes pattern),TM2,0.579
+NAM137,Asthma (Unani),CA23,Asthma,MMS,0.77
+NAM138,Hypertension (Ayurveda),5A72,Hyperaldosteronism,MMS,0.495
+NAM139,Anemia (Siddha),MB41.0,Anosmia,MMS,0.481
+NAM140,Headache (Unani),8A81.Z,"Tension-type headache,unspecified",MMS,0.634
+NAM141,Migraine (Ayurveda),8A80,Migraine,MMS,0.712
+NAM142,Cough (Siddha),TM2-013,Siddha Peenisam (Cold),TM2,0.549
+NAM143,Cold (Unani),4A84.31,Cold-induced Anaphylaxis,MMS,0.495
+NAM144,Arthritis (Ayurveda),TM2-009,Sandhivata (Osteoarthritis),TM2,0.482
+NAM145,Back Pain (Siddha),TM2-012,Siddha Prameha,TM2,0.47
+NAM146,Obesity (Unani),5B81,Obesity,MMS,0.627
+NAM147,Jaundice (Ayurveda),5C58.00,Crigler-Najjar syndrome,MMS,0.445
+NAM148,Epilepsy (Siddha),8A66.1Z,"Non-convulsive status epilepticus,unspecified",MMS,0.55
+NAM149,Skin Rash (Unani),ME66.6,Rash,MMS,0.664
+NAM150,Eczema (Ayurveda),1B73,Ecthyma,MMS,0.522
