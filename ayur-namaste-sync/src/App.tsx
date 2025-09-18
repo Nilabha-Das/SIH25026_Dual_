@@ -47,8 +47,9 @@ const App = () => {
           <Toaster />
           <BrowserRouter>
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route 
-                path="/" 
+                path="/login" 
                 element={
                   <LoginPage 
                     onLogin={handleLogin} 
@@ -56,11 +57,11 @@ const App = () => {
                   />
                 } 
               />
+              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={getDashboardComponent()} />
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
               <Route path="*" element={<NotFound />} />
-              <Route path="/home" element={<Home />} />
             </Routes>
           </BrowserRouter>
         </SidebarProvider>
