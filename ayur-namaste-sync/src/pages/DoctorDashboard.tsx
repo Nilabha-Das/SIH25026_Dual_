@@ -1436,3 +1436,5 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
     </Layout>
   );
 }
+
+
