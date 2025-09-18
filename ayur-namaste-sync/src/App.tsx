@@ -10,6 +10,7 @@ import { DoctorDashboard } from "./pages/DoctorDashboard";
 import { CuratorDashboard } from "./pages/CuratorDashboard";
 import NotFound from "./pages/NotFound";
 import { User } from "@/lib/mockData";
+import Home from "./pages/Home";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => {
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/home" element={<Home />} />
             </Routes>
           </BrowserRouter>
         </SidebarProvider>
