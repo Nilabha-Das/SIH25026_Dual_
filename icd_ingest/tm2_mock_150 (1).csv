@@ -1,0 +1,151 @@
+code,title,class_kind,parent
+TM2-001,Pitta Excess,category,TM2-PATTERNS
+TM2-002,Kapha Obstruction,category,TM2-DISORDERS
+TM2-003,Prameha (Diabetes pattern),category,TM2-ROOT
+TM2-004,Amlapitta (Acid dyspepsia),category,TM2-PATTERNS
+TM2-005,Ardita (Facial paralysis),category,TM2-DISORDERS
+TM2-006,Kustha (Skin disorder),category,TM2-ROOT
+TM2-007,Jwara (Fever),category,TM2-PATTERNS
+TM2-008,Raktapitta (Bleeding disorder),category,TM2-DISORDERS
+TM2-009,Sandhivata (Osteoarthritis),category,TM2-ROOT
+TM2-010,Megadosham imbalance,category,TM2-PATTERNS
+TM2-011,Siddha Viral Fever Pattern,category,TM2-DISORDERS
+TM2-012,Siddha Prameha,category,TM2-ROOT
+TM2-013,Siddha Peenisam (Cold),category,TM2-PATTERNS
+TM2-014,Siddha Kaba Suram (Flu),category,TM2-DISORDERS
+TM2-015,Siddha Mukkutram imbalance,category,TM2-ROOT
+TM2-016,Balgham (Phlegm excess),category,TM2-PATTERNS
+TM2-017,Safra (Bile imbalance),category,TM2-DISORDERS
+TM2-018,Dam (Blood disorder),category,TM2-ROOT
+TM2-019,Sauda (Black bile excess),category,TM2-PATTERNS
+TM2-020,Humor imbalance (Unani),category,TM2-DISORDERS
+TM2-021,Nazla (Respiratory catarrh),category,TM2-ROOT
+TM2-022,Qi Deficiency,category,TM2-PATTERNS
+TM2-023,Blood Stasis Pattern,category,TM2-DISORDERS
+TM2-024,Yin Deficiency Heat,category,TM2-ROOT
+TM2-025,Yang Collapse,category,TM2-PATTERNS
+TM2-026,Phlegm Dampness,category,TM2-DISORDERS
+TM2-027,Qi Stagnation,category,TM2-ROOT
+TM2-028,Wind-Heat Invasion,category,TM2-PATTERNS
+TM2-029,Liver Qi Stagnation,category,TM2-DISORDERS
+TM2-030,Vata Imbalance,category,TM2-ROOT
+TM2-031,Pitta Excess,category,TM2-PATTERNS
+TM2-032,Kapha Obstruction,category,TM2-DISORDERS
+TM2-033,Prameha (Diabetes pattern),category,TM2-ROOT
+TM2-034,Amlapitta (Acid dyspepsia),category,TM2-PATTERNS
+TM2-035,Ardita (Facial paralysis),category,TM2-DISORDERS
+TM2-036,Kustha (Skin disorder),category,TM2-ROOT
+TM2-037,Jwara (Fever),category,TM2-PATTERNS
+TM2-038,Raktapitta (Bleeding disorder),category,TM2-DISORDERS
+TM2-039,Sandhivata (Osteoarthritis),category,TM2-ROOT
+TM2-040,Megadosham imbalance,category,TM2-PATTERNS
+TM2-041,Siddha Viral Fever Pattern,category,TM2-DISORDERS
+TM2-042,Siddha Prameha,category,TM2-ROOT
+TM2-043,Siddha Peenisam (Cold),category,TM2-PATTERNS
+TM2-044,Siddha Kaba Suram (Flu),category,TM2-DISORDERS
+TM2-045,Siddha Mukkutram imbalance,category,TM2-ROOT
+TM2-046,Balgham (Phlegm excess),category,TM2-PATTERNS
+TM2-047,Safra (Bile imbalance),category,TM2-DISORDERS
+TM2-048,Dam (Blood disorder),category,TM2-ROOT
+TM2-049,Sauda (Black bile excess),category,TM2-PATTERNS
+TM2-050,Humor imbalance (Unani),category,TM2-DISORDERS
+TM2-051,Nazla (Respiratory catarrh),category,TM2-ROOT
+TM2-052,Qi Deficiency,category,TM2-PATTERNS
+TM2-053,Blood Stasis Pattern,category,TM2-DISORDERS
+TM2-054,Yin Deficiency Heat,category,TM2-ROOT
+TM2-055,Yang Collapse,category,TM2-PATTERNS
+TM2-056,Phlegm Dampness,category,TM2-DISORDERS
+TM2-057,Qi Stagnation,category,TM2-ROOT
+TM2-058,Wind-Heat Invasion,category,TM2-PATTERNS
+TM2-059,Liver Qi Stagnation,category,TM2-DISORDERS
+TM2-060,Vata Imbalance,category,TM2-ROOT
+TM2-061,Pitta Excess,category,TM2-PATTERNS
+TM2-062,Kapha Obstruction,category,TM2-DISORDERS
+TM2-063,Prameha (Diabetes pattern),category,TM2-ROOT
+TM2-064,Amlapitta (Acid dyspepsia),category,TM2-PATTERNS
+TM2-065,Ardita (Facial paralysis),category,TM2-DISORDERS
+TM2-066,Kustha (Skin disorder),category,TM2-ROOT
+TM2-067,Jwara (Fever),category,TM2-PATTERNS
+TM2-068,Raktapitta (Bleeding disorder),category,TM2-DISORDERS
+TM2-069,Sandhivata (Osteoarthritis),category,TM2-ROOT
+TM2-070,Megadosham imbalance,category,TM2-PATTERNS
+TM2-071,Siddha Viral Fever Pattern,category,TM2-DISORDERS
+TM2-072,Siddha Prameha,category,TM2-ROOT
+TM2-073,Siddha Peenisam (Cold),category,TM2-PATTERNS
+TM2-074,Siddha Kaba Suram (Flu),category,TM2-DISORDERS
+TM2-075,Siddha Mukkutram imbalance,category,TM2-ROOT
+TM2-076,Balgham (Phlegm excess),category,TM2-PATTERNS
+TM2-077,Safra (Bile imbalance),category,TM2-DISORDERS
+TM2-078,Dam (Blood disorder),category,TM2-ROOT
+TM2-079,Sauda (Black bile excess),category,TM2-PATTERNS
+TM2-080,Humor imbalance (Unani),category,TM2-DISORDERS
+TM2-081,Nazla (Respiratory catarrh),category,TM2-ROOT
+TM2-082,Qi Deficiency,category,TM2-PATTERNS
+TM2-083,Blood Stasis Pattern,category,TM2-DISORDERS
+TM2-084,Yin Deficiency Heat,category,TM2-ROOT
+TM2-085,Yang Collapse,category,TM2-PATTERNS
+TM2-086,Phlegm Dampness,category,TM2-DISORDERS
+TM2-087,Qi Stagnation,category,TM2-ROOT
+TM2-088,Wind-Heat Invasion,category,TM2-PATTERNS
+TM2-089,Liver Qi Stagnation,category,TM2-DISORDERS
+TM2-090,Vata Imbalance,category,TM2-ROOT
+TM2-091,Pitta Excess,category,TM2-PATTERNS
+TM2-092,Kapha Obstruction,category,TM2-DISORDERS
+TM2-093,Prameha (Diabetes pattern),category,TM2-ROOT
+TM2-094,Amlapitta (Acid dyspepsia),category,TM2-PATTERNS
+TM2-095,Ardita (Facial paralysis),category,TM2-DISORDERS
+TM2-096,Kustha (Skin disorder),category,TM2-ROOT
+TM2-097,Jwara (Fever),category,TM2-PATTERNS
+TM2-098,Raktapitta (Bleeding disorder),category,TM2-DISORDERS
+TM2-099,Sandhivata (Osteoarthritis),category,TM2-ROOT
+TM2-100,Megadosham imbalance,category,TM2-PATTERNS
+TM2-101,Siddha Viral Fever Pattern,category,TM2-DISORDERS
+TM2-102,Siddha Prameha,category,TM2-ROOT
+TM2-103,Siddha Peenisam (Cold),category,TM2-PATTERNS
+TM2-104,Siddha Kaba Suram (Flu),category,TM2-DISORDERS
+TM2-105,Siddha Mukkutram imbalance,category,TM2-ROOT
+TM2-106,Balgham (Phlegm excess),category,TM2-PATTERNS
+TM2-107,Safra (Bile imbalance),category,TM2-DISORDERS
+TM2-108,Dam (Blood disorder),category,TM2-ROOT
+TM2-109,Sauda (Black bile excess),category,TM2-PATTERNS
+TM2-110,Humor imbalance (Unani),category,TM2-DISORDERS
+TM2-111,Nazla (Respiratory catarrh),category,TM2-ROOT
+TM2-112,Qi Deficiency,category,TM2-PATTERNS
+TM2-113,Blood Stasis Pattern,category,TM2-DISORDERS
+TM2-114,Yin Deficiency Heat,category,TM2-ROOT
+TM2-115,Yang Collapse,category,TM2-PATTERNS
+TM2-116,Phlegm Dampness,category,TM2-DISORDERS
+TM2-117,Qi Stagnation,category,TM2-ROOT
+TM2-118,Wind-Heat Invasion,category,TM2-PATTERNS
+TM2-119,Liver Qi Stagnation,category,TM2-DISORDERS
+TM2-120,Vata Imbalance,category,TM2-ROOT
+TM2-121,Pitta Excess,category,TM2-PATTERNS
+TM2-122,Kapha Obstruction,category,TM2-DISORDERS
+TM2-123,Prameha (Diabetes pattern),category,TM2-ROOT
+TM2-124,Amlapitta (Acid dyspepsia),category,TM2-PATTERNS
+TM2-125,Ardita (Facial paralysis),category,TM2-DISORDERS
+TM2-126,Kustha (Skin disorder),category,TM2-ROOT
+TM2-127,Jwara (Fever),category,TM2-PATTERNS
+TM2-128,Raktapitta (Bleeding disorder),category,TM2-DISORDERS
+TM2-129,Sandhivata (Osteoarthritis),category,TM2-ROOT
+TM2-130,Megadosham imbalance,category,TM2-PATTERNS
+TM2-131,Siddha Viral Fever Pattern,category,TM2-DISORDERS
+TM2-132,Siddha Prameha,category,TM2-ROOT
+TM2-133,Siddha Peenisam (Cold),category,TM2-PATTERNS
+TM2-134,Siddha Kaba Suram (Flu),category,TM2-DISORDERS
+TM2-135,Siddha Mukkutram imbalance,category,TM2-ROOT
+TM2-136,Balgham (Phlegm excess),category,TM2-PATTERNS
+TM2-137,Safra (Bile imbalance),category,TM2-DISORDERS
+TM2-138,Dam (Blood disorder),category,TM2-ROOT
+TM2-139,Sauda (Black bile excess),category,TM2-PATTERNS
+TM2-140,Humor imbalance (Unani),category,TM2-DISORDERS
+TM2-141,Nazla (Respiratory catarrh),category,TM2-ROOT
+TM2-142,Qi Deficiency,category,TM2-PATTERNS
+TM2-143,Blood Stasis Pattern,category,TM2-DISORDERS
+TM2-144,Yin Deficiency Heat,category,TM2-ROOT
+TM2-145,Yang Collapse,category,TM2-PATTERNS
+TM2-146,Phlegm Dampness,category,TM2-DISORDERS
+TM2-147,Qi Stagnation,category,TM2-ROOT
+TM2-148,Wind-Heat Invasion,category,TM2-PATTERNS
+TM2-149,Liver Qi Stagnation,category,TM2-DISORDERS
+TM2-150,Vata Imbalance,category,TM2-ROOT
