@@ -9,6 +9,8 @@ router.get('/pending-records', async (req, res) => {
             'medicalRecords.approvalStatus': 'pending'
         }).populate('medicalRecords.doctorId', 'name email');
 
+        console.log('Found patients with pending records:', patients.length);
+
         const pendingRecords = patients.flatMap(patient => {
             return patient.medicalRecords
                 .filter(record => record.approvalStatus === 'pending')
@@ -19,6 +21,9 @@ router.get('/pending-records', async (req, res) => {
                     ...record.toObject()
                 }));
         });
+
+        console.log('Pending records to return:', pendingRecords.length);
+        console.log('Sample record:', pendingRecords[0]);
 
         res.json(pendingRecords);
     } catch (error) {
@@ -32,7 +37,7 @@ router.post('/:patientId/records/:recordId/review', async (req, res) => {
     try {
         const { decision, notes } = req.body;
         const { patientId, recordId } = req.params;
-        const curatorId = req.user._id; // Assuming you have authentication middleware
+        const curatorId = null; // TODO: Add authentication middleware later
 
         const patient = await User.findById(patientId);
         if (!patient) {
