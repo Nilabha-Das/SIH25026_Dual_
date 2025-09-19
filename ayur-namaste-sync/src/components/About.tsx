@@ -68,7 +68,7 @@ export function About() {
 
             {/* CTA Button */}
             <Button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/login")}
               size="lg"
               className="gradient-medical text-primary-foreground font-semibold shadow-glow hover:shadow-green-glow transition-transform duration-500 hover:scale-105 animate-fade-in [animation-delay:800ms]"
             >
