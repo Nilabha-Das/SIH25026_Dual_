@@ -92,7 +92,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
           >
             <Button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/login")}
               size="lg"
               className="gradient-medical text-primary-foreground font-semibold shadow-glow hover:shadow-green-glow transition-transform hover:scale-105 text-lg px-8 py-4"
             >
