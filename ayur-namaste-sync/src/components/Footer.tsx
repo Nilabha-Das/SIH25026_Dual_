@@ -51,7 +51,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Transforming healthcare communication with dual coding system integration and comprehensive 
+              Transforming healthcare communication with dual coding system integration and comprehensive
               medical standard mapping.
             </p>
             <div className="space-y-3">
