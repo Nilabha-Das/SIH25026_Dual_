@@ -81,14 +81,15 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
       <SidebarProvider>
         <div className="min-h-screen flex w-full">
           <AppSidebar userRole="curator" />
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col overflow-hidden">
             <TopBar user={user} onLogout={onLogout} />
-            <main className="flex-1 p-6 space-y-6">
+            <main className="flex-1 overflow-y-auto p-4 space-y-4 max-w-full">
+              <div className="max-w-7xl mx-auto w-full">
               {/* Header */}
               <div className="flex items-center justify-between">
                 <div>
-                  <h1 className="text-3xl font-bold text-gray-900">Medical Records Review</h1>
-                  <p className="text-gray-600 mt-1">Review and approve medical records submitted by doctors</p>
+                  <h1 className="text-2xl font-bold text-gray-900">Medical Records Review</h1>
+                  <p className="text-gray-600 mt-1 text-sm">Review and approve medical records submitted by doctors</p>
                 </div>
                 {pendingRecords.length > 0 && (
                   <Badge variant="destructive" className="text-lg px-3 py-1">
@@ -98,9 +99,9 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
               </div>
 
               {/* Stats Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card>
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <CardContent className="p-4 flex items-center gap-4">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                       <Clock className="w-6 h-6 text-orange-600" />
                     </div>
@@ -112,7 +113,7 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <CardContent className="p-4 flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-green-600" />
                     </div>
@@ -124,7 +125,7 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <CardContent className="p-4 flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                       <Stethoscope className="w-6 h-6 text-blue-600" />
                     </div>
@@ -159,7 +160,7 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
                   ) : (
                     <div className="space-y-4">
                       {pendingRecords.map((record) => (
-                        <div key={record._id} className="border rounded-lg p-6 space-y-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+                        <div key={record._id} className="border rounded-lg p-4 space-y-4 bg-gradient-to-r from-blue-50 to-indigo-50">
                           {/* Patient & Doctor Info */}
                           <div className="flex justify-between items-start">
                             <div className="flex items-center gap-4">
@@ -189,12 +190,12 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
                           <div className="grid md:grid-cols-2 gap-4">
                             <div className="bg-white rounded-lg p-4 border-l-4 border-amber-400">
                               <h5 className="font-semibold text-amber-900 mb-2">Problem Diagnosed</h5>
-                              <p className="font-medium">{record.namasteTerm}</p>
+                              <p className="font-medium text-gray-900">{record.namasteTerm}</p>
                               <p className="text-sm text-gray-600 font-mono">Code: {record.namasteCode}</p>
                             </div>
                             <div className="bg-white rounded-lg p-4 border-l-4 border-green-400">
                               <h5 className="font-semibold text-green-900 mb-2">ICD-11 Mapping</h5>
-                              <p className="font-medium">{record.icdTerm}</p>
+                              <p className="font-medium text-gray-900">{record.icdTerm}</p>
                               <p className="text-sm text-gray-600 font-mono">Code: {record.icdCode}</p>
                             </div>
                           </div>
@@ -264,6 +265,7 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
                   )}
                 </CardContent>
               </Card>
+              </div>
             </main>
           </div>
         </div>
