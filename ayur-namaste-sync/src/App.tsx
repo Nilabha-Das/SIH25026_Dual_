@@ -59,11 +59,13 @@ const App = () => {
                   />
                 } 
               />
-              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={getDashboardComponent()} />
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api" element={<API />} />
             </Routes>
           </BrowserRouter>
         </SidebarProvider>
