@@ -131,7 +131,8 @@ export function Navigation() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-
+            <button
+              onClick={() => scrollToSection("/login")}
               className="flex items-center space-x-2 text-gray-300 hover:text-white hover:bg-gray-800/50 font-medium px-6 py-2.5 rounded-lg transition-all duration-300"
             >
               <LogIn className="h-4 w-4" />
