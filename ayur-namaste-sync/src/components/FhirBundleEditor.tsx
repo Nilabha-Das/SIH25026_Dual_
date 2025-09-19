@@ -92,14 +92,21 @@ export default function FhirBundleEditor({ initialBundle, onSave }: FhirBundleEd
 
       <div className="mt-4">
         {isEditing ? (
-          <textarea
-            value={bundleText}
-            onChange={(e) => setBundleText(e.target.value)}
-            rows={16}
-            className="w-full p-3 bg-gray-950 text-green-200 font-mono text-sm rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-          />
+          <div className="max-h-96 overflow-y-auto border border-gray-800 rounded-md scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+            <textarea
+              value={bundleText}
+              onChange={(e) => setBundleText(e.target.value)}
+              rows={16}
+              className="w-full h-full p-3 bg-gray-950 text-green-200 font-mono text-sm rounded-md border-none focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
+              style={{ minHeight: '400px' }}
+            />
+          </div>
         ) : (
-          <CodeSnippet code={bundleText} language="json" showLineNumbers />
+          <div className="max-h-96 overflow-y-auto border border-gray-800 rounded-md bg-gray-950 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+            <div className="h-full">
+              <CodeSnippet code={bundleText} language="json" showLineNumbers />
+            </div>
+          </div>
         )}
       </div>
 
