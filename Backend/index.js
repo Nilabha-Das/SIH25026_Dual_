@@ -11,6 +11,7 @@ const searchRoutes = require("./routes/route.search");
 const patientRoutes = require("./routes/route.patient");
 const curatorRoutes = require("./routes/route.curator");
 
+
 const app = express();
 app.use(cors());
 // Middleware
