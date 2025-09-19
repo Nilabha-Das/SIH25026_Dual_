@@ -45,7 +45,7 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
           </div>
         </CardTitle>
       </CardHeader>
-      
+
       <CardContent className="space-y-6">
         {/* NAMASTE Code Section */}
         <div className="p-4 bg-accent/5 border border-accent/20 rounded-lg">
@@ -53,7 +53,7 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
             <Badge className="bg-accent text-accent-foreground">NAMASTE</Badge>
             <h4 className="font-semibold text-foreground">{namasteCode.display}</h4>
           </div>
-          
+
           <div className="text-sm text-muted-foreground space-y-1">
             <p><strong>Code:</strong> {namasteCode.code}</p>
             <p><strong>System:</strong> {namasteCode.system}</p>
@@ -73,7 +73,7 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
         {/* ICD-11 Mappings */}
         <div className="space-y-4">
           <h4 className="font-semibold text-foreground">ICD-11 Mappings</h4>
-          
+
           {icdMappings.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
               <AlertTriangle className="w-12 h-12 mx-auto mb-4 opacity-50" />
@@ -81,19 +81,18 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
             </div>
           ) : (
             icdMappings.map((mapping, index) => (
-              <div 
+              <div
                 key={index}
-                className={`p-4 border rounded-lg transition-all cursor-pointer hover:shadow-md ${
-                  onSelectMapping ? 'hover:border-primary' : ''
-                }`}
+                className={`p-4 border rounded-lg transition-all cursor-pointer hover:shadow-md ${onSelectMapping ? 'hover:border-primary' : ''
+                  }`}
                 onClick={() => onSelectMapping?.(mapping.icdCode.code, mapping.module)}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <Badge 
-                        className={mapping.module === 'TM2' ? 
-                          'bg-primary text-primary-foreground' : 
+                      <Badge
+                        className={mapping.module === 'TM2' ?
+                          'bg-primary text-primary-foreground' :
                           'bg-secondary text-secondary-foreground'
                         }
                       >
@@ -101,7 +100,7 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
                       </Badge>
                       <h5 className="font-medium text-foreground">{mapping.icdCode.title}</h5>
                     </div>
-                    
+
                     <div className="text-sm text-muted-foreground space-y-1">
                       <p><strong>Code:</strong> {mapping.icdCode.code}</p>
                       {mapping.icdCode.description && (
@@ -109,7 +108,7 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
                       )}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 ml-4">
                     {getConfidenceIcon(mapping.confidence)}
                     <span className={`px-2 py-1 rounded text-xs font-medium ${getConfidenceClass(mapping.confidence)}`}>
@@ -121,9 +120,9 @@ export function DualCodePreview({ namasteCode, icdMappings, onSelectMapping }: D
                 {/* Module Information */}
                 <div className="text-xs text-muted-foreground">
                   <span className="font-medium">Module:</span> {
-                    mapping.module === 'TM2' ? 
-                    'Traditional Medicine Conditions' : 
-                    'Mortality and Morbidity Statistics'
+                    mapping.module === 'TM2' ?
+                      'Traditional Medicine Conditions' :
+                      'Mortality and Morbidity Statistics'
                   }
                 </div>
               </div>
