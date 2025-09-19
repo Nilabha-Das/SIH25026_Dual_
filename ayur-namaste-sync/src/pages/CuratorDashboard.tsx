@@ -5,9 +5,11 @@ import { TopBar } from '@/components/TopBar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { FileText, CheckCircle, XCircle, Clock } from 'lucide-react';
-import { useState } from 'react';
-import { User, mockMappings, mockNAMASTECodes, mockICD11Codes, getConfidenceLevel } from '@/lib/mockData';
+import { Textarea } from '@/components/ui/textarea';
+import { CheckCircle, XCircle, Clock, Stethoscope, UserCheck, AlertTriangle, User as UserIcon, Calendar } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { User } from '@/lib/mockData';
+import axios from 'axios';
 
 interface CuratorDashboardProps {
   user: User;
@@ -15,57 +17,64 @@ interface CuratorDashboardProps {
 }
 
 export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
-  const [editModalOpen, setEditModalOpen] = useState(false);
-  const [editMapping, setEditMapping] = useState<any>(null);
-  const [mappings, setMappings] = useState(mockMappings);
+  // Medical Records Review State
+  const [pendingRecords, setPendingRecords] = useState<any[]>([]);
+  const [isLoadingRecords, setIsLoadingRecords] = useState(false);
+  const [reviewingRecord, setReviewingRecord] = useState<string | null>(null);
+  const [reviewNotes, setReviewNotes] = useState<{[key: string]: string}>({});
 
-  const [editForm, setEditForm] = useState({
-    namasteCode: '',
-    icdCode: '',
-    module: '',
-  });
-
-  const handleApprove = (mappingId: string) => {
-    alert(`Mapping ${mappingId} approved`);
+  // Medical Records Functions
+  const fetchPendingRecords = async () => {
+    setIsLoadingRecords(true);
+    try {
+      const response = await axios.get('http://localhost:3000/api/curator/pending-records');
+      setPendingRecords(response.data);
+    } catch (error) {
+      console.error('Error fetching pending records:', error);
+    } finally {
+      setIsLoadingRecords(false);
+    }
   };
 
-  const handleReject = (mappingId: string) => {
-    alert(`Mapping ${mappingId} rejected`);
+  const handleRecordReview = async (patientId: string, recordId: string, decision: 'approved' | 'rejected') => {
+    setReviewingRecord(recordId);
+    try {
+      const notes = reviewNotes[recordId] || '';
+      console.log(`Reviewing record: patientId=${patientId}, recordId=${recordId}, decision=${decision}`);
+      
+      const response = await axios.post(`http://localhost:3000/api/curator/${patientId}/records/${recordId}/review`, {
+        decision,
+        notes
+      });
+      
+      console.log('Review response:', response.data);
+      
+      // Remove the reviewed record from the list
+      setPendingRecords(prev => prev.filter(record => record._id !== recordId));
+      
+      // Clear the notes for this record
+      setReviewNotes(prev => {
+        const updated = { ...prev };
+        delete updated[recordId];
+        return updated;
+      });
+      
+      console.log(`Record ${decision} successfully`);
+    } catch (error) {
+      console.error(`Error ${decision} record:`, error);
+      console.error('Error details:', error.response?.data);
+    } finally {
+      setReviewingRecord(null);
+    }
   };
 
-  const handleEdit = (mapping: any) => {
-    setEditMapping(mapping);
-    setEditForm({
-      namasteCode: mapping.namasteCode,
-      icdCode: mapping.icdCode,
-      module: mapping.module,
-    });
-    setEditModalOpen(true);
+  const updateReviewNotes = (recordId: string, notes: string) => {
+    setReviewNotes(prev => ({ ...prev, [recordId]: notes }));
   };
 
-  const handleEditChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setEditForm({ ...editForm, [e.target.name]: e.target.value });
-  };
-
-  const handleEditSave = () => {
-    setMappings((prev) => prev.map((m) =>
-      m.id === editMapping.id
-        ? {
-            ...m,
-            namasteCode: editForm.namasteCode,
-            icdCode: editForm.icdCode,
-            module: editForm.module as 'MMS' | 'TM2',
-          }
-        : m
-    ));
-    setEditModalOpen(false);
-    setEditMapping(null);
-  };
-
-  const handleEditCancel = () => {
-    setEditModalOpen(false);
-    setEditMapping(null);
-  };
+  useEffect(() => {
+    fetchPendingRecords();
+  }, []);
 
   return (
     <Layout>
@@ -75,131 +84,190 @@ export function CuratorDashboard({ user, onLogout }: CuratorDashboardProps) {
           <div className="flex-1 flex flex-col">
             <TopBar user={user} onLogout={onLogout} />
             <main className="flex-1 p-6 space-y-6">
-              <Card className="medical-card">
+              {/* Header */}
+              <div className="flex items-center justify-between">
+                <div>
+                  <h1 className="text-3xl font-bold text-gray-900">Medical Records Review</h1>
+                  <p className="text-gray-600 mt-1">Review and approve medical records submitted by doctors</p>
+                </div>
+                {pendingRecords.length > 0 && (
+                  <Badge variant="destructive" className="text-lg px-3 py-1">
+                    {pendingRecords.length} Pending
+                  </Badge>
+                )}
+              </div>
+
+              {/* Stats Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card>
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-orange-600" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">{pendingRecords.length}</p>
+                      <p className="text-muted-foreground">Pending Review</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">127</p>
+                      <p className="text-muted-foreground">Approved Today</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Stethoscope className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">15</p>
+                      <p className="text-muted-foreground">Active Doctors</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Pending Records */}
+              <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <FileText className="w-5 h-5 text-primary" />
-                    NAMASTE-ICD11 Mapping Review
+                  <CardTitle className="flex items-center gap-2">
+                    <UserCheck className="w-5 h-5" />
+                    Pending Medical Records
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    {mappings.map((mapping) => {
-                      const namasteCode = mockNAMASTECodes.find(n => n.code === mapping.namasteCode);
-                      const icdCode = mockICD11Codes.find(i => i.code === mapping.icdCode);
-                      const confidenceLevel = getConfidenceLevel(mapping.confidence);
-                      
-                      return (
-                        <div key={mapping.id} className="p-4 border border-border rounded-lg">
-                          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center">
-                            <div>
-                              <p className="font-medium text-foreground">{namasteCode?.display}</p>
-                              <p className="text-sm text-muted-foreground">{mapping.namasteCode}</p>
+                  {isLoadingRecords ? (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                      <span className="ml-2">Loading pending records...</span>
+                    </div>
+                  ) : pendingRecords.length === 0 ? (
+                    <div className="text-center py-8">
+                      <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">All caught up!</h3>
+                      <p className="text-gray-600">No pending medical records to review at the moment.</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {pendingRecords.map((record) => (
+                        <div key={record._id} className="border rounded-lg p-6 space-y-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+                          {/* Patient & Doctor Info */}
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-center gap-4">
+                              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                                {record.patientName?.charAt(0) || 'P'}
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-lg">{record.patientName || 'Unknown Patient'}</h4>
+                                <p className="text-sm text-gray-600">ABHA ID: {record.patientAbhaId}</p>
+                                <div className="flex items-center gap-2 mt-1">
+                                  <UserIcon className="w-4 h-4 text-gray-500" />
+                                  <span className="text-sm text-gray-600">Dr. {record.doctorId?.name || 'Unknown'}</span>
+                                  <Calendar className="w-4 h-4 text-gray-500 ml-2" />
+                                  <span className="text-sm text-gray-600">
+                                    {new Date(record.submittedAt || record.date).toLocaleDateString()}
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                            
-                            <div>
-                              <p className="font-medium text-foreground">{icdCode?.title}</p>
-                              <p className="text-sm text-muted-foreground">{mapping.icdCode}</p>
+                            <Badge variant="secondary" className="bg-orange-100 text-orange-800">
+                              <Clock className="w-3 h-3 mr-1" />
+                              Pending Review
+                            </Badge>
+                          </div>
+
+                          {/* Medical Information */}
+                          <div className="grid md:grid-cols-2 gap-4">
+                            <div className="bg-white rounded-lg p-4 border-l-4 border-amber-400">
+                              <h5 className="font-semibold text-amber-900 mb-2">Problem Diagnosed</h5>
+                              <p className="font-medium">{record.namasteTerm}</p>
+                              <p className="text-sm text-gray-600 font-mono">Code: {record.namasteCode}</p>
                             </div>
-                            
-                            <div className="flex items-center gap-2">
-                              <Badge className={`
-                                ${confidenceLevel === 'high' ? 'confidence-high' : 
-                                  confidenceLevel === 'medium' ? 'confidence-medium' : 'confidence-low'}
-                              `}>
-                                {Math.round(mapping.confidence * 100)}%
-                              </Badge>
-                              <Badge variant="outline">{mapping.module}</Badge>
-                            </div>
-                            
-                            <div className="flex gap-2">
-                              <Button 
-                                size="sm" 
-                                className="bg-success text-white hover:bg-success/80"
-                                onClick={() => handleApprove(mapping.id)}
-                              >
-                                <CheckCircle className="w-4 h-4 mr-1" />
-                                Approve
-                              </Button>
-                              <Button 
-                                size="sm" 
-                                variant="destructive"
-                                onClick={() => handleReject(mapping.id)}
-                              >
-                                <XCircle className="w-4 h-4 mr-1" />
-                                Reject
-                              </Button>
-                              <Button 
-                                size="sm"
-                                variant="outline"
-                                onClick={() => handleEdit(mapping)}
-                              >
-                                Edit
-                              </Button>
+                            <div className="bg-white rounded-lg p-4 border-l-4 border-green-400">
+                              <h5 className="font-semibold text-green-900 mb-2">ICD-11 Mapping</h5>
+                              <p className="font-medium">{record.icdTerm}</p>
+                              <p className="text-sm text-gray-600 font-mono">Code: {record.icdCode}</p>
                             </div>
                           </div>
+
+                          {/* Prescription */}
+                          {record.prescription && (
+                            <div className="bg-white rounded-lg p-4 border-l-4 border-blue-400">
+                              <h5 className="font-semibold text-blue-900 mb-2">Prescription</h5>
+                              <pre className="text-sm text-gray-800 whitespace-pre-wrap font-sans">
+                                {record.prescription}
+                              </pre>
+                            </div>
+                          )}
+
+                          {/* Review Notes */}
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                              Review Notes (Optional)
+                            </label>
+                            <Textarea
+                              value={reviewNotes[record._id] || ''}
+                              onChange={(e) => updateReviewNotes(record._id, e.target.value)}
+                              placeholder="Add any notes about this medical record review..."
+                              className="min-h-[80px]"
+                            />
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="flex gap-3 pt-4 border-t">
+                            <Button
+                              onClick={() => handleRecordReview(record.patientId, record._id, 'approved')}
+                              disabled={reviewingRecord === record._id}
+                              className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
+                            >
+                              {reviewingRecord === record._id ? (
+                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                              ) : (
+                                <CheckCircle className="w-4 h-4" />
+                              )}
+                              Approve
+                            </Button>
+                            <Button
+                              onClick={() => handleRecordReview(record.patientId, record._id, 'rejected')}
+                              disabled={reviewingRecord === record._id}
+                              variant="destructive"
+                              className="flex items-center gap-2"
+                            >
+                              {reviewingRecord === record._id ? (
+                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                              ) : (
+                                <XCircle className="w-4 h-4" />
+                              )}
+                              Reject
+                            </Button>
+                            <Button
+                              onClick={() => fetchPendingRecords()}
+                              variant="outline"
+                              className="flex items-center gap-2"
+                            >
+                              <AlertTriangle className="w-4 h-4" />
+                              Refresh
+                            </Button>
+                          </div>
                         </div>
-                      );
-                    })}
-                  </div>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </main>
           </div>
         </div>
       </SidebarProvider>
-    {/* Edit Modal */}
-    {editModalOpen && (
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
-        <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-          <h2 className="text-lg font-semibold mb-4">Edit Mapping</h2>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-1">NAMASTE Code</label>
-              <select
-                name="namasteCode"
-                value={editForm.namasteCode}
-                onChange={handleEditChange}
-                className="w-full border rounded px-2 py-1"
-              >
-                {mockNAMASTECodes.map((n) => (
-                  <option key={n.code} value={n.code}>{n.display} ({n.code})</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1">ICD11 Code</label>
-              <select
-                name="icdCode"
-                value={editForm.icdCode}
-                onChange={handleEditChange}
-                className="w-full border rounded px-2 py-1"
-              >
-                {mockICD11Codes.map((i) => (
-                  <option key={i.code} value={i.code}>{i.title} ({i.code})</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1">Module</label>
-              <select
-                name="module"
-                value={editForm.module}
-                onChange={handleEditChange}
-                className="w-full border rounded px-2 py-1"
-              >
-                <option value="MMS">MMS</option>
-                <option value="TM2">TM2</option>
-              </select>
-            </div>
-          </div>
-          <div className="flex justify-end gap-2 mt-6">
-            <Button size="sm" variant="outline" onClick={handleEditCancel}>Cancel</Button>
-            <Button size="sm" className="bg-primary text-white" onClick={handleEditSave}>Save</Button>
-          </div>
-        </div>
-      </div>
-    )}
     </Layout>
   );
 }

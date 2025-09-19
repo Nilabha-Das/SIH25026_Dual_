@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import DocsPage from "./pages/DocsPage";
 import API from "./pages/API";
 
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -48,8 +49,9 @@ const App = () => {
           <Toaster />
           <BrowserRouter>
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route 
-                path="/" 
+                path="/login" 
                 element={
                   <LoginPage 
                     onLogin={handleLogin} 
@@ -57,14 +59,11 @@ const App = () => {
                   />
                 } 
               />
+              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={getDashboardComponent()} />
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
               <Route path="*" element={<NotFound />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/api" element={<API />} />
-
             </Routes>
           </BrowserRouter>
         </SidebarProvider>

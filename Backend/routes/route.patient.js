@@ -108,4 +108,131 @@ router.get('/:abhaId/records', async (req, res) => {
     }
 });
 
+// Get only approved medical records for a patient (for patient dashboard)
+router.get('/:abhaId/approved-records', async (req, res) => {
+    try {
+        const patient = await User.findOne({ abhaId: req.params.abhaId })
+            .select('medicalRecords name')
+            .populate('medicalRecords.doctorId', 'name email')
+            .populate('medicalRecords.curatorId', 'name');
+
+        if (!patient) {
+            return res.status(404).json({ message: 'Patient not found' });
+        }
+
+        // Filter only approved records
+        const approvedRecords = patient.medicalRecords
+            .filter(record => record.approvalStatus === 'approved')
+            .map(record => ({
+                id: record._id,
+                patientName: patient.name,
+                patientAbhaId: patient.abhaId,
+                doctorName: record.doctorId?.name || 'Unknown Doctor',
+                doctorEmail: record.doctorId?.email,
+                curatorName: record.curatorId?.name,
+                namasteCode: record.namasteCode,
+                namasteTerm: record.namasteTerm,
+                icdCode: record.icdCode,
+                icdTerm: record.icdTerm,
+                prescription: record.prescription,
+                date: record.date,
+                submittedAt: record.submittedAt,
+                approvedAt: record.approvedAt,
+                curatorNotes: record.curatorNotes,
+                status: record.approvalStatus
+            }));
+
+        console.log(`Found ${approvedRecords.length} approved records for patient ${req.params.abhaId}`);
+        res.json(approvedRecords);
+    } catch (error) {
+        console.error('Error fetching approved medical records:', error);
+        res.status(500).json({ message: 'Error fetching approved medical records' });
+    }
+});
+
+// Update a specific medical record
+router.put('/:abhaId/records/:recordId', async (req, res) => {
+    try {
+        const { abhaId, recordId } = req.params;
+        const {
+            namasteTerm,
+            namasteCode,
+            icdTerm,
+            icdCode,
+            prescription
+        } = req.body;
+
+        console.log('Updating medical record:', { abhaId, recordId, body: req.body });
+
+        const patient = await User.findOne({ abhaId });
+        
+        if (!patient) {
+            return res.status(404).json({ message: 'Patient not found' });
+        }
+
+        // Find the medical record by ID
+        const record = patient.medicalRecords.id(recordId);
+        
+        if (!record) {
+            return res.status(404).json({ message: 'Medical record not found' });
+        }
+
+        // Update the record fields
+        if (namasteTerm !== undefined) record.namasteTerm = namasteTerm;
+        if (namasteCode !== undefined) record.namasteCode = namasteCode;
+        if (icdTerm !== undefined) record.icdTerm = icdTerm;
+        if (icdCode !== undefined) record.icdCode = icdCode;
+        if (prescription !== undefined) record.prescription = prescription;
+        
+        // Update modification timestamp
+        record.modifiedAt = new Date();
+
+        await patient.save();
+
+        console.log('Medical record updated successfully');
+        res.json({ message: 'Medical record updated successfully', record });
+    } catch (error) {
+        console.error('Error updating medical record:', error);
+        res.status(500).json({ 
+            message: 'Error updating medical record',
+            details: error.message
+        });
+    }
+});
+
+// Delete a specific medical record
+router.delete('/:abhaId/records/:recordId', async (req, res) => {
+    try {
+        const { abhaId, recordId } = req.params;
+
+        console.log('Deleting medical record:', { abhaId, recordId });
+
+        const patient = await User.findOne({ abhaId });
+        
+        if (!patient) {
+            return res.status(404).json({ message: 'Patient not found' });
+        }
+
+        // Find and remove the medical record by ID
+        const record = patient.medicalRecords.id(recordId);
+        
+        if (!record) {
+            return res.status(404).json({ message: 'Medical record not found' });
+        }
+
+        // Remove the record using Mongoose subdocument methods
+        record.deleteOne();
+        await patient.save();
+
+        console.log('Medical record deleted successfully');
+        res.json({ message: 'Medical record deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting medical record:', error);
+        res.status(500).json({ 
+            message: 'Error deleting medical record',
+            details: error.message
+        });
+    }
+});
+
 module.exports = router;
