@@ -33,8 +33,10 @@ export function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-              Modern Healthcare with {"SwasthaLink "}
-              <span className="gradient-medical bg-clip-text animate-gradient">
+              Modern Healthcare with{" "}
+              <span style={{ color: "#7BEDFC" }}>Swastha</span>
+              <span style={{ color: "#95FFAE", marginLeft: "0.25rem" }}>Link</span>
+              <span className="ml-2 gradient-medical bg-clip-text animate-gradient">
                 Dual Coding
               </span>
             </h1>
@@ -90,7 +92,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
           >
             <Button
-              onClick={() => navigate("/AbhaRegistration")}
+              onClick={() => navigate("/login")}
               size="lg"
               className="gradient-medical text-primary-foreground font-semibold shadow-glow hover:shadow-green-glow transition-transform hover:scale-105 text-lg px-8 py-4"
             >
