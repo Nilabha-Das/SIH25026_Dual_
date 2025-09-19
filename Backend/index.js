@@ -11,6 +11,7 @@ const searchRoutes = require("./routes/route.search");
 const patientRoutes = require("./routes/route.patient");
 const curatorRoutes = require("./routes/route.curator");
 
+
 const app = express();
 app.use(cors());
 // Middleware
@@ -23,6 +24,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     next();
 });
+
 
 // Connect to MongoDB
 ConnectMongo();
@@ -46,3 +48,4 @@ app.use((err, req, res, next) => {
 app.listen(process.env.PORT, () => {
     console.log(`Server is up and running on port ${process.env.PORT}`);
 });
+ 

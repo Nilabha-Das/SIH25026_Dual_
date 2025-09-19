@@ -16,8 +16,10 @@ import {
   Database,
   X
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function Navigation() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -25,15 +27,15 @@ export function Navigation() {
     { name: "Home", href: "/" },
     {
       name: "Services",
-      href: "#services",
+      href: "#",
       dropdown: [
-        { name: "ABHA Login", href: "./", icon: Heart },
+        { name: "ABHA Login", href: "/login", icon: Heart },
         { name: "API", href: "/api", icon: Cpu }
       ]
     },
     {
       name: "Resources",
-      href: "#resources",
+      href: "#",
       dropdown: [
         { name: "NAMASTE", href: "https://www.india.gov.in/content/namaste-portal", icon: Heart },
         { name: "WHO ICD-11", href: "https://icd.who.int/docs/icd-api/APIDoc-Version2/", icon: Database },
@@ -41,7 +43,7 @@ export function Navigation() {
         { name: "Support", href: "/support", icon: MessageCircle }
       ]
     },
-    { name: "Docs", href: "#docs" },
+    { name: "Docs", href: "/docs" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -51,7 +53,7 @@ export function Navigation() {
     } else if (href.startsWith("http")) {
       window.open(href, "_blank");
     } else {
-      // Navigation logic would go here in a real app
+      navigate(href);
     }
     setIsOpen(false);
     setActiveDropdown(null);
@@ -74,8 +76,13 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
-              <Shield className="h-7 w-7 text-white" />
+            {/* Logo Image Container */}
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 overflow-hidden bg-white">
+              <img
+                src="/logo.jpg"   // replace with your logo file
+                alt="SwasthaLink Logo"
+                className="w-full h-full object-cover"   // ✅ ensures the logo fills container perfectly
+              />
             </div>
             <div>
               <div className="text-xl font-bold text-white">SwasthaLink</div>
@@ -124,14 +131,13 @@ export function Navigation() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Login Button as Anchor */}
-            <a
-              href="/login"
+            <button
+              onClick={() => scrollToSection("/login")}
               className="flex items-center space-x-2 text-gray-300 hover:text-white hover:bg-gray-800/50 font-medium px-6 py-2.5 rounded-lg transition-all duration-300"
             >
               <LogIn className="h-4 w-4" />
               <span>ABHA Sign in</span>
-            </a>
+            </button>
 
             {/* Get Started Button as Anchor */}
             <a
@@ -212,7 +218,7 @@ export function Navigation() {
               {/* Mobile Actions */}
               <div className="p-6 space-y-4 border-t border-gray-800">
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => scrollToSection("/")}
                   className="flex items-center justify-center space-x-2 w-full border border-gray-700 text-gray-300 hover:bg-gray-800/50 hover:text-white py-3 rounded-lg transition-colors duration-200"
                 >
                   <LogIn className="h-4 w-4" />

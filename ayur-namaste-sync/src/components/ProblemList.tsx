@@ -42,7 +42,7 @@ export function ProblemList({ records, showActions = false, onDownloadSummary }:
               <p className="text-muted-foreground">Diagnosis and treatment history</p>
             </div>
           </div>
-          
+
           {showActions && onDownloadSummary && (
             <Button
               onClick={onDownloadSummary}
@@ -56,7 +56,7 @@ export function ProblemList({ records, showActions = false, onDownloadSummary }:
           )}
         </CardTitle>
       </CardHeader>
-      
+
       <CardContent>
         {records.length === 0 ? (
           <div className="text-center py-12">
@@ -67,8 +67,8 @@ export function ProblemList({ records, showActions = false, onDownloadSummary }:
         ) : (
           <div className="space-y-4">
             {records.map((record) => (
-              <div 
-                key={record.id} 
+              <div
+                key={record.id}
                 className="p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
@@ -76,25 +76,25 @@ export function ProblemList({ records, showActions = false, onDownloadSummary }:
                     <h4 className="text-lg font-semibold text-foreground mb-1">
                       {record.diagnosisName}
                     </h4>
-                    
+
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {new Date(record.createdAt).toLocaleDateString('en-IN')}
                       </div>
-                      
+
                       {record.onsetDate && (
                         <div>
                           Onset: {new Date(record.onsetDate).toLocaleDateString('en-IN')}
                         </div>
                       )}
-                      
+
                       {record.severity && (
-                        <Badge 
+                        <Badge
                           className={
                             record.severity === 'Severe' ? 'bg-error/20 text-error border-error/30' :
-                            record.severity === 'Moderate' ? 'bg-warning/20 text-warning border-warning/30' :
-                            'bg-info/20 text-info border-info/30'
+                              record.severity === 'Moderate' ? 'bg-warning/20 text-warning border-warning/30' :
+                                'bg-info/20 text-info border-info/30'
                           }
                         >
                           {record.severity}
@@ -102,7 +102,7 @@ export function ProblemList({ records, showActions = false, onDownloadSummary }:
                       )}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     {getStatusIcon(record.status)}
                     <Badge className={getStatusVariant(record.status)}>

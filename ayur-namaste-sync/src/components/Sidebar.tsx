@@ -106,7 +106,7 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
           <SidebarGroupLabel className="text-sidebar-foreground/70 font-medium">
             Navigation
           </SidebarGroupLabel>
-          
+
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
@@ -115,10 +115,9 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
                     <NavLink
                       to={item.url}
                       className={({ isActive }) =>
-                        `flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${
-                          isActive
-                            ? 'bg-sidebar-accent text-sidebar-primary font-medium'
-                            : 'text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-foreground'
+                        `flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${isActive
+                          ? 'bg-sidebar-accent text-sidebar-primary font-medium'
+                          : 'text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-foreground'
                         }`
                       }
                     >

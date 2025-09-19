@@ -103,7 +103,7 @@ export function TopBar({ user, onLogout }: TopBarProps) {
               Settings
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem 
+            <DropdownMenuItem
               className="text-error hover:bg-error/10 cursor-pointer"
               onClick={onLogout}
             >
