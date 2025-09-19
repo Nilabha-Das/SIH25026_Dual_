@@ -9,6 +9,7 @@ const fhirRoutes = require('./routes/route.fhir');
 const authRoutes = require('./routes/route.auth'); // 👈 add this
 const searchRoutes = require("./routes/route.search");
 const patientRoutes = require("./routes/route.patient");
+const curatorRoutes = require("./routes/route.curator");
 
 const app = express();
 app.use(cors());
@@ -32,6 +33,7 @@ app.use('/api/mapping', mappingRoutes);
 app.use('/api/icd', icdRoutes);
 app.use('/api/namaste', namasteRoutes);
 app.use('/api/patient', patientRoutes);
+app.use('/api/curator', curatorRoutes);
 app.use('/fhir', fhirRoutes);
 app.use('/api', searchRoutes);
 
