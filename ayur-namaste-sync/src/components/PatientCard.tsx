@@ -22,7 +22,7 @@ export function PatientCard({ patient, showConsent = true }: PatientCardProps) {
           </div>
         </CardTitle>
       </CardHeader>
-      
+
       <CardContent className="space-y-4">
         {/* ABHA ID */}
         <div className="flex items-center gap-3 p-3 bg-muted/30 rounded-lg">
@@ -42,7 +42,7 @@ export function PatientCard({ patient, showConsent = true }: PatientCardProps) {
               <p className="text-sm font-medium text-foreground">{patient.email}</p>
             </div>
           </div>
-          
+
           {patient.phone && (
             <div className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-muted-foreground" />
