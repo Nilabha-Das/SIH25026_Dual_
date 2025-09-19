@@ -2,6 +2,13 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { CheckCircle, ArrowRight, Heart, Globe, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import type { LucideIcon } from 'lucide-react';
+
+interface StatItem {
+  icon: LucideIcon;
+  value: string;
+  label: string;
+}
 
 export function About() {
   const navigate = useNavigate();
@@ -15,7 +22,7 @@ export function About() {
     "Streamlined consultation and treatment workflows",
   ];
 
-  const stats = [
+  const stats: StatItem[] = [
     { icon: Heart, value: "Healthcare", label: "First Priority" },
     { icon: Globe, value: "Universal", label: "Accessibility" },
     { icon: Zap, value: "Real-time", label: "Processing" },
@@ -61,7 +68,7 @@ export function About() {
 
             {/* CTA Button */}
             <Button
-              onClick={() => navigate("/AbhaRegistration")}
+              onClick={() => navigate("/")}
               size="lg"
               className="gradient-medical text-primary-foreground font-semibold shadow-glow hover:shadow-green-glow transition-transform duration-500 hover:scale-105 animate-fade-in [animation-delay:800ms]"
             >
@@ -74,26 +81,29 @@ export function About() {
           <div className="space-y-8 animate-fade-in [animation-delay:400ms]">
             {/* Stats Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <Card
-                  key={index}
-                  className="text-center p-6 bg-card/80 border-border/50 hover:shadow-lg hover:border-primary/30 transition-all duration-500 hover:scale-105"
-                >
-                  <CardContent className="space-y-3 p-0">
-                    <div className="w-12 h-12 gradient-medical rounded-xl flex items-center justify-center shadow-glow mx-auto group-hover:animate-pulse-glow transition-transform duration-500">
-                      <stat.icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground">
-                        {stat.value}
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className="group text-center p-6 bg-card/80 border-border/50 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+                  >
+                    <CardContent className="space-y-3 p-0">
+                      <div className="w-12 h-12 gradient-medical rounded-xl flex items-center justify-center shadow-glow mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="h-6 w-6 text-primary-foreground" />
                       </div>
-                      <div className="text-sm text-muted-foreground">
-                        {stat.label}
+                      <div>
+                        <div className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {stat.value}
+                        </div>
+                        <div className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                          {stat.label}
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
 
             {/* Feature Card */}

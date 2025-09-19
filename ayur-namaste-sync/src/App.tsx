@@ -11,6 +11,8 @@ import { CuratorDashboard } from "./pages/CuratorDashboard";
 import NotFound from "./pages/NotFound";
 import { User } from "@/lib/mockData";
 import Home from "./pages/Home";
+import DocsPage from "./pages/DocsPage";
+import API from "./pages/API";
 
 
 const queryClient = new QueryClient();
