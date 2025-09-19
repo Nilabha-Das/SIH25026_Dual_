@@ -59,9 +59,12 @@ const App = () => {
                   />
                 } 
               />
+
               <Route path="/dashboard" element={getDashboardComponent()} />
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
+               <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api" element={<API />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/docs" element={<DocsPage />} />
