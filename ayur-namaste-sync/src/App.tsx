@@ -66,6 +66,9 @@ const App = () => {
                <Route path="/docs" element={<DocsPage />} />
               <Route path="/api" element={<API />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api" element={<API />} />
             </Routes>
           </BrowserRouter>
         </SidebarProvider>
