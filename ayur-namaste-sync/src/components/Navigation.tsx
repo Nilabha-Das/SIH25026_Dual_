@@ -7,12 +7,8 @@ import {
   ChevronDown,
   Heart,
   Cpu,
-  BookOpen,
-  Code,
-  Globe,
   Github,
   MessageCircle,
-  FileText,
   Database,
   X
 } from "lucide-react";
@@ -112,12 +108,11 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            {/* Logo Image Container */}
             <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 overflow-hidden bg-white">
               <img
-                src="/logo.jpg"   // replace with your logo file
+                src="/logo.jpg"
                 alt="SwasthaLink Logo"
-                className="w-full h-full object-cover"   // ✅ ensures the logo fills container perfectly
+                className="w-full h-full object-cover"
               />
             </div>
             <div>
@@ -141,8 +136,11 @@ export function Navigation() {
                 >
                   <span>{item.name}</span>
                   {item.dropdown && (
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                    />
                   )}
                 </button>
 
@@ -179,16 +177,14 @@ export function Navigation() {
               <span>ABHA Sign in</span>
             </button>
 
-            {/* Get Started Button as Anchor */}
             <a
-              href="#about"  // 🔹 replace with your actual page
+              href="#about"
               className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-6 py-2.5 rounded-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:scale-[1.02]"
             >
               <UserPlus className="h-4 w-4" />
               <span>Get Started</span>
             </a>
           </div>
-
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -205,7 +201,10 @@ export function Navigation() {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          />
           <div className="fixed right-0 top-0 h-full w-80 bg-gray-900 border-l border-gray-800 shadow-2xl transform transition-transform duration-300">
             <div className="flex flex-col h-full">
               {/* Mobile Header */}
@@ -215,8 +214,12 @@ export function Navigation() {
                     <Shield className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-white">NAMASTE-ICD</div>
-                    <div className="text-xs text-gray-400">Healthcare System</div>
+                    <div className="text-lg font-bold text-white">
+                      NAMASTE-ICD
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      Healthcare System
+                    </div>
                   </div>
                 </div>
                 <button
@@ -258,7 +261,7 @@ export function Navigation() {
               {/* Mobile Actions */}
               <div className="p-6 space-y-4 border-t border-gray-800">
                 <button
-                  onClick={() => scrollToSection("/")}
+                  onClick={() => scrollToSection("/login")}
                   className="flex items-center justify-center space-x-2 w-full border border-gray-700 text-gray-300 hover:bg-gray-800/50 hover:text-white py-3 rounded-lg transition-colors duration-200"
                 >
                   <LogIn className="h-4 w-4" />
