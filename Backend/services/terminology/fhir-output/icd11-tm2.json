@@ -1,0 +1,2307 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "icd11-tm2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+    ]
+  },
+  "url": "http://id.who.int/icd/entity/tm2",
+  "identifier": [
+    {
+      "system": "http://who.int/fhir/terminology",
+      "value": "ICD-11-TM2"
+    }
+  ],
+  "version": "2022-02",
+  "name": "ICD11TM2CodeSystem",
+  "title": "ICD-11 Traditional Medicine Module 2 (TM2) CodeSystem",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:37:21.104Z",
+  "publisher": "World Health Organization (WHO)",
+  "contact": [
+    {
+      "name": "WHO Classifications Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://icd.who.int"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 CodeSystem for ICD-11 Traditional Medicine Module 2 (TM2) terminology",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "purpose": "International standardized terminology for traditional medicine concepts",
+  "copyright": "© World Health Organization",
+  "caseSensitive": true,
+  "valueSet": "http://id.who.int/icd/entity/tm2/valueset",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 150,
+  "concept": [
+    {
+      "code": "TM2-001",
+      "display": "Pitta Excess",
+      "definition": "TM2 concept: Pitta Excess (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-002",
+      "display": "Kapha Obstruction",
+      "definition": "TM2 concept: Kapha Obstruction (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-003",
+      "display": "Prameha (Diabetes pattern)",
+      "definition": "TM2 concept: Prameha (Diabetes pattern) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-004",
+      "display": "Amlapitta (Acid dyspepsia)",
+      "definition": "TM2 concept: Amlapitta (Acid dyspepsia) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-005",
+      "display": "Ardita (Facial paralysis)",
+      "definition": "TM2 concept: Ardita (Facial paralysis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-006",
+      "display": "Kustha (Skin disorder)",
+      "definition": "TM2 concept: Kustha (Skin disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-007",
+      "display": "Jwara (Fever)",
+      "definition": "TM2 concept: Jwara (Fever) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-008",
+      "display": "Raktapitta (Bleeding disorder)",
+      "definition": "TM2 concept: Raktapitta (Bleeding disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-009",
+      "display": "Sandhivata (Osteoarthritis)",
+      "definition": "TM2 concept: Sandhivata (Osteoarthritis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-010",
+      "display": "Megadosham imbalance",
+      "definition": "TM2 concept: Megadosham imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-011",
+      "display": "Siddha Viral Fever Pattern",
+      "definition": "TM2 concept: Siddha Viral Fever Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-012",
+      "display": "Siddha Prameha",
+      "definition": "TM2 concept: Siddha Prameha (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-013",
+      "display": "Siddha Peenisam (Cold)",
+      "definition": "TM2 concept: Siddha Peenisam (Cold) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-014",
+      "display": "Siddha Kaba Suram (Flu)",
+      "definition": "TM2 concept: Siddha Kaba Suram (Flu) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-015",
+      "display": "Siddha Mukkutram imbalance",
+      "definition": "TM2 concept: Siddha Mukkutram imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-016",
+      "display": "Balgham (Phlegm excess)",
+      "definition": "TM2 concept: Balgham (Phlegm excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-017",
+      "display": "Safra (Bile imbalance)",
+      "definition": "TM2 concept: Safra (Bile imbalance) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-018",
+      "display": "Dam (Blood disorder)",
+      "definition": "TM2 concept: Dam (Blood disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-019",
+      "display": "Sauda (Black bile excess)",
+      "definition": "TM2 concept: Sauda (Black bile excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-020",
+      "display": "Humor imbalance (Unani)",
+      "definition": "TM2 concept: Humor imbalance (Unani) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-021",
+      "display": "Nazla (Respiratory catarrh)",
+      "definition": "TM2 concept: Nazla (Respiratory catarrh) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-022",
+      "display": "Qi Deficiency",
+      "definition": "TM2 concept: Qi Deficiency (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-023",
+      "display": "Blood Stasis Pattern",
+      "definition": "TM2 concept: Blood Stasis Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-024",
+      "display": "Yin Deficiency Heat",
+      "definition": "TM2 concept: Yin Deficiency Heat (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-025",
+      "display": "Yang Collapse",
+      "definition": "TM2 concept: Yang Collapse (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-026",
+      "display": "Phlegm Dampness",
+      "definition": "TM2 concept: Phlegm Dampness (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-027",
+      "display": "Qi Stagnation",
+      "definition": "TM2 concept: Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-028",
+      "display": "Wind-Heat Invasion",
+      "definition": "TM2 concept: Wind-Heat Invasion (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-029",
+      "display": "Liver Qi Stagnation",
+      "definition": "TM2 concept: Liver Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-030",
+      "display": "Vata Imbalance",
+      "definition": "TM2 concept: Vata Imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-031",
+      "display": "Pitta Excess",
+      "definition": "TM2 concept: Pitta Excess (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-032",
+      "display": "Kapha Obstruction",
+      "definition": "TM2 concept: Kapha Obstruction (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-033",
+      "display": "Prameha (Diabetes pattern)",
+      "definition": "TM2 concept: Prameha (Diabetes pattern) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-034",
+      "display": "Amlapitta (Acid dyspepsia)",
+      "definition": "TM2 concept: Amlapitta (Acid dyspepsia) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-035",
+      "display": "Ardita (Facial paralysis)",
+      "definition": "TM2 concept: Ardita (Facial paralysis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-036",
+      "display": "Kustha (Skin disorder)",
+      "definition": "TM2 concept: Kustha (Skin disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-037",
+      "display": "Jwara (Fever)",
+      "definition": "TM2 concept: Jwara (Fever) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-038",
+      "display": "Raktapitta (Bleeding disorder)",
+      "definition": "TM2 concept: Raktapitta (Bleeding disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-039",
+      "display": "Sandhivata (Osteoarthritis)",
+      "definition": "TM2 concept: Sandhivata (Osteoarthritis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-040",
+      "display": "Megadosham imbalance",
+      "definition": "TM2 concept: Megadosham imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-041",
+      "display": "Siddha Viral Fever Pattern",
+      "definition": "TM2 concept: Siddha Viral Fever Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-042",
+      "display": "Siddha Prameha",
+      "definition": "TM2 concept: Siddha Prameha (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-043",
+      "display": "Siddha Peenisam (Cold)",
+      "definition": "TM2 concept: Siddha Peenisam (Cold) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-044",
+      "display": "Siddha Kaba Suram (Flu)",
+      "definition": "TM2 concept: Siddha Kaba Suram (Flu) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-045",
+      "display": "Siddha Mukkutram imbalance",
+      "definition": "TM2 concept: Siddha Mukkutram imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-046",
+      "display": "Balgham (Phlegm excess)",
+      "definition": "TM2 concept: Balgham (Phlegm excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-047",
+      "display": "Safra (Bile imbalance)",
+      "definition": "TM2 concept: Safra (Bile imbalance) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-048",
+      "display": "Dam (Blood disorder)",
+      "definition": "TM2 concept: Dam (Blood disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-049",
+      "display": "Sauda (Black bile excess)",
+      "definition": "TM2 concept: Sauda (Black bile excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-050",
+      "display": "Humor imbalance (Unani)",
+      "definition": "TM2 concept: Humor imbalance (Unani) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-051",
+      "display": "Nazla (Respiratory catarrh)",
+      "definition": "TM2 concept: Nazla (Respiratory catarrh) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-052",
+      "display": "Qi Deficiency",
+      "definition": "TM2 concept: Qi Deficiency (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-053",
+      "display": "Blood Stasis Pattern",
+      "definition": "TM2 concept: Blood Stasis Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-054",
+      "display": "Yin Deficiency Heat",
+      "definition": "TM2 concept: Yin Deficiency Heat (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-055",
+      "display": "Yang Collapse",
+      "definition": "TM2 concept: Yang Collapse (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-056",
+      "display": "Phlegm Dampness",
+      "definition": "TM2 concept: Phlegm Dampness (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-057",
+      "display": "Qi Stagnation",
+      "definition": "TM2 concept: Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-058",
+      "display": "Wind-Heat Invasion",
+      "definition": "TM2 concept: Wind-Heat Invasion (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-059",
+      "display": "Liver Qi Stagnation",
+      "definition": "TM2 concept: Liver Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-060",
+      "display": "Vata Imbalance",
+      "definition": "TM2 concept: Vata Imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-061",
+      "display": "Pitta Excess",
+      "definition": "TM2 concept: Pitta Excess (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-062",
+      "display": "Kapha Obstruction",
+      "definition": "TM2 concept: Kapha Obstruction (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-063",
+      "display": "Prameha (Diabetes pattern)",
+      "definition": "TM2 concept: Prameha (Diabetes pattern) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-064",
+      "display": "Amlapitta (Acid dyspepsia)",
+      "definition": "TM2 concept: Amlapitta (Acid dyspepsia) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-065",
+      "display": "Ardita (Facial paralysis)",
+      "definition": "TM2 concept: Ardita (Facial paralysis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-066",
+      "display": "Kustha (Skin disorder)",
+      "definition": "TM2 concept: Kustha (Skin disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-067",
+      "display": "Jwara (Fever)",
+      "definition": "TM2 concept: Jwara (Fever) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-068",
+      "display": "Raktapitta (Bleeding disorder)",
+      "definition": "TM2 concept: Raktapitta (Bleeding disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-069",
+      "display": "Sandhivata (Osteoarthritis)",
+      "definition": "TM2 concept: Sandhivata (Osteoarthritis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-070",
+      "display": "Megadosham imbalance",
+      "definition": "TM2 concept: Megadosham imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-071",
+      "display": "Siddha Viral Fever Pattern",
+      "definition": "TM2 concept: Siddha Viral Fever Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-072",
+      "display": "Siddha Prameha",
+      "definition": "TM2 concept: Siddha Prameha (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-073",
+      "display": "Siddha Peenisam (Cold)",
+      "definition": "TM2 concept: Siddha Peenisam (Cold) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-074",
+      "display": "Siddha Kaba Suram (Flu)",
+      "definition": "TM2 concept: Siddha Kaba Suram (Flu) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-075",
+      "display": "Siddha Mukkutram imbalance",
+      "definition": "TM2 concept: Siddha Mukkutram imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-076",
+      "display": "Balgham (Phlegm excess)",
+      "definition": "TM2 concept: Balgham (Phlegm excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-077",
+      "display": "Safra (Bile imbalance)",
+      "definition": "TM2 concept: Safra (Bile imbalance) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-078",
+      "display": "Dam (Blood disorder)",
+      "definition": "TM2 concept: Dam (Blood disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-079",
+      "display": "Sauda (Black bile excess)",
+      "definition": "TM2 concept: Sauda (Black bile excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-080",
+      "display": "Humor imbalance (Unani)",
+      "definition": "TM2 concept: Humor imbalance (Unani) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-081",
+      "display": "Nazla (Respiratory catarrh)",
+      "definition": "TM2 concept: Nazla (Respiratory catarrh) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-082",
+      "display": "Qi Deficiency",
+      "definition": "TM2 concept: Qi Deficiency (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-083",
+      "display": "Blood Stasis Pattern",
+      "definition": "TM2 concept: Blood Stasis Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-084",
+      "display": "Yin Deficiency Heat",
+      "definition": "TM2 concept: Yin Deficiency Heat (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-085",
+      "display": "Yang Collapse",
+      "definition": "TM2 concept: Yang Collapse (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-086",
+      "display": "Phlegm Dampness",
+      "definition": "TM2 concept: Phlegm Dampness (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-087",
+      "display": "Qi Stagnation",
+      "definition": "TM2 concept: Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-088",
+      "display": "Wind-Heat Invasion",
+      "definition": "TM2 concept: Wind-Heat Invasion (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-089",
+      "display": "Liver Qi Stagnation",
+      "definition": "TM2 concept: Liver Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-090",
+      "display": "Vata Imbalance",
+      "definition": "TM2 concept: Vata Imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-091",
+      "display": "Pitta Excess",
+      "definition": "TM2 concept: Pitta Excess (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-092",
+      "display": "Kapha Obstruction",
+      "definition": "TM2 concept: Kapha Obstruction (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-093",
+      "display": "Prameha (Diabetes pattern)",
+      "definition": "TM2 concept: Prameha (Diabetes pattern) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-094",
+      "display": "Amlapitta (Acid dyspepsia)",
+      "definition": "TM2 concept: Amlapitta (Acid dyspepsia) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-095",
+      "display": "Ardita (Facial paralysis)",
+      "definition": "TM2 concept: Ardita (Facial paralysis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-096",
+      "display": "Kustha (Skin disorder)",
+      "definition": "TM2 concept: Kustha (Skin disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-097",
+      "display": "Jwara (Fever)",
+      "definition": "TM2 concept: Jwara (Fever) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-098",
+      "display": "Raktapitta (Bleeding disorder)",
+      "definition": "TM2 concept: Raktapitta (Bleeding disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-099",
+      "display": "Sandhivata (Osteoarthritis)",
+      "definition": "TM2 concept: Sandhivata (Osteoarthritis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-100",
+      "display": "Megadosham imbalance",
+      "definition": "TM2 concept: Megadosham imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-101",
+      "display": "Siddha Viral Fever Pattern",
+      "definition": "TM2 concept: Siddha Viral Fever Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-102",
+      "display": "Siddha Prameha",
+      "definition": "TM2 concept: Siddha Prameha (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-103",
+      "display": "Siddha Peenisam (Cold)",
+      "definition": "TM2 concept: Siddha Peenisam (Cold) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-104",
+      "display": "Siddha Kaba Suram (Flu)",
+      "definition": "TM2 concept: Siddha Kaba Suram (Flu) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-105",
+      "display": "Siddha Mukkutram imbalance",
+      "definition": "TM2 concept: Siddha Mukkutram imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-106",
+      "display": "Balgham (Phlegm excess)",
+      "definition": "TM2 concept: Balgham (Phlegm excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-107",
+      "display": "Safra (Bile imbalance)",
+      "definition": "TM2 concept: Safra (Bile imbalance) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-108",
+      "display": "Dam (Blood disorder)",
+      "definition": "TM2 concept: Dam (Blood disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-109",
+      "display": "Sauda (Black bile excess)",
+      "definition": "TM2 concept: Sauda (Black bile excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-110",
+      "display": "Humor imbalance (Unani)",
+      "definition": "TM2 concept: Humor imbalance (Unani) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-111",
+      "display": "Nazla (Respiratory catarrh)",
+      "definition": "TM2 concept: Nazla (Respiratory catarrh) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-112",
+      "display": "Qi Deficiency",
+      "definition": "TM2 concept: Qi Deficiency (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-113",
+      "display": "Blood Stasis Pattern",
+      "definition": "TM2 concept: Blood Stasis Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-114",
+      "display": "Yin Deficiency Heat",
+      "definition": "TM2 concept: Yin Deficiency Heat (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-115",
+      "display": "Yang Collapse",
+      "definition": "TM2 concept: Yang Collapse (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-116",
+      "display": "Phlegm Dampness",
+      "definition": "TM2 concept: Phlegm Dampness (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-117",
+      "display": "Qi Stagnation",
+      "definition": "TM2 concept: Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-118",
+      "display": "Wind-Heat Invasion",
+      "definition": "TM2 concept: Wind-Heat Invasion (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-119",
+      "display": "Liver Qi Stagnation",
+      "definition": "TM2 concept: Liver Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-120",
+      "display": "Vata Imbalance",
+      "definition": "TM2 concept: Vata Imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-121",
+      "display": "Pitta Excess",
+      "definition": "TM2 concept: Pitta Excess (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-122",
+      "display": "Kapha Obstruction",
+      "definition": "TM2 concept: Kapha Obstruction (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-123",
+      "display": "Prameha (Diabetes pattern)",
+      "definition": "TM2 concept: Prameha (Diabetes pattern) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-124",
+      "display": "Amlapitta (Acid dyspepsia)",
+      "definition": "TM2 concept: Amlapitta (Acid dyspepsia) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-125",
+      "display": "Ardita (Facial paralysis)",
+      "definition": "TM2 concept: Ardita (Facial paralysis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-126",
+      "display": "Kustha (Skin disorder)",
+      "definition": "TM2 concept: Kustha (Skin disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-127",
+      "display": "Jwara (Fever)",
+      "definition": "TM2 concept: Jwara (Fever) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-128",
+      "display": "Raktapitta (Bleeding disorder)",
+      "definition": "TM2 concept: Raktapitta (Bleeding disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-129",
+      "display": "Sandhivata (Osteoarthritis)",
+      "definition": "TM2 concept: Sandhivata (Osteoarthritis) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-130",
+      "display": "Megadosham imbalance",
+      "definition": "TM2 concept: Megadosham imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-131",
+      "display": "Siddha Viral Fever Pattern",
+      "definition": "TM2 concept: Siddha Viral Fever Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-132",
+      "display": "Siddha Prameha",
+      "definition": "TM2 concept: Siddha Prameha (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-133",
+      "display": "Siddha Peenisam (Cold)",
+      "definition": "TM2 concept: Siddha Peenisam (Cold) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-134",
+      "display": "Siddha Kaba Suram (Flu)",
+      "definition": "TM2 concept: Siddha Kaba Suram (Flu) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-135",
+      "display": "Siddha Mukkutram imbalance",
+      "definition": "TM2 concept: Siddha Mukkutram imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-136",
+      "display": "Balgham (Phlegm excess)",
+      "definition": "TM2 concept: Balgham (Phlegm excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-137",
+      "display": "Safra (Bile imbalance)",
+      "definition": "TM2 concept: Safra (Bile imbalance) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-138",
+      "display": "Dam (Blood disorder)",
+      "definition": "TM2 concept: Dam (Blood disorder) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-139",
+      "display": "Sauda (Black bile excess)",
+      "definition": "TM2 concept: Sauda (Black bile excess) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-140",
+      "display": "Humor imbalance (Unani)",
+      "definition": "TM2 concept: Humor imbalance (Unani) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-141",
+      "display": "Nazla (Respiratory catarrh)",
+      "definition": "TM2 concept: Nazla (Respiratory catarrh) (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-142",
+      "display": "Qi Deficiency",
+      "definition": "TM2 concept: Qi Deficiency (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-143",
+      "display": "Blood Stasis Pattern",
+      "definition": "TM2 concept: Blood Stasis Pattern (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-144",
+      "display": "Yin Deficiency Heat",
+      "definition": "TM2 concept: Yin Deficiency Heat (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-145",
+      "display": "Yang Collapse",
+      "definition": "TM2 concept: Yang Collapse (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-146",
+      "display": "Phlegm Dampness",
+      "definition": "TM2 concept: Phlegm Dampness (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-147",
+      "display": "Qi Stagnation",
+      "definition": "TM2 concept: Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    },
+    {
+      "code": "TM2-148",
+      "display": "Wind-Heat Invasion",
+      "definition": "TM2 concept: Wind-Heat Invasion (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-PATTERNS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-149",
+      "display": "Liver Qi Stagnation",
+      "definition": "TM2 concept: Liver Qi Stagnation (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-DISORDERS"
+        }
+      ]
+    },
+    {
+      "code": "TM2-150",
+      "display": "Vata Imbalance",
+      "definition": "TM2 concept: Vata Imbalance (category)",
+      "property": [
+        {
+          "code": "class_kind",
+          "valueString": "category"
+        },
+        {
+          "code": "parent",
+          "valueString": "TM2-ROOT"
+        }
+      ]
+    }
+  ]
+}

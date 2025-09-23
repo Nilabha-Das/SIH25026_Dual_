@@ -1,0 +1,2610 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "icd11-mms-to-namaste",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/ConceptMap"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/ConceptMap/icd11-mms-to-namaste",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "ICD11-MMS-NAMASTE-MAP"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ICD11MMSToNAMASTEConceptMap",
+  "title": "ICD-11 MMS to NAMASTE ConceptMap",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:39:35.905Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 ConceptMap for mapping WHO ICD-11 MMS codes to NAMASTE AYUSH terminologies",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Enable reverse mapping from international ICD-11 MMS to Indian AYUSH traditional medicine concepts",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "sourceUri": "http://id.who.int/icd/entity/mms",
+  "targetUri": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+  "group": [
+    {
+      "source": "http://id.who.int/icd/entity/mms",
+      "target": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+      "element": [
+        {
+          "code": "CA23",
+          "display": "Asthma",
+          "target": [
+            {
+              "code": "NAM002",
+              "display": "Asthma (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.77. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.77"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM137",
+              "display": "Asthma (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.77. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.77"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5A72",
+          "display": "Hyperaldosteronism",
+          "target": [
+            {
+              "code": "NAM003",
+              "display": "Hypertension (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.495. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM138",
+              "display": "Hypertension (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.495. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB41.0",
+          "display": "Anosmia",
+          "target": [
+            {
+              "code": "NAM004",
+              "display": "Anemia (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.481. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.481"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM039",
+              "display": "Infertility (Ayurveda)",
+              "equivalence": "unmatched",
+              "comment": "Reverse semantic mapping with confidence 0.377. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.377"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM139",
+              "display": "Anemia (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.481. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.481"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8A81.Z",
+          "display": "Tension-type headache,unspecified",
+          "target": [
+            {
+              "code": "NAM005",
+              "display": "Headache (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.634. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.634"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM140",
+              "display": "Headache (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.634. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.634"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8A80",
+          "display": "Migraine",
+          "target": [
+            {
+              "code": "NAM006",
+              "display": "Migraine (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.712. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.712"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM141",
+              "display": "Migraine (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.712. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.712"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4A84.31",
+          "display": "Cold-induced Anaphylaxis",
+          "target": [
+            {
+              "code": "NAM008",
+              "display": "Cold (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.495. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM143",
+              "display": "Cold (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.495. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5B81",
+          "display": "Obesity",
+          "target": [
+            {
+              "code": "NAM011",
+              "display": "Obesity (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.627. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.627"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM133",
+              "display": "Obesity-Related Disorder (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.568. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.568"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM146",
+              "display": "Obesity (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.627. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.627"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5C58.00",
+          "display": "Crigler-Najjar syndrome",
+          "target": [
+            {
+              "code": "NAM012",
+              "display": "Jaundice (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.445. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.445"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM130",
+              "display": "Dark Circles (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.437. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.437"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM147",
+              "display": "Jaundice (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.445. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.445"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8A66.1Z",
+          "display": "Non-convulsive status epilepticus,unspecified",
+          "target": [
+            {
+              "code": "NAM013",
+              "display": "Epilepsy (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.55. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.55"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM114",
+              "display": "Seizures (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.507. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM148",
+              "display": "Epilepsy (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.55. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.55"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ME66.6",
+          "display": "Rash",
+          "target": [
+            {
+              "code": "NAM014",
+              "display": "Skin Rash (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.664. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM149",
+              "display": "Skin Rash (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.664. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1B73",
+          "display": "Ecthyma",
+          "target": [
+            {
+              "code": "NAM015",
+              "display": "Eczema (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.522. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM150",
+              "display": "Eczema (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.522. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EA90",
+          "display": "Psoriasis",
+          "target": [
+            {
+              "code": "NAM016",
+              "display": "Psoriasis (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.775. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.775"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ME05.0",
+          "display": "Constipation",
+          "target": [
+            {
+              "code": "NAM017",
+              "display": "Constipation (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.684. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.684"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ME05.1",
+          "display": "Diarrhoea",
+          "target": [
+            {
+              "code": "NAM018",
+              "display": "Diarrhea (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.637. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.637"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DA42",
+          "display": "Gastritis",
+          "target": [
+            {
+              "code": "NAM019",
+              "display": "Gastritis (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.695. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.695"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CA20",
+          "display": "Bronchitis",
+          "target": [
+            {
+              "code": "NAM020",
+              "display": "Bronchitis (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.691. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.691"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "7A01",
+          "display": "Short-term insomnia",
+          "target": [
+            {
+              "code": "NAM021",
+              "display": "Insomnia (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.662. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.662"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB24.3",
+          "display": "anxiety",
+          "target": [
+            {
+              "code": "NAM022",
+              "display": "Anxiety (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.701. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.701"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM117",
+              "display": "Phobia (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.558. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.558"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6C43.70",
+          "display": "Opioid-induced mood disorder",
+          "target": [
+            {
+              "code": "NAM023",
+              "display": "Depression (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.442. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.442"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DA60.60",
+          "display": "Alcohol-induced gastric ulcer",
+          "target": [
+            {
+              "code": "NAM024",
+              "display": "Ulcer (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.566. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.566"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB60",
+          "display": "Haemorrhoids",
+          "target": [
+            {
+              "code": "NAM025",
+              "display": "Piles (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.444. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.444"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM067",
+              "display": "Hemorrhage (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.57. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.57"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA8KL9",
+          "display": "gallbladder",
+          "target": [
+            {
+              "code": "NAM026",
+              "display": "Gallstones (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.601. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.601"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MF98.1",
+          "display": "Hyperkaluria",
+          "target": [
+            {
+              "code": "NAM027",
+              "display": "Kidney Stones (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.489. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.489"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM093",
+              "display": "UTI (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.443. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.443"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB92.Z",
+          "display": "Non-alcoholic fatty liver disease,unspecified",
+          "target": [
+            {
+              "code": "NAM028",
+              "display": "Liver Disorder (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.573. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.573"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5A00.1Z",
+          "display": "Iodine-deficiency-related thyroid disorders or allied conditions,unspecified",
+          "target": [
+            {
+              "code": "NAM029",
+              "display": "Thyroid Disorder (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.636. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.636"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "GC00.0",
+          "display": "Trigonitis",
+          "target": [
+            {
+              "code": "NAM030",
+              "display": "Sinusitis (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.519. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.519"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CA08.1Z",
+          "display": "Non-allergic rhinitis,unspecified",
+          "target": [
+            {
+              "code": "NAM031",
+              "display": "Allergy (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.566. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.566"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM057",
+              "display": "Tonsillitis (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.483. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.483"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5C73",
+          "display": "Acidosis",
+          "target": [
+            {
+              "code": "NAM032",
+              "display": "Acidity (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.664. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DA22.Z",
+          "display": "Gastro-oesophageal reflux disease,unspecified",
+          "target": [
+            {
+              "code": "NAM033",
+              "display": "Indigestion (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.497. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.497"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM034",
+              "display": "Flatulence (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.508. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.508"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM100",
+              "display": "GERD (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.564. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.564"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ED80",
+          "display": "Acne",
+          "target": [
+            {
+              "code": "NAM035",
+              "display": "Acne (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.678. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.678"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EH72.00",
+          "display": "Drug-induced telogen hair loss",
+          "target": [
+            {
+              "code": "NAM036",
+              "display": "Hair Loss (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.557. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.557"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "LD28.1",
+          "display": "Ehlers-Danlos syndrome",
+          "target": [
+            {
+              "code": "NAM037",
+              "display": "Dandruff (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.473. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.473"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM086",
+              "display": "Warts (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.485. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.485"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB40.8",
+          "display": "Analgesia",
+          "target": [
+            {
+              "code": "NAM038",
+              "display": "Menstrual Pain (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.431. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.431"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4A20.0",
+          "display": "Adult-onset Immunodeficiency",
+          "target": [
+            {
+              "code": "NAM041",
+              "display": "Low Immunity (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.432. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MG22",
+          "display": "Fatigue",
+          "target": [
+            {
+              "code": "NAM042",
+              "display": "Fatigue (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.671. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.671"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8A00",
+          "display": "Parkinsonism",
+          "target": [
+            {
+              "code": "NAM045",
+              "display": "Parkinsonism (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.674. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.674"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB21.1",
+          "display": "Amnesia",
+          "target": [
+            {
+              "code": "NAM047",
+              "display": "Memory Loss (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.455. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.455"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "FB56.2",
+          "display": "Myalgia",
+          "target": [
+            {
+              "code": "NAM048",
+              "display": "Joint Pain (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.436. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.436"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM115",
+              "display": "Neuralgia (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.486. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.486"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM116",
+              "display": "Trigeminal Neuralgia (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.48. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.48"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ME84.3",
+          "display": "Sciatica",
+          "target": [
+            {
+              "code": "NAM049",
+              "display": "Sciatica (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.774. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.774"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "FA25",
+          "display": "Gout",
+          "target": [
+            {
+              "code": "NAM050",
+              "display": "Gout (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.69. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.69"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SC73",
+          "display": "Non-inflammatory eyelid disorder (#REF!)",
+          "target": [
+            {
+              "code": "NAM051",
+              "display": "Eye Strain (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.516. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.516"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM131",
+              "display": "Wrinkles (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.446. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.446"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "9B10",
+          "display": "Cataract",
+          "target": [
+            {
+              "code": "NAM052",
+              "display": "Cataract (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.733. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.733"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "9C61",
+          "display": "Glaucoma",
+          "target": [
+            {
+              "code": "NAM053",
+              "display": "Glaucoma (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.702. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.702"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA01U5",
+          "display": "Ear",
+          "target": [
+            {
+              "code": "NAM054",
+              "display": "Ear Infection (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.442. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.442"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MA82.2",
+          "display": "Nasality",
+          "target": [
+            {
+              "code": "NAM056",
+              "display": "Nasal Polyp (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.545. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.545"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA2RH5",
+          "display": "Larynx",
+          "target": [
+            {
+              "code": "NAM059",
+              "display": "Laryngitis (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.649. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.649"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8.00E+41",
+          "display": "Pachymeningitis",
+          "target": [
+            {
+              "code": "NAM060",
+              "display": "Whooping Cough (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.414. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.414"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CA40",
+          "display": "Pneumonia",
+          "target": [
+            {
+              "code": "NAM062",
+              "display": "Pneumonia (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.739. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.739"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "7A4Z",
+          "display": "Sleep-related breathing disorders,unspecified",
+          "target": [
+            {
+              "code": "NAM063",
+              "display": "Breathlessness (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.523. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.523"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM106",
+              "display": "Obstructive Sleep Apnea (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.507. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM107",
+              "display": "Snoring (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.504. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.504"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "BC42",
+          "display": "Myocarditis",
+          "target": [
+            {
+              "code": "NAM064",
+              "display": "Chest Pain (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.488. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.488"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MC81.2",
+          "display": "Palpitations",
+          "target": [
+            {
+              "code": "NAM065",
+              "display": "Palpitation (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.6. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.6"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA5J49",
+          "display": "Veins",
+          "target": [
+            {
+              "code": "NAM066",
+              "display": "Varicose Veins (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.555. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.555"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EJ40",
+          "display": "Sunburn",
+          "target": [
+            {
+              "code": "NAM068",
+              "display": "Burn Injury (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.42. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.42"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM129",
+              "display": "Sunburn (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.736. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.736"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XE44L",
+          "display": "Non-venomous snake",
+          "target": [
+            {
+              "code": "NAM070",
+              "display": "Snake Bite (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.488. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.488"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MG43.7",
+          "display": "Anorexia",
+          "target": [
+            {
+              "code": "NAM071",
+              "display": "Food Poisoning (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.487. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.487"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM104",
+              "display": "Anorexia (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.764. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.764"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM105",
+              "display": "Bulimia (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.507. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM122",
+              "display": "ADHD (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.43. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.43"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XN5FW",
+          "display": "Plasmodium",
+          "target": [
+            {
+              "code": "NAM072",
+              "display": "Malaria (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.536. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.536"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "AB16",
+          "display": "Tympanosclerosis",
+          "target": [
+            {
+              "code": "NAM073",
+              "display": "Typhoid (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.495. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1D0Z",
+          "display": "Non-viral and unspecified infections of the central nervous system,unspecified",
+          "target": [
+            {
+              "code": "NAM074",
+              "display": "Dengue (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.451. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.451"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB98.5",
+          "display": "Budd-Chiari syndrome",
+          "target": [
+            {
+              "code": "NAM075",
+              "display": "Chikungunya (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.522. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XM0UW4",
+          "display": "Hexaminolevulinate",
+          "target": [
+            {
+              "code": "NAM077",
+              "display": "Chickenpox (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.434. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.434"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1F03",
+          "display": "Measles",
+          "target": [
+            {
+              "code": "NAM078",
+              "display": "Measles (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.609. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.609"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1D80",
+          "display": "Mumps",
+          "target": [
+            {
+              "code": "NAM079",
+              "display": "Mumps (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.706. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.706"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XN3M0",
+          "display": "Poliovirus",
+          "target": [
+            {
+              "code": "NAM080",
+              "display": "Polio (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.608. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.608"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1.00E+70",
+          "display": "Smallpox",
+          "target": [
+            {
+              "code": "NAM081",
+              "display": "Smallpox (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.642. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.642"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1B20",
+          "display": "Leprosy",
+          "target": [
+            {
+              "code": "NAM082",
+              "display": "Leprosy (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.709. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.709"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XN69Y",
+          "display": "Hookworm",
+          "target": [
+            {
+              "code": "NAM083",
+              "display": "Ringworm (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.438. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.438"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1F20",
+          "display": "Aspergillosis",
+          "target": [
+            {
+              "code": "NAM084",
+              "display": "Fungal Infection (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.569. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.569"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1G04",
+          "display": "Scabies",
+          "target": [
+            {
+              "code": "NAM085",
+              "display": "Scabies (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.753. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.753"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "LD24.23",
+          "display": "Yunis-Varon disease",
+          "target": [
+            {
+              "code": "NAM087",
+              "display": "Herpes (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.432. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB95.1Z",
+          "display": "Drug-induced or toxic liver disease with chronic hepatitis,unspecified",
+          "target": [
+            {
+              "code": "NAM089",
+              "display": "Hepatitis B (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.444. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.444"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            },
+            {
+              "code": "NAM090",
+              "display": "Hepatitis C (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.432. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4B03",
+          "display": "Eosinophilia",
+          "target": [
+            {
+              "code": "NAM092",
+              "display": "STD (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.468. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.468"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB46.2",
+          "display": "Athetosis",
+          "target": [
+            {
+              "code": "NAM095",
+              "display": "Bladder Stone (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.437. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.437"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "LA31.2",
+          "display": "Ankyloglossia",
+          "target": [
+            {
+              "code": "NAM096",
+              "display": "Bedwetting (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.453. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.453"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XM6510",
+          "display": "Colistin",
+          "target": [
+            {
+              "code": "NAM097",
+              "display": "Colic (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.532. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.532"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB10",
+          "display": "Appendicitis",
+          "target": [
+            {
+              "code": "NAM098",
+              "display": "Appendicitis (Unani)",
+              "equivalence": "equivalent",
+              "comment": "Reverse semantic mapping with confidence 0.827. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.827"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA3QC5",
+          "display": "pancreas",
+          "target": [
+            {
+              "code": "NAM099",
+              "display": "Pancreatitis (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.601. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.601"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XA0QT6",
+          "display": "Ileum",
+          "target": [
+            {
+              "code": "NAM101",
+              "display": "IBS (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.496. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.496"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EE01",
+          "display": "Hypohidrosis",
+          "target": [
+            {
+              "code": "NAM102",
+              "display": "Crohn’s Disease (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.487. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.487"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DB33.43",
+          "display": "Drug-induced colitis",
+          "target": [
+            {
+              "code": "NAM103",
+              "display": "Colitis (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.537. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.537"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EE00",
+          "display": "Hyperhidrosis",
+          "target": [
+            {
+              "code": "NAM108",
+              "display": "Night Sweats (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.443. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.443"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NF02",
+          "display": "Hypothermia",
+          "target": [
+            {
+              "code": "NAM110",
+              "display": "Hypothermia (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.764. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.764"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MB48.0",
+          "display": "Vertigo",
+          "target": [
+            {
+              "code": "NAM111",
+              "display": "Motion Sickness (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.463. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.463"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM112",
+              "display": "Vertigo (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.756. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.756"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "MC41",
+          "display": "Tinnitus",
+          "target": [
+            {
+              "code": "NAM113",
+              "display": "Tinnitus (Unani)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.781. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.781"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6B2Z",
+          "display": "Obsessive-compulsive or related disorders,unspecified",
+          "target": [
+            {
+              "code": "NAM118",
+              "display": "OCD (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.555. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.555"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XM3GA2",
+          "display": "Manidipine",
+          "target": [
+            {
+              "code": "NAM119",
+              "display": "Bipolar Disorder (Unani)",
+              "equivalence": "unmatched",
+              "comment": "Reverse semantic mapping with confidence 0.366. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.366"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6A20",
+          "display": "Schizophrenia",
+          "target": [
+            {
+              "code": "NAM120",
+              "display": "Schizophrenia (Ayurveda)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.661. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.661"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6B20",
+          "display": "Obsessive-compulsive disorder",
+          "target": [
+            {
+              "code": "NAM123",
+              "display": "Learning Disorder (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.42. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.42"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6B20.1",
+          "display": "Obsessive-compulsive disorder with poor to absent insight",
+          "target": [
+            {
+              "code": "NAM125",
+              "display": "Stammering (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.478. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.478"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ED63.0",
+          "display": "Vitiligo",
+          "target": [
+            {
+              "code": "NAM127",
+              "display": "Vitiligo (Siddha)",
+              "equivalence": "wider",
+              "comment": "Reverse semantic mapping with confidence 0.658. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.658"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "8A44",
+          "display": "Leukodystrophies",
+          "target": [
+            {
+              "code": "NAM128",
+              "display": "Leukoderma (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.497. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.497"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XT9T",
+          "display": "Ageing-related",
+          "target": [
+            {
+              "code": "NAM132",
+              "display": "Premature Aging (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.535. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.535"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XT8W",
+          "display": "chronic",
+          "target": [
+            {
+              "code": "NAM134",
+              "display": "Lifestyle Disorder (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.482. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,9 +5,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { LoginPage } from "./pages/LoginPage";
+import { AuthCallback } from "./pages/AuthCallback";
+import { RoleSelection } from "./pages/RoleSelection";
+import { OTPVerification } from "./pages/OTPVerification";
 import { PatientDashboard } from "./pages/PatientDashboard";
 import { DoctorDashboard } from "./pages/DoctorDashboard";
 import { CuratorDashboard } from "./pages/CuratorDashboard";
+import TerminologyShowcase from "./pages/TerminologyShowcase";
 import NotFound from "./pages/NotFound";
 import { User } from "@/lib/mockData";
 import Home from "./pages/Home";
@@ -59,16 +63,31 @@ const App = () => {
                   />
                 } 
               />
+              <Route 
+                path="/auth/callback" 
+                element={<AuthCallback onLogin={handleLogin} />} 
+              />
+              <Route 
+                path="/otp-verification" 
+                element={<OTPVerification onLogin={handleLogin} />} 
+              />
+              <Route 
+                path="/select-role" 
+                element={<RoleSelection onRoleSelected={handleLogin} />} 
+              />
+              <Route 
+                path="/role-selection" 
+                element={<RoleSelection onRoleSelected={handleLogin} />} 
+              />
 
               <Route path="/dashboard" element={getDashboardComponent()} />
               <Route path="/doctor" element={getDashboardComponent()} />
               <Route path="/curator" element={getDashboardComponent()} />
-               <Route path="/docs" element={<DocsPage />} />
+              <Route path="/terminology" element={<TerminologyShowcase />} />
+              <Route path="/docs" element={<DocsPage />} />
               <Route path="/api" element={<API />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/api" element={<API />} />
             </Routes>
           </BrowserRouter>
         </SidebarProvider>

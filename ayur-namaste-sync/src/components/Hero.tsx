@@ -92,26 +92,24 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
           >
             <Button
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/terminology")}
               size="lg"
               className="gradient-medical text-primary-foreground font-semibold shadow-glow hover:shadow-green-glow transition-transform hover:scale-105 text-lg px-8 py-4"
             >
-              Start Healthcare Journey
+              🚀 Try Live Demo
               <ArrowRight className="h-5 w-5 ml-2 animate-moveRight" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              onClick={() =>
-                document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => navigate("/login")}
               className="text-lg px-8 py-4 border-primary/20 hover:bg-primary/10 hover:scale-105 transition-transform"
             >
-              Learn More
+              Doctor Dashboard
             </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats - NAMASTE FHIR Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -119,10 +117,10 @@ export function Hero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-border/20"
           >
             {[
-              { value: "5K+", label: "Active Users" },
-              { value: "200+", label: "Healthcare Providers" },
-              { value: "500K+", label: "Code Mappings" },
-              { value: "99.9%", label: "Uptime" },
+              { value: "150+", label: "AYUSH Concepts", color: "text-green-500" },
+              { value: "5", label: "Traditional Systems", color: "text-blue-500" },
+              { value: "4", label: "FHIR CodeSystems", color: "text-purple-500" },
+              { value: "100%", label: "ICD-11 Mapping", color: "text-orange-500" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -131,7 +129,7 @@ export function Hero() {
                 transition={{ delay: i * 0.2, type: "spring", stiffness: 100 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-primary">{stat.value}</div>
+                <div className={`text-3xl font-bold ${stat.color}`}>{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}

@@ -1,0 +1,2820 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "namaste-to-icd11-mms",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/ConceptMap"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/ConceptMap/namaste-to-icd11-mms",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "NAMASTE-ICD11-MMS-MAP"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NAMASTEToICD11MMSConceptMap",
+  "title": "NAMASTE to ICD-11 MMS ConceptMap",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:39:35.905Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 ConceptMap for mapping NAMASTE AYUSH terminologies to WHO ICD-11 Mortality and Morbidity Statistics (MMS)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Enable dual-coding between AYUSH traditional medicine concepts and international ICD-11 MMS classifications",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "sourceUri": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+  "targetUri": "http://id.who.int/icd/entity/mms",
+  "group": [
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-unani",
+      "target": "http://id.who.int/icd/entity/mms",
+      "element": [
+        {
+          "code": "NAM002",
+          "display": "Asthma (Unani)",
+          "target": [
+            {
+              "code": "CA23",
+              "display": "Asthma",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.77. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.77"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM005",
+          "display": "Headache (Unani)",
+          "target": [
+            {
+              "code": "8A81.Z",
+              "display": "Tension-type headache,unspecified",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.634. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.634"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM008",
+          "display": "Cold (Unani)",
+          "target": [
+            {
+              "code": "4A84.31",
+              "display": "Cold-induced Anaphylaxis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.495. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM011",
+          "display": "Obesity (Unani)",
+          "target": [
+            {
+              "code": "5B81",
+              "display": "Obesity",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.627. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.627"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM014",
+          "display": "Skin Rash (Unani)",
+          "target": [
+            {
+              "code": "ME66.6",
+              "display": "Rash",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.664. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM017",
+          "display": "Constipation (Unani)",
+          "target": [
+            {
+              "code": "ME05.0",
+              "display": "Constipation",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.684. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.684"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM020",
+          "display": "Bronchitis (Unani)",
+          "target": [
+            {
+              "code": "CA20",
+              "display": "Bronchitis",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.691. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.691"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM023",
+          "display": "Depression (Unani)",
+          "target": [
+            {
+              "code": "6C43.70",
+              "display": "Opioid-induced mood disorder",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.442. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.442"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM026",
+          "display": "Gallstones (Unani)",
+          "target": [
+            {
+              "code": "XA8KL9",
+              "display": "gallbladder",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.601. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.601"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM029",
+          "display": "Thyroid Disorder (Unani)",
+          "target": [
+            {
+              "code": "5A00.1Z",
+              "display": "Iodine-deficiency-related thyroid disorders or allied conditions,unspecified",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.636. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.636"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM032",
+          "display": "Acidity (Unani)",
+          "target": [
+            {
+              "code": "5C73",
+              "display": "Acidosis",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.664. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM035",
+          "display": "Acne (Unani)",
+          "target": [
+            {
+              "code": "ED80",
+              "display": "Acne",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.678. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.678"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM038",
+          "display": "Menstrual Pain (Unani)",
+          "target": [
+            {
+              "code": "MB40.8",
+              "display": "Analgesia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.431. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.431"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM041",
+          "display": "Low Immunity (Unani)",
+          "target": [
+            {
+              "code": "4A20.0",
+              "display": "Adult-onset Immunodeficiency",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.432. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM047",
+          "display": "Memory Loss (Unani)",
+          "target": [
+            {
+              "code": "MB21.1",
+              "display": "Amnesia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.455. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.455"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM050",
+          "display": "Gout (Unani)",
+          "target": [
+            {
+              "code": "FA25",
+              "display": "Gout",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.69. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.69"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM053",
+          "display": "Glaucoma (Unani)",
+          "target": [
+            {
+              "code": "9C61",
+              "display": "Glaucoma",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.702. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.702"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM056",
+          "display": "Nasal Polyp (Unani)",
+          "target": [
+            {
+              "code": "MA82.2",
+              "display": "Nasality",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.545. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.545"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM059",
+          "display": "Laryngitis (Unani)",
+          "target": [
+            {
+              "code": "XA2RH5",
+              "display": "Larynx",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.649. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.649"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM062",
+          "display": "Pneumonia (Unani)",
+          "target": [
+            {
+              "code": "CA40",
+              "display": "Pneumonia",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.739. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.739"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM065",
+          "display": "Palpitation (Unani)",
+          "target": [
+            {
+              "code": "MC81.2",
+              "display": "Palpitations",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.6. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.6"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM068",
+          "display": "Burn Injury (Unani)",
+          "target": [
+            {
+              "code": "EJ40",
+              "display": "Sunburn",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.42. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.42"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM071",
+          "display": "Food Poisoning (Unani)",
+          "target": [
+            {
+              "code": "MG43.7",
+              "display": "Anorexia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.487. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.487"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM074",
+          "display": "Dengue (Unani)",
+          "target": [
+            {
+              "code": "1D0Z",
+              "display": "Non-viral and unspecified infections of the central nervous system,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.451. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.451"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM077",
+          "display": "Chickenpox (Unani)",
+          "target": [
+            {
+              "code": "XM0UW4",
+              "display": "Hexaminolevulinate",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.434. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.434"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM080",
+          "display": "Polio (Unani)",
+          "target": [
+            {
+              "code": "XN3M0",
+              "display": "Poliovirus",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.608. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.608"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM083",
+          "display": "Ringworm (Unani)",
+          "target": [
+            {
+              "code": "XN69Y",
+              "display": "Hookworm",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.438. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.438"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM086",
+          "display": "Warts (Unani)",
+          "target": [
+            {
+              "code": "LD28.1",
+              "display": "Ehlers-Danlos syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.485. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.485"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM089",
+          "display": "Hepatitis B (Unani)",
+          "target": [
+            {
+              "code": "DB95.1Z",
+              "display": "Drug-induced or toxic liver disease with chronic hepatitis,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.444. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.444"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM092",
+          "display": "STD (Unani)",
+          "target": [
+            {
+              "code": "4B03",
+              "display": "Eosinophilia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.468. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.468"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM095",
+          "display": "Bladder Stone (Unani)",
+          "target": [
+            {
+              "code": "MB46.2",
+              "display": "Athetosis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.437. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.437"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM098",
+          "display": "Appendicitis (Unani)",
+          "target": [
+            {
+              "code": "DB10",
+              "display": "Appendicitis",
+              "equivalence": "equivalent",
+              "comment": "Semantic mapping with confidence 0.827. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.827"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM101",
+          "display": "IBS (Unani)",
+          "target": [
+            {
+              "code": "XA0QT6",
+              "display": "Ileum",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.496. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.496"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM104",
+          "display": "Anorexia (Unani)",
+          "target": [
+            {
+              "code": "MG43.7",
+              "display": "Anorexia",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.764. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.764"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM107",
+          "display": "Snoring (Unani)",
+          "target": [
+            {
+              "code": "7A4Z",
+              "display": "Sleep-related breathing disorders,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.504. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.504"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM110",
+          "display": "Hypothermia (Unani)",
+          "target": [
+            {
+              "code": "NF02",
+              "display": "Hypothermia",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.764. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.764"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM113",
+          "display": "Tinnitus (Unani)",
+          "target": [
+            {
+              "code": "MC41",
+              "display": "Tinnitus",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.781. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.781"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM116",
+          "display": "Trigeminal Neuralgia (Unani)",
+          "target": [
+            {
+              "code": "FB56.2",
+              "display": "Myalgia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.48. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.48"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM119",
+          "display": "Bipolar Disorder (Unani)",
+          "target": [
+            {
+              "code": "XM3GA2",
+              "display": "Manidipine",
+              "equivalence": "unmatched",
+              "comment": "Semantic mapping with confidence 0.366. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.366"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM122",
+          "display": "ADHD (Unani)",
+          "target": [
+            {
+              "code": "MG43.7",
+              "display": "Anorexia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.43. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.43"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM125",
+          "display": "Stammering (Unani)",
+          "target": [
+            {
+              "code": "6B20.1",
+              "display": "Obsessive-compulsive disorder with poor to absent insight",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.478. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.478"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM128",
+          "display": "Leukoderma (Unani)",
+          "target": [
+            {
+              "code": "8A44",
+              "display": "Leukodystrophies",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.497. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.497"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM131",
+          "display": "Wrinkles (Unani)",
+          "target": [
+            {
+              "code": "SC73",
+              "display": "Non-inflammatory eyelid disorder (#REF!)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.446. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.446"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM134",
+          "display": "Lifestyle Disorder (Unani)",
+          "target": [
+            {
+              "code": "XT8W",
+              "display": "chronic",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.482. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM137",
+          "display": "Asthma (Unani)",
+          "target": [
+            {
+              "code": "CA23",
+              "display": "Asthma",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.77. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.77"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM140",
+          "display": "Headache (Unani)",
+          "target": [
+            {
+              "code": "8A81.Z",
+              "display": "Tension-type headache,unspecified",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.634. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.634"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM143",
+          "display": "Cold (Unani)",
+          "target": [
+            {
+              "code": "4A84.31",
+              "display": "Cold-induced Anaphylaxis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.495. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM146",
+          "display": "Obesity (Unani)",
+          "target": [
+            {
+              "code": "5B81",
+              "display": "Obesity",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.627. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.627"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM149",
+          "display": "Skin Rash (Unani)",
+          "target": [
+            {
+              "code": "ME66.6",
+              "display": "Rash",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.664. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.664"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-ayurveda",
+      "target": "http://id.who.int/icd/entity/mms",
+      "element": [
+        {
+          "code": "NAM003",
+          "display": "Hypertension (Ayurveda)",
+          "target": [
+            {
+              "code": "5A72",
+              "display": "Hyperaldosteronism",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.495. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM006",
+          "display": "Migraine (Ayurveda)",
+          "target": [
+            {
+              "code": "8A80",
+              "display": "Migraine",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.712. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.712"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM012",
+          "display": "Jaundice (Ayurveda)",
+          "target": [
+            {
+              "code": "5C58.00",
+              "display": "Crigler-Najjar syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.445. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.445"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM015",
+          "display": "Eczema (Ayurveda)",
+          "target": [
+            {
+              "code": "1B73",
+              "display": "Ecthyma",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.522. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM018",
+          "display": "Diarrhea (Ayurveda)",
+          "target": [
+            {
+              "code": "ME05.1",
+              "display": "Diarrhoea",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.637. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.637"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM021",
+          "display": "Insomnia (Ayurveda)",
+          "target": [
+            {
+              "code": "7A01",
+              "display": "Short-term insomnia",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.662. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.662"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM024",
+          "display": "Ulcer (Ayurveda)",
+          "target": [
+            {
+              "code": "DA60.60",
+              "display": "Alcohol-induced gastric ulcer",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.566. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.566"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM027",
+          "display": "Kidney Stones (Ayurveda)",
+          "target": [
+            {
+              "code": "MF98.1",
+              "display": "Hyperkaluria",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.489. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.489"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM030",
+          "display": "Sinusitis (Ayurveda)",
+          "target": [
+            {
+              "code": "GC00.0",
+              "display": "Trigonitis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.519. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.519"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM033",
+          "display": "Indigestion (Ayurveda)",
+          "target": [
+            {
+              "code": "DA22.Z",
+              "display": "Gastro-oesophageal reflux disease,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.497. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.497"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM036",
+          "display": "Hair Loss (Ayurveda)",
+          "target": [
+            {
+              "code": "EH72.00",
+              "display": "Drug-induced telogen hair loss",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.557. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.557"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM039",
+          "display": "Infertility (Ayurveda)",
+          "target": [
+            {
+              "code": "MB41.0",
+              "display": "Anosmia",
+              "equivalence": "unmatched",
+              "comment": "Semantic mapping with confidence 0.377. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.377"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM042",
+          "display": "Fatigue (Ayurveda)",
+          "target": [
+            {
+              "code": "MG22",
+              "display": "Fatigue",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.671. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.671"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM045",
+          "display": "Parkinsonism (Ayurveda)",
+          "target": [
+            {
+              "code": "8A00",
+              "display": "Parkinsonism",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.674. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.674"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM048",
+          "display": "Joint Pain (Ayurveda)",
+          "target": [
+            {
+              "code": "FB56.2",
+              "display": "Myalgia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.436. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.436"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM051",
+          "display": "Eye Strain (Ayurveda)",
+          "target": [
+            {
+              "code": "SC73",
+              "display": "Non-inflammatory eyelid disorder (#REF!)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.516. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.516"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM054",
+          "display": "Ear Infection (Ayurveda)",
+          "target": [
+            {
+              "code": "XA01U5",
+              "display": "Ear",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.442. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.442"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM057",
+          "display": "Tonsillitis (Ayurveda)",
+          "target": [
+            {
+              "code": "CA08.1Z",
+              "display": "Non-allergic rhinitis,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.483. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.483"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM060",
+          "display": "Whooping Cough (Ayurveda)",
+          "target": [
+            {
+              "code": "8.00E+41",
+              "display": "Pachymeningitis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.414. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.414"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM063",
+          "display": "Breathlessness (Ayurveda)",
+          "target": [
+            {
+              "code": "7A4Z",
+              "display": "Sleep-related breathing disorders,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.523. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.523"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM066",
+          "display": "Varicose Veins (Ayurveda)",
+          "target": [
+            {
+              "code": "XA5J49",
+              "display": "Veins",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.555. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.555"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM072",
+          "display": "Malaria (Ayurveda)",
+          "target": [
+            {
+              "code": "XN5FW",
+              "display": "Plasmodium",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.536. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.536"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM075",
+          "display": "Chikungunya (Ayurveda)",
+          "target": [
+            {
+              "code": "DB98.5",
+              "display": "Budd-Chiari syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.522. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM078",
+          "display": "Measles (Ayurveda)",
+          "target": [
+            {
+              "code": "1F03",
+              "display": "Measles",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.609. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.609"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM081",
+          "display": "Smallpox (Ayurveda)",
+          "target": [
+            {
+              "code": "1.00E+70",
+              "display": "Smallpox",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.642. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.642"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM084",
+          "display": "Fungal Infection (Ayurveda)",
+          "target": [
+            {
+              "code": "1F20",
+              "display": "Aspergillosis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.569. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.569"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM087",
+          "display": "Herpes (Ayurveda)",
+          "target": [
+            {
+              "code": "LD24.23",
+              "display": "Yunis-Varon disease",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.432. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM090",
+          "display": "Hepatitis C (Ayurveda)",
+          "target": [
+            {
+              "code": "DB95.1Z",
+              "display": "Drug-induced or toxic liver disease with chronic hepatitis,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.432. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.432"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM093",
+          "display": "UTI (Ayurveda)",
+          "target": [
+            {
+              "code": "MF98.1",
+              "display": "Hyperkaluria",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.443. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.443"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM096",
+          "display": "Bedwetting (Ayurveda)",
+          "target": [
+            {
+              "code": "LA31.2",
+              "display": "Ankyloglossia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.453. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.453"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM099",
+          "display": "Pancreatitis (Ayurveda)",
+          "target": [
+            {
+              "code": "XA3QC5",
+              "display": "pancreas",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.601. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.601"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM102",
+          "display": "Crohn’s Disease (Ayurveda)",
+          "target": [
+            {
+              "code": "EE01",
+              "display": "Hypohidrosis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.487. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.487"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM105",
+          "display": "Bulimia (Ayurveda)",
+          "target": [
+            {
+              "code": "MG43.7",
+              "display": "Anorexia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.507. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM108",
+          "display": "Night Sweats (Ayurveda)",
+          "target": [
+            {
+              "code": "EE00",
+              "display": "Hyperhidrosis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.443. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.443"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM111",
+          "display": "Motion Sickness (Ayurveda)",
+          "target": [
+            {
+              "code": "MB48.0",
+              "display": "Vertigo",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.463. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.463"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM114",
+          "display": "Seizures (Ayurveda)",
+          "target": [
+            {
+              "code": "8A66.1Z",
+              "display": "Non-convulsive status epilepticus,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.507. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM117",
+          "display": "Phobia (Ayurveda)",
+          "target": [
+            {
+              "code": "MB24.3",
+              "display": "anxiety",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.558. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.558"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM120",
+          "display": "Schizophrenia (Ayurveda)",
+          "target": [
+            {
+              "code": "6A20",
+              "display": "Schizophrenia",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.661. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.661"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM123",
+          "display": "Learning Disorder (Ayurveda)",
+          "target": [
+            {
+              "code": "6B20",
+              "display": "Obsessive-compulsive disorder",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.42. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.42"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM129",
+          "display": "Sunburn (Ayurveda)",
+          "target": [
+            {
+              "code": "EJ40",
+              "display": "Sunburn",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.736. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.736"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM132",
+          "display": "Premature Aging (Ayurveda)",
+          "target": [
+            {
+              "code": "XT9T",
+              "display": "Ageing-related",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.535. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.535"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM138",
+          "display": "Hypertension (Ayurveda)",
+          "target": [
+            {
+              "code": "5A72",
+              "display": "Hyperaldosteronism",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.495. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM141",
+          "display": "Migraine (Ayurveda)",
+          "target": [
+            {
+              "code": "8A80",
+              "display": "Migraine",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.712. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.712"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM147",
+          "display": "Jaundice (Ayurveda)",
+          "target": [
+            {
+              "code": "5C58.00",
+              "display": "Crigler-Najjar syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.445. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.445"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM150",
+          "display": "Eczema (Ayurveda)",
+          "target": [
+            {
+              "code": "1B73",
+              "display": "Ecthyma",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.522. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.522"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-siddha",
+      "target": "http://id.who.int/icd/entity/mms",
+      "element": [
+        {
+          "code": "NAM004",
+          "display": "Anemia (Siddha)",
+          "target": [
+            {
+              "code": "MB41.0",
+              "display": "Anosmia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.481. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.481"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM013",
+          "display": "Epilepsy (Siddha)",
+          "target": [
+            {
+              "code": "8A66.1Z",
+              "display": "Non-convulsive status epilepticus,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.55. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.55"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM016",
+          "display": "Psoriasis (Siddha)",
+          "target": [
+            {
+              "code": "EA90",
+              "display": "Psoriasis",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.775. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.775"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM019",
+          "display": "Gastritis (Siddha)",
+          "target": [
+            {
+              "code": "DA42",
+              "display": "Gastritis",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.695. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.695"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM022",
+          "display": "Anxiety (Siddha)",
+          "target": [
+            {
+              "code": "MB24.3",
+              "display": "anxiety",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.701. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.701"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM025",
+          "display": "Piles (Siddha)",
+          "target": [
+            {
+              "code": "DB60",
+              "display": "Haemorrhoids",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.444. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.444"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM028",
+          "display": "Liver Disorder (Siddha)",
+          "target": [
+            {
+              "code": "DB92.Z",
+              "display": "Non-alcoholic fatty liver disease,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.573. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.573"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM031",
+          "display": "Allergy (Siddha)",
+          "target": [
+            {
+              "code": "CA08.1Z",
+              "display": "Non-allergic rhinitis,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.566. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.566"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM034",
+          "display": "Flatulence (Siddha)",
+          "target": [
+            {
+              "code": "DA22.Z",
+              "display": "Gastro-oesophageal reflux disease,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.508. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.508"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM037",
+          "display": "Dandruff (Siddha)",
+          "target": [
+            {
+              "code": "LD28.1",
+              "display": "Ehlers-Danlos syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.473. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.473"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM049",
+          "display": "Sciatica (Siddha)",
+          "target": [
+            {
+              "code": "ME84.3",
+              "display": "Sciatica",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.774. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.774"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM052",
+          "display": "Cataract (Siddha)",
+          "target": [
+            {
+              "code": "9B10",
+              "display": "Cataract",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.733. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.733"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM064",
+          "display": "Chest Pain (Siddha)",
+          "target": [
+            {
+              "code": "BC42",
+              "display": "Myocarditis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.488. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.488"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM067",
+          "display": "Hemorrhage (Siddha)",
+          "target": [
+            {
+              "code": "DB60",
+              "display": "Haemorrhoids",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.57. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.57"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM070",
+          "display": "Snake Bite (Siddha)",
+          "target": [
+            {
+              "code": "XE44L",
+              "display": "Non-venomous snake",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.488. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.488"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM073",
+          "display": "Typhoid (Siddha)",
+          "target": [
+            {
+              "code": "AB16",
+              "display": "Tympanosclerosis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.495. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.495"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM079",
+          "display": "Mumps (Siddha)",
+          "target": [
+            {
+              "code": "1D80",
+              "display": "Mumps",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.706. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.706"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM082",
+          "display": "Leprosy (Siddha)",
+          "target": [
+            {
+              "code": "1B20",
+              "display": "Leprosy",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.709. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.709"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM085",
+          "display": "Scabies (Siddha)",
+          "target": [
+            {
+              "code": "1G04",
+              "display": "Scabies",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.753. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.753"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM097",
+          "display": "Colic (Siddha)",
+          "target": [
+            {
+              "code": "XM6510",
+              "display": "Colistin",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.532. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.532"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM100",
+          "display": "GERD (Siddha)",
+          "target": [
+            {
+              "code": "DA22.Z",
+              "display": "Gastro-oesophageal reflux disease,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.564. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.564"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM103",
+          "display": "Colitis (Siddha)",
+          "target": [
+            {
+              "code": "DB33.43",
+              "display": "Drug-induced colitis",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.537. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.537"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM106",
+          "display": "Obstructive Sleep Apnea (Siddha)",
+          "target": [
+            {
+              "code": "7A4Z",
+              "display": "Sleep-related breathing disorders,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.507. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.507"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM112",
+          "display": "Vertigo (Siddha)",
+          "target": [
+            {
+              "code": "MB48.0",
+              "display": "Vertigo",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.756. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.756"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM115",
+          "display": "Neuralgia (Siddha)",
+          "target": [
+            {
+              "code": "FB56.2",
+              "display": "Myalgia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.486. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.486"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM118",
+          "display": "OCD (Siddha)",
+          "target": [
+            {
+              "code": "6B2Z",
+              "display": "Obsessive-compulsive or related disorders,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.555. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.555"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM127",
+          "display": "Vitiligo (Siddha)",
+          "target": [
+            {
+              "code": "ED63.0",
+              "display": "Vitiligo",
+              "equivalence": "wider",
+              "comment": "Semantic mapping with confidence 0.658. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.658"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM130",
+          "display": "Dark Circles (Siddha)",
+          "target": [
+            {
+              "code": "5C58.00",
+              "display": "Crigler-Najjar syndrome",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.437. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.437"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM133",
+          "display": "Obesity-Related Disorder (Siddha)",
+          "target": [
+            {
+              "code": "5B81",
+              "display": "Obesity",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.568. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.568"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM139",
+          "display": "Anemia (Siddha)",
+          "target": [
+            {
+              "code": "MB41.0",
+              "display": "Anosmia",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.481. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.481"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM148",
+          "display": "Epilepsy (Siddha)",
+          "target": [
+            {
+              "code": "8A66.1Z",
+              "display": "Non-convulsive status epilepticus,unspecified",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.55. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.55"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

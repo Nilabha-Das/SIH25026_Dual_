@@ -1,0 +1,620 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "namaste-to-icd11-tm2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/ConceptMap"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/ConceptMap/namaste-to-icd11-tm2",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "NAMASTE-ICD11-TM2-MAP"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NAMASTEToICD11TM2ConceptMap",
+  "title": "NAMASTE to ICD-11 TM2 ConceptMap",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:39:35.905Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 ConceptMap for mapping NAMASTE AYUSH terminologies to WHO ICD-11 Traditional Medicine Module 2 (TM2)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Enable seamless mapping between Indian AYUSH traditional medicine concepts and WHO ICD-11 TM2 classifications",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "sourceUri": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+  "targetUri": "http://id.who.int/icd/entity/tm2",
+  "group": [
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-siddha",
+      "target": "http://id.who.int/icd/entity/tm2",
+      "element": [
+        {
+          "code": "NAM001",
+          "display": "Diabetes (Siddha)",
+          "target": [
+            {
+              "code": "TM2-003",
+              "display": "Prameha (Diabetes pattern)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.579. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.579"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM007",
+          "display": "Cough (Siddha)",
+          "target": [
+            {
+              "code": "TM2-013",
+              "display": "Siddha Peenisam (Cold)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.549. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.549"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM010",
+          "display": "Back Pain (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.47. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM040",
+          "display": "PCOS (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.446. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.446"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM043",
+          "display": "Stroke Recovery (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "unmatched",
+              "comment": "Semantic mapping with confidence 0.368. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.368"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM046",
+          "display": "Alzheimer’s (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.528. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.528"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM055",
+          "display": "Hearing Loss (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.43. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.43"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM058",
+          "display": "Sore Throat (Siddha)",
+          "target": [
+            {
+              "code": "TM2-013",
+              "display": "Siddha Peenisam (Cold)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.491. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.491"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM061",
+          "display": "Tuberculosis (Siddha)",
+          "target": [
+            {
+              "code": "TM2-011",
+              "display": "Siddha Viral Fever Pattern",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.536. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.536"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM076",
+          "display": "Viral Fever (Siddha)",
+          "target": [
+            {
+              "code": "TM2-011",
+              "display": "Siddha Viral Fever Pattern",
+              "equivalence": "equivalent",
+              "comment": "Semantic mapping with confidence 0.845. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.845"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM088",
+          "display": "Hepatitis A (Siddha)",
+          "target": [
+            {
+              "code": "TM2-011",
+              "display": "Siddha Viral Fever Pattern",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.504. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.504"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM091",
+          "display": "HIV Infection (Siddha)",
+          "target": [
+            {
+              "code": "TM2-011",
+              "display": "Siddha Viral Fever Pattern",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.598. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.598"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM094",
+          "display": "Prostate Enlargement (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.427. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.427"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM109",
+          "display": "Heat Stroke (Siddha)",
+          "target": [
+            {
+              "code": "TM2-011",
+              "display": "Siddha Viral Fever Pattern",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.5. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.5"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM121",
+          "display": "Autism (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.47. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM124",
+          "display": "Speech Disorder (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.464. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.464"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM136",
+          "display": "Diabetes (Siddha)",
+          "target": [
+            {
+              "code": "TM2-003",
+              "display": "Prameha (Diabetes pattern)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.579. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.579"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM142",
+          "display": "Cough (Siddha)",
+          "target": [
+            {
+              "code": "TM2-013",
+              "display": "Siddha Peenisam (Cold)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.549. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.549"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM145",
+          "display": "Back Pain (Siddha)",
+          "target": [
+            {
+              "code": "TM2-012",
+              "display": "Siddha Prameha",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.47. Source: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-ayurveda",
+      "target": "http://id.who.int/icd/entity/tm2",
+      "element": [
+        {
+          "code": "NAM009",
+          "display": "Arthritis (Ayurveda)",
+          "target": [
+            {
+              "code": "TM2-009",
+              "display": "Sandhivata (Osteoarthritis)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.482. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM069",
+          "display": "Wound Healing (Ayurveda)",
+          "target": [
+            {
+              "code": "TM2-006",
+              "display": "Kustha (Skin disorder)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.412. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.412"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM126",
+          "display": "Skin Burn (Ayurveda)",
+          "target": [
+            {
+              "code": "TM2-006",
+              "display": "Kustha (Skin disorder)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.53. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.53"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM135",
+          "display": "Fever (Ayurveda)",
+          "target": [
+            {
+              "code": "TM2-007",
+              "display": "Jwara (Fever)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.594. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.594"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "NAM144",
+          "display": "Arthritis (Ayurveda)",
+          "target": [
+            {
+              "code": "TM2-009",
+              "display": "Sandhivata (Osteoarthritis)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.482. Source: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://ayush.gov.in/fhir/CodeSystem/namaste-unani",
+      "target": "http://id.who.int/icd/entity/tm2",
+      "element": [
+        {
+          "code": "NAM044",
+          "display": "Paralysis (Unani)",
+          "target": [
+            {
+              "code": "TM2-005",
+              "display": "Ardita (Facial paralysis)",
+              "equivalence": "narrower",
+              "comment": "Semantic mapping with confidence 0.537. Source: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.537"
+                },
+                {
+                  "property": "source_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

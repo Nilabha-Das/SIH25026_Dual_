@@ -4,7 +4,8 @@ import { Layout } from "@/components/Layout";
 import CodeSnippet from "@/components/CodeSnippet";
 import FhirBundleEditor from "@/components/FhirBundleEditor";
 import { motion } from "framer-motion";
-import { Copy, Key } from "lucide-react";
+import { Copy, Key, Stethoscope } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const apiBase = "http://localhost:3000";
 
@@ -16,11 +17,28 @@ const apiKeysMock = [
 ];
 
 const apis = [
-  { name: "Namaste API", url: `${apiBase}/api/namaste`, desc: "NAMASTE codes endpoint." },
-  { name: "ICD API", url: `${apiBase}/api/icd`, desc: "ICD codes endpoint." },
-  { name: "Mapping API", url: `${apiBase}/api/mapping`, desc: "Mapping NAMASTE ↔ ICD endpoint." },
-  { name: "FHIR Bundle API", url: `${apiBase}/api/fhir/bundle`, desc: "Upload FHIR Bundles (transaction)." },
-  { name: "Register API", url: `${apiBase}/api/auth/register`, desc: "Register users." },
+  // Core APIs (Port 3000)
+  { name: "Namaste API", url: `${apiBase}/api/namaste`, desc: "NAMASTE codes endpoint.", category: "core" },
+  { name: "ICD API", url: `${apiBase}/api/icd`, desc: "ICD codes endpoint.", category: "core" },
+  { name: "Mapping API", url: `${apiBase}/api/mapping`, desc: "Mapping NAMASTE ↔ ICD endpoint.", category: "core" },
+  { name: "FHIR Bundle API", url: `${apiBase}/api/fhir/bundle`, desc: "Upload FHIR Bundles (transaction).", category: "fhir" },
+  { name: "Register API", url: `${apiBase}/api/auth/register`, desc: "Register users.", category: "auth" },
+  
+  // FHIR Terminology Service (Port 3001)
+  { name: "Service Health", url: "http://localhost:3001/health", desc: "Terminology service health check with WHO integration status.", category: "fhir" },
+  { name: "Service Statistics", url: "http://localhost:3001/stats", desc: "Comprehensive statistics including WHO API metrics.", category: "fhir" },
+  { name: "FHIR CodeSystems", url: "http://localhost:3001/CodeSystem", desc: "All FHIR R4 CodeSystem resources.", category: "fhir" },
+  { name: "FHIR ConceptMaps", url: "http://localhost:3001/ConceptMap", desc: "All ConceptMap resources for dual-coding.", category: "fhir" },
+  { name: "Code Lookup", url: "http://localhost:3001/CodeSystem/namaste-ayurveda/$lookup?code=NAM003", desc: "FHIR $lookup operation.", category: "fhir" },
+  { name: "Code Translation", url: "http://localhost:3001/ConceptMap/namaste-to-icd11-mms/$translate?code=NAM002", desc: "FHIR $translate operation.", category: "fhir" },
+  
+  // WHO API Integration (Port 3001)
+  { name: "WHO Health Check", url: "http://localhost:3001/who/health", desc: "WHO ICD-11 API connectivity and authentication status.", category: "who" },
+  { name: "WHO Entity Fetch", url: "http://localhost:3001/who/icd11/410525008", desc: "Fetch official ICD-11 entity from WHO API.", category: "who" },
+  { name: "WHO Search", url: "http://localhost:3001/who/search?q=diabetes", desc: "Search WHO ICD-11 entities with semantic matching.", category: "who" },
+  { name: "WHO Validation", url: "http://localhost:3001/who/validate-mapping", desc: "Validate NAMASTE mappings against WHO standards.", category: "who" },
+  { name: "Enhanced Mapping", url: "http://localhost:3001/namaste/NAM001/mappings/validated", desc: "NAMASTE mappings with WHO API validation.", category: "who" },
+  { name: "Bulk Validation", url: "http://localhost:3001/who/validate-all-mappings?limit=10", desc: "Bulk validate mappings with WHO API.", category: "who" },
 ];
 
 export default function ApiDocsPage() {
@@ -32,7 +50,7 @@ export default function ApiDocsPage() {
   const sectionIds = [
     { id: "api-keys", label: "API Keys" },
     { id: "endpoints", label: "Endpoints" },
-    { id: "try-it", label: "Try It" },
+    { id: "try-it", label: "Live Testing" },
     { id: "fhir-bundle", label: "FHIR Bundle" },
     { id: "rate-limits", label: "Rate Limits" },
     { id: "security", label: "Security" },
@@ -95,8 +113,17 @@ export default function ApiDocsPage() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-cyan-300 text-center mb-8"
         >
-          SwasthaLink — API Docs & FHIR Editor
+          NAMASTE API Documentation
         </motion.h1>
+        <motion.p
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-center text-gray-400 mb-8 max-w-4xl mx-auto"
+        >
+          Comprehensive API documentation for the FHIR R4-compliant NAMASTE terminology system with WHO ICD-11 integration, 
+          featuring 21+ endpoints across FHIR operations, WHO API integration, and traditional medicine dual-coding.
+        </motion.p>
 
         <div className="max-w-7xl mx-auto grid grid-cols-12 gap-8">
           {/* Sidebar */}
@@ -201,14 +228,31 @@ export default function ApiDocsPage() {
             {/* Endpoints Section */}
             <section id="endpoints" className="rounded-2xl bg-gray-900/60 border border-gray-800 p-6 shadow">
               <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="text-2xl font-semibold text-cyan-300 mb-3">
-                API Endpoints
+                API Endpoints (21+ Endpoints)
               </motion.h2>
+              <p className="text-sm text-gray-400 mb-4">
+                Complete API reference including WHO ICD-11 integration endpoints, FHIR operations, and traditional medicine dual-coding features.
+              </p>
 
               <div className="grid gap-4">
                 {apis.map((a, i) => (
                   <motion.div key={i} whileHover={{ scale: 1.01 }} className="flex items-start justify-between bg-gray-900 border border-gray-800 p-4 rounded-lg">
                     <div>
-                      <div className="font-semibold text-gray-100">{a.name}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="font-semibold text-gray-100">{a.name}</div>
+                        {a.category && (
+                          <span className={`text-xs px-2 py-1 rounded ${
+                            a.category === 'who' ? 'bg-green-100 text-green-700' :
+                            a.category === 'fhir' ? 'bg-blue-100 text-blue-700' :
+                            a.category === 'core' ? 'bg-purple-100 text-purple-700' :
+                            'bg-gray-100 text-gray-700'
+                          }`}>
+                            {a.category === 'who' ? '🌍 WHO' : 
+                             a.category === 'fhir' ? '🏥 FHIR' :
+                             a.category === 'core' ? '⚡ Core' : '🔐 Auth'}
+                          </span>
+                        )}
+                      </div>
                       <div className="text-sm text-gray-400 mt-1">{a.desc}</div>
                       <div className="mt-2 flex items-center gap-2">
                         <code className="text-xs text-cyan-300">{a.url}</code>
@@ -221,22 +265,72 @@ export default function ApiDocsPage() {
                   </motion.div>
                 ))}
               </div>
+              
+              <div className="mt-4 p-4 bg-cyan-900/20 border border-cyan-700/30 rounded-lg">
+                <div className="text-sm font-medium text-cyan-300 mb-2">� Key Features:</div>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• <strong>WHO API Integration:</strong> Real-time connection to official WHO ICD-11 API</li>
+                  <li>• <strong>FHIR R4 Compliance:</strong> Complete terminology service with standard operations</li>
+                  <li>• <strong>Advanced Confidence Scoring:</strong> Semantic similarity algorithms for mapping quality</li>
+                  <li>• <strong>Performance Optimization:</strong> Intelligent caching and bulk operations</li>
+                </ul>
+              </div>
             </section>
 
             {/* Try It */}
             <section id="try-it" className="rounded-2xl bg-gray-900/60 border border-gray-800 p-6 shadow">
               <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="text-2xl font-semibold text-cyan-300 mb-3">
-                Try it — Examples
+                Live System Testing
               </motion.h2>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <p className="text-sm text-gray-400 mb-2">Search NAMASTE codes</p>
-                  <CodeSnippet code={`GET ${apiBase}/api/namaste?q=diabetes`} language="http" />
+              <div className="bg-cyan-900/20 border border-cyan-700/30 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center">
+                    <Stethoscope className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-cyan-300">Interactive System Testing</h3>
+                    <p className="text-sm text-gray-400">Live validation and testing interface</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-400 mb-2">Translate a code</p>
-                  <CodeSnippet code={`GET ${apiBase}/api/mapping?source=namaste&code=NAM123`} language="http" />
+                <p className="text-gray-300 mb-4">
+                  Access comprehensive testing tools for NAMASTE terminology system APIs, including FHIR operations, 
+                  WHO integration validation, and dual-coding demonstrations through the <strong>Curator Dashboard</strong>.
+                </p>
+                <div className="flex gap-3">
+                  <Button 
+                    onClick={() => window.location.href = '/curator'} 
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white"
+                  >
+                    Access System Testing
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    onClick={() => window.open('http://localhost:3001/health', '_blank')}
+                    className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                  >
+                    Quick Health Check
+                  </Button>
+                </div>
+
+              </div>
+              
+              <div className="border-t border-gray-700 pt-4">
+                <div className="text-sm font-medium text-cyan-300 mb-3">� WHO API Integration Examples</div>
+                <div className="grid md:grid-cols-2 gap-4">
+
+                  <div>
+                    <p className="text-sm text-gray-400 mb-2">🔍 Search WHO ICD-11</p>
+                    <CodeSnippet code={`GET http://localhost:3001/who/search?q=diabetes`} language="http" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400 mb-2">✅ WHO-Validated Mapping</p>
+                    <CodeSnippet code={`GET http://localhost:3001/namaste/NAM001/mappings/validated`} language="http" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400 mb-2">📊 Service Statistics</p>
+                    <CodeSnippet code={`GET http://localhost:3001/stats`} language="http" />
+                  </div>
                 </div>
               </div>
             </section>
@@ -297,12 +391,24 @@ export default function ApiDocsPage() {
                 <li>Rotate API keys and store them in secret managers.</li>
                 <li>Validate and sanitize FHIR bundles server-side before ingest.</li>
                 <li>Limit scopes for each API key and perform server-side scope checks.</li>
+                <li><strong className="text-cyan-300">WHO Integration:</strong> OAuth2 tokens are securely cached with automatic refresh.</li>
+                <li><strong className="text-cyan-300">Enhanced Security:</strong> Advanced validation prevents unauthorized terminology modifications.</li>
+                <li><strong className="text-cyan-300">Rate Limiting:</strong> WHO API rate limiting is handled automatically with intelligent caching.</li>
               </ul>
             </section>
           </main>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-6 text-xs text-gray-500">Replace <code className="text-cyan-300">http://localhost:3000</code> with production API base during deployment.</div>
+        <div className="max-w-7xl mx-auto mt-6 text-xs text-gray-500">
+          <div className="text-center">
+            <div className="mb-2">
+              <strong className="text-cyan-400">NAMASTE Terminology System:</strong> FHIR R4 Compliant • WHO ICD-11 Integration • 21+ API Endpoints
+            </div>
+            <div>
+              Replace <code className="text-cyan-300">http://localhost:3000</code> and <code className="text-cyan-300">http://localhost:3001</code> with production API bases during deployment.
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

@@ -40,7 +40,10 @@ router.get("/search", async (req, res) => {
         const icd = icdDocs.find(i => i.code === m.icdCode);
         return {
           code: m.icdCode,
-          confidence: m.confidence,
+          confidence: m.overallConfidence || m.confidence || 0.5, // Use new overallConfidence field
+          tm2Confidence: m.tm2Confidence || 0.5,
+          icdConfidence: m.icdConfidence || 0.5,
+          overallConfidence: m.overallConfidence || m.confidence || 0.5,
           module: m.module,
           title: icd ? icd.title : "No ICD title"
         };

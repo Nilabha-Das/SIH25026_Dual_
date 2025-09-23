@@ -58,7 +58,19 @@ router.post("/register", validateRole, async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    console.error('Registration error:', err);
+    
+    // Handle MongoDB duplicate key error
+    if (err.code === 11000) {
+      if (err.keyPattern?.email) {
+        return res.status(400).json({ message: "Email already registered" });
+      }
+      if (err.keyPattern?.abhaId) {
+        return res.status(400).json({ message: "ABHA ID generation failed, please try again" });
+      }
+    }
+    
+    res.status(500).json({ message: "Registration failed. Please try again." });
   }
 });
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const auditLogger = require('../middleware/auditLogger');
 
 // Get all pending records that need curator approval
 router.get('/pending-records', async (req, res) => {
@@ -57,6 +58,17 @@ router.post('/:patientId/records/:recordId/review', async (req, res) => {
         }
 
         await patient.save();
+
+        // Log the approval/rejection action
+        await auditLogger.logRecordApproval(req, {
+            recordId: recordId,
+            patientId: patientId,
+            decision: decision,
+            curatorId: curatorId,
+            notes: notes,
+            namasteCode: record.namasteCode,
+            icd11Code: record.icd11Code
+        });
 
         res.json({ message: `Record ${decision}`, record });
     } catch (error) {

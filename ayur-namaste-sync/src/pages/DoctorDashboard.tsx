@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/dialog";
 import { Stethoscope, UserPlus, TrendingUp, Search, X, AlertCircle, Eye, Edit3, Trash2, Save, XCircle } from "lucide-react";
 import { User } from "@/lib/mockData";
+import { searchWithThreeLayer, TM2SearchResult, getTM2Statistics } from "@/lib/tm2Api";
 
 interface DoctorDashboardProps {
   user: User;
@@ -42,6 +43,11 @@ interface Problem {
   icdTerm: string;
   confidence: number;
   status?: string;
+  // Three-layer fields
+  tm2Code?: string;
+  tm2Title?: string;
+  tm2Confidence?: number;
+  traditionalSystem?: string;
 }
 
 // Helper function to highlight matching text
@@ -67,6 +73,17 @@ interface NAMASTESearchResult {
     module: "MMS" | "TM2";
     title: string;
   }>;
+  // Three-layer mappings
+  tm2Mappings?: Array<{
+    tm2Code: string;
+    tm2Title: string;
+    tm2Confidence: number;
+    traditionalSystem: string;
+    icdCode: string;
+    icdTitle: string;
+    icdConfidence: number;
+    overallConfidence: number;
+  }>;
 }
 
 export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
@@ -90,6 +107,10 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
   const [editingData, setEditingData] = useState<any>(null);
   const [isSavingEdit, setIsSavingEdit] = useState(false);
   const [isDeletingRecord, setIsDeletingRecord] = useState<string | null>(null);
+  
+  // Three-layer architecture states
+  const [useThreeLayer, setUseThreeLayer] = useState(true);
+  const [tm2Stats, setTM2Stats] = useState<any>(null);
 
   // Validation functions
   const validateAbhaId = (id: string): boolean => {
@@ -153,7 +174,7 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
     setProblemList(prev => prev.filter(p => p._id !== problemId));
   };
 
-  // Search function using mapping API
+  // Search function using three-layer architecture
   const handleSearch = async (term: string) => {
     if (term.length < 2) {
       setSearchResults([]);
@@ -162,69 +183,136 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
 
     setIsSearching(true);
     try {
-      console.log('Searching for term:', term);
+      console.log('🔍 Searching with three-layer architecture for term:', term);
       
-      // First, get NAMASTE codes that match the search term
-      const namasteResponse = await axios.get(`http://localhost:3000/api/namaste`, {
-        params: { 
-          term,
-          limit: 10 // Limit results to top 10 matches
-        }
-      });
-      console.log('NAMASTE Response:', namasteResponse.data);
-      
-      // Sort results by relevance
-      const sortedResults = namasteResponse.data.sort((a: any, b: any) => {
-        const aStartsWith = a.display.toLowerCase().startsWith(term.toLowerCase());
-        const bStartsWith = b.display.toLowerCase().startsWith(term.toLowerCase());
-        
-        if (aStartsWith && !bStartsWith) return -1;
-        if (!aStartsWith && bStartsWith) return 1;
-        
-        // If neither or both start with the term, sort alphabetically
-        return a.display.localeCompare(b.display);
-      });
+      if (useThreeLayer) {
+        try {
+          // Use three-layer search API
+          const threeLayerResults = await searchWithThreeLayer(term, 10);
+          console.log('🩺 Three-layer search results:', threeLayerResults);
+          
+          if (threeLayerResults && threeLayerResults.length > 0) {
+            // Convert to compatible format
+            const results = threeLayerResults.map((result: TM2SearchResult) => {
+              console.log('🔍 Converting three-layer result:', result);
+              
+              // Create ICD mappings from TM2 mappings for three-layer architecture
+              const icdMappings = result.tm2Mappings?.map(mapping => ({
+                // Layer 3: ICD-11 MMS information (final layer)
+                code: mapping.icdCode,           // ICD-11 code (e.g., "5A14" for diabetes)
+                title: mapping.icdTitle,         // ICD-11 title (e.g., "Type 2 diabetes mellitus")
+                confidence: mapping.icdConfidence || mapping.overallConfidence,
+                module: "MMS" as const,          // ICD-11 MMS module (not TM2)
+                
+                // Layer 2: TM2 Bridge information (middle layer)
+                tm2Code: mapping.tm2Code,        // TM2 code (e.g., "TM2-003")
+                tm2Title: mapping.tm2Title,      // TM2 title (e.g., "Prameha (Diabetes pattern)")
+                tm2Confidence: mapping.tm2Confidence,
+                traditionalSystem: mapping.traditionalSystem,
+              })) || [];
 
-      if (!sortedResults || sortedResults.length === 0) {
-        console.log('No NAMASTE codes found');
-        setSearchResults([]);
-        return;
-      }
+              const convertedResult = {
+                code: result.code,
+                display: result.display,
+                system: result.system,
+                synonyms: result.synonyms,
+                icdMappings,
+                tm2Mappings: result.tm2Mappings, // Add TM2 mappings
+              };
+              
+              console.log('✅ Converted result:', convertedResult);
+              return convertedResult;
+            });
 
-      // For each NAMASTE code, get its mappings
-      const results = await Promise.all(
-        sortedResults.map(async (namaste: any) => {
-          console.log('Getting mappings for NAMASTE code:', namaste.code);
-          const mappingResponse = await axios.get(
-            `http://localhost:3000/api/mapping/namaste/${namaste.code}`
-          );
-          console.log('Mapping Response for', namaste.code, ':', mappingResponse.data);
-
-          // Format the mappings into the expected structure
-          const icdMappings = mappingResponse.data.map((mapping: any) => {
-            console.log('Processing mapping with details:', mapping);
-            return {
-              code: mapping.icdCode || mapping.icd_code,
-              confidence: mapping.confidence || 0,
-              module: mapping.module || "MMS",
-              title: mapping.icdDetails?.title || mapping.icdTitle || mapping.icd_title || "Unknown ICD Title"
-            };
+            console.log('✅ Formatted three-layer results:', results);
+            setSearchResults(results);
+          } else {
+            console.log('⚠️ No three-layer results, falling back to dual-layer search');
+            // Fallback to dual-layer search if no three-layer results
+            throw new Error('No three-layer results found');
+          }
+        } catch (threeLayerError) {
+          console.log('❌ Three-layer search failed, falling back to dual-layer:', threeLayerError);
+          // Fallback to traditional dual-layer search
+          const namasteResponse = await axios.get(`http://localhost:3000/api/namaste`, {
+            params: { term }
           });
 
-          return {
-            code: namaste.code,
-            display: namaste.display,
-            system: namaste.system,
-            synonyms: namaste.synonyms,
-            icdMappings
-          };
-        })
-      );
+          const namasteCodes = namasteResponse.data;
+          console.log('Fallback dual-layer search results:', namasteCodes);
+          setSearchResults(namasteCodes);
+        }
+      } else {
+        // Fallback to traditional dual-layer search
+        console.log('⚡ Using traditional dual-layer search');
+        
+        // First, get NAMASTE codes that match the search term
+        const namasteResponse = await axios.get(`http://localhost:3000/api/namaste`, {
+          params: { 
+            term,
+            limit: 10 // Limit results to top 10 matches
+          }
+        });
+        console.log('NAMASTE Response:', namasteResponse.data);
+        
+        // Sort results by relevance
+        const sortedResults = namasteResponse.data.sort((a: any, b: any) => {
+          const aStartsWith = a.display.toLowerCase().startsWith(term.toLowerCase());
+          const bStartsWith = b.display.toLowerCase().startsWith(term.toLowerCase());
+          
+          if (aStartsWith && !bStartsWith) return -1;
+          if (!aStartsWith && bStartsWith) return 1;
+          
+          // If neither or both start with the term, sort alphabetically
+          return a.display.localeCompare(b.display);
+        });
 
-      console.log('Final formatted results:', results);
-      setSearchResults(results);
+        if (!sortedResults || sortedResults.length === 0) {
+          console.log('No NAMASTE codes found');
+          setSearchResults([]);
+          return;
+        }
+
+        // For each NAMASTE code, get its mappings
+        const results = await Promise.all(
+          sortedResults.map(async (namaste: any) => {
+            console.log('Getting mappings for NAMASTE code:', namaste.code);
+            const mappingResponse = await axios.get(
+              `http://localhost:3000/api/mapping/namaste/${namaste.code}`
+            );
+            console.log('Mapping Response for', namaste.code, ':', mappingResponse.data);
+
+            // Format the mappings into the expected structure
+            const icdMappings = mappingResponse.data.map((mapping: any) => {
+              console.log('Processing mapping with details:', mapping);
+              return {
+                code: mapping.icdCode || mapping.icd_code,
+                confidence: mapping.overallConfidence || mapping.confidence || 0.5, // Use new overallConfidence
+                module: mapping.module || "TM2", // Updated to show TM2 module
+                title: mapping.icdDetails?.title || mapping.icdTitle || mapping.icd_title || "Unknown ICD Title",
+                // Include three-layer data
+                tm2Code: mapping.tm2Code,
+                tm2Title: mapping.tm2Title,
+                tm2Confidence: mapping.tm2Confidence,
+                traditionalSystem: mapping.traditionalSystem
+              };
+            });
+
+            return {
+              code: namaste.code,
+              display: namaste.display,
+              system: namaste.system,
+              synonyms: namaste.synonyms,
+              icdMappings
+            };
+          })
+        );
+
+        console.log('Final formatted results:', results);
+        setSearchResults(results);
+      }
     } catch (error) {
-      console.error('Search failed:', error);
+      console.error('❌ Search failed:', error);
       if (axios.isAxiosError(error)) {
         console.error('Axios error details:', {
           message: error.message,
@@ -232,6 +320,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
           status: error.response?.status
         });
       }
+      // Fallback to empty results
+      setSearchResults([]);
     } finally {
       setIsSearching(false);
     }
@@ -241,13 +331,50 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
   const handleAddProblem = () => {
     if (!selectedNAMASTE) return;
 
-    // Find the best mapping (prefer TM2 with highest confidence)
-    const tm2Mappings = selectedNAMASTE.icdMappings.filter(m => m.module === "TM2");
-    const mmsMappings = selectedNAMASTE.icdMappings.filter(m => m.module === "MMS");
-    
-    const bestMapping = tm2Mappings.length > 0
-      ? tm2Mappings.reduce((prev, curr) => curr.confidence > prev.confidence ? curr : prev)
-      : mmsMappings[0];
+    let bestMapping;
+    let tm2Info = {};
+
+    if (useThreeLayer && selectedNAMASTE.tm2Mappings && selectedNAMASTE.tm2Mappings.length > 0) {
+      // Use three-layer mapping - find the best TM2 mapping
+      const bestTM2Mapping = selectedNAMASTE.tm2Mappings.reduce((prev, curr) => 
+        curr.overallConfidence > prev.overallConfidence ? curr : prev
+      );
+
+      bestMapping = {
+        code: bestTM2Mapping.icdCode,
+        title: bestTM2Mapping.icdTitle,
+        confidence: bestTM2Mapping.overallConfidence,
+        module: "TM2" as const
+      };
+
+      tm2Info = {
+        tm2Code: bestTM2Mapping.tm2Code,
+        tm2Title: bestTM2Mapping.tm2Title,
+        tm2Confidence: bestTM2Mapping.tm2Confidence,
+        traditionalSystem: bestTM2Mapping.traditionalSystem,
+      };
+
+      console.log('🩺 Using three-layer mapping:', {
+        namaste: selectedNAMASTE.code,
+        tm2: bestTM2Mapping.tm2Code,
+        icd: bestTM2Mapping.icdCode,
+        confidence: bestTM2Mapping.overallConfidence
+      });
+    } else {
+      // Fallback to traditional dual-layer mapping
+      const tm2Mappings = selectedNAMASTE.icdMappings.filter(m => m.module === "TM2");
+      const mmsMappings = selectedNAMASTE.icdMappings.filter(m => m.module === "MMS");
+      
+      bestMapping = tm2Mappings.length > 0
+        ? tm2Mappings.reduce((prev, curr) => curr.confidence > prev.confidence ? curr : prev)
+        : mmsMappings[0];
+
+      console.log('⚡ Using traditional mapping:', {
+        namaste: selectedNAMASTE.code,
+        icd: bestMapping?.code,
+        confidence: bestMapping?.confidence
+      });
+    }
 
     const newProblem: Problem = {
       _id: Date.now().toString(),
@@ -257,6 +384,7 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
       icdTerm: bestMapping?.title || "No ICD Mapping",
       confidence: bestMapping?.confidence ?? 0,
       status: "active",
+      ...tm2Info, // Spread TM2 information if available
     };
 
     setProblemList((prev) => [...prev, newProblem]);
@@ -380,6 +508,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
     setEditingData({
       namasteTerm: record.namasteTerm,
       namasteCode: record.namasteCode,
+      tm2Title: record.tm2Title || '',
+      tm2Code: record.tm2Code || '',
       icdTerm: record.icdTerm,
       icdCode: record.icdCode,
       prescription: record.prescription || ''
@@ -390,6 +520,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
       editingData: {
         namasteTerm: record.namasteTerm,
         namasteCode: record.namasteCode,
+        tm2Title: record.tm2Title || '',
+        tm2Code: record.tm2Code || '',
         icdTerm: record.icdTerm,
         icdCode: record.icdCode,
         prescription: record.prescription || ''
@@ -500,11 +632,30 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
     }
   };
 
+  // Load TM2 statistics on component mount
+  useEffect(() => {
+    const loadTM2Stats = async () => {
+      try {
+        const stats = await getTM2Statistics();
+        setTM2Stats(stats);
+        console.log('🩺 TM2 Statistics loaded:', stats);
+      } catch (error) {
+        console.error('Failed to load TM2 statistics:', error);
+      }
+    };
+
+    if (useThreeLayer) {
+      loadTM2Stats();
+    }
+  }, [useThreeLayer]);
+
   // Log component state on each render
   console.log('DoctorDashboard render state:', {
     selectedNAMASTE,
     searchResults,
-    isSearching
+    isSearching,
+    useThreeLayer,
+    tm2Stats
   });
 
   return (
@@ -541,17 +692,17 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                           <div className="space-y-4">
                             {patientData.medicalRecords?.length > 0 ? (
                               patientData.medicalRecords.map((record: any, index: number) => (
-                                <div key={record._id || index} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                                <div key={record._id || index} className="medical-card hover:shadow-xl transition-all duration-300 overflow-hidden">
                                   {/* Header Section */}
-                                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-4 py-3 border-b border-gray-100">
+                                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-3 border-b border-border">
                                     <div className="flex justify-between items-center">
                                       <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
                                           {index + 1}
                                         </div>
                                         <div>
-                                          <h4 className="font-semibold text-gray-800">Medical Record #{index + 1}</h4>
-                                          <p className="text-xs text-gray-600">
+                                          <h4 className="font-semibold text-foreground">Medical Record #{index + 1}</h4>
+                                          <p className="text-xs text-muted-foreground">
                                             📅 {new Date(record.date).toLocaleDateString('en-US', { 
                                               weekday: 'short', 
                                               year: 'numeric', 
@@ -573,11 +724,11 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                                 size="sm"
                                                 onClick={() => handleSaveEdit(record._id)}
                                                 disabled={isSavingEdit}
-                                                className="h-8 px-3 bg-green-50 hover:bg-green-100 text-green-700 border-green-300"
+                                                className="h-8 px-3 bg-success/10 hover:bg-success/20 text-success border-success/30"
                                                 title="Save changes"
                                               >
                                                 {isSavingEdit ? (
-                                                  <div className="w-4 h-4 border-2 border-green-500 border-t-transparent rounded-full animate-spin mr-1" />
+                                                  <div className="w-4 h-4 border-2 border-success border-t-transparent rounded-full animate-spin mr-1" />
                                                 ) : (
                                                   <Save className="w-3 h-3 mr-1" />
                                                 )}
@@ -588,7 +739,7 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                                 size="sm"
                                                 onClick={handleCancelEdit}
                                                 disabled={isSavingEdit}
-                                                className="h-8 px-3 bg-gray-50 hover:bg-gray-100 text-gray-700 border-gray-300"
+                                                className="h-8 px-3 bg-muted/50 hover:bg-muted text-muted-foreground border-border"
                                                 title="Cancel editing"
                                               >
                                                 <XCircle className="w-3 h-3 mr-1" />
@@ -603,7 +754,7 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                                 size="sm"
                                                 onClick={() => handleStartEdit(record)}
                                                 disabled={editingRecord !== null || isDeletingRecord === record._id}
-                                                className="h-8 px-3 bg-blue-50 hover:bg-blue-100 text-blue-700 border-blue-300"
+                                                className="h-8 px-3 bg-primary/10 hover:bg-primary/20 text-primary border-primary/30"
                                                 title="Edit medical record"
                                               >
                                                 <Edit3 className="w-3 h-3 mr-1" />
@@ -614,11 +765,11 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                                 size="sm"
                                                 onClick={() => handleDeleteMedicalRecord(record._id)}
                                                 disabled={isDeletingRecord === record._id || editingRecord !== null}
-                                                className="h-8 px-3 bg-red-50 hover:bg-red-100 text-red-700 border-red-300"
+                                                className="h-8 px-3 bg-destructive/10 hover:bg-destructive/20 text-destructive border-destructive/30"
                                                 title="Delete medical record"
                                               >
                                                 {isDeletingRecord === record._id ? (
-                                                  <div className="w-4 h-4 border-2 border-red-500 border-t-transparent rounded-full animate-spin mr-1" />
+                                                  <div className="w-4 h-4 border-2 border-destructive border-t-transparent rounded-full animate-spin mr-1" />
                                                 ) : (
                                                   <Trash2 className="w-3 h-3 mr-1" />
                                                 )}
@@ -644,33 +795,33 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                   
                                   {/* Content Section */}
                                   <div className="p-4 space-y-4">
-                                    {/* Problem Diagnosed Section */}
-                                    <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    {/* Layer 1: NAMASTE Ayurvedic Diagnosis */}
+                                    <div className="bg-gradient-to-r from-secondary/20 to-secondary/10 rounded-lg p-4 border border-secondary/30">
                                       <div className="flex items-center gap-2 mb-3">
-                                        <div className="w-6 h-6 bg-amber-500 rounded-full flex items-center justify-center">
-                                          <span className="text-white text-xs font-bold">🩺</span>
+                                        <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center">
+                                          <span className="text-secondary-foreground text-xs font-bold">1</span>
                                         </div>
-                                        <h5 className="font-semibold text-amber-900">Problem Diagnosed</h5>
+                                        <h5 className="font-semibold text-secondary-foreground">NAMASTE Ayurvedic Diagnosis</h5>
                                       </div>
                                       
                                       {editingRecord === record._id ? (
                                         // Editable fields
                                         <div className="space-y-3">
                                           <div>
-                                            <label className="text-sm font-medium text-amber-800 block mb-1">Problem Name:</label>
+                                            <label className="text-sm font-medium text-foreground block mb-1">Ayurvedic Diagnosis:</label>
                                             <Input
                                               value={editingData?.namasteTerm || ''}
                                               onChange={(e) => setEditingData(prev => prev ? {...prev, namasteTerm: e.target.value} : null)}
-                                              className="bg-white border-amber-300 focus:border-amber-500"
-                                              placeholder="Enter problem name..."
+                                              className="bg-input border-secondary/30 focus:border-secondary text-foreground"
+                                              placeholder="Enter Ayurvedic diagnosis..."
                                             />
                                           </div>
                                           <div>
-                                            <label className="text-sm font-medium text-amber-800 block mb-1">NAMASTE Code:</label>
+                                            <label className="text-sm font-medium text-foreground block mb-1">NAMASTE Code:</label>
                                             <Input
                                               value={editingData?.namasteCode || ''}
                                               onChange={(e) => setEditingData(prev => prev ? {...prev, namasteCode: e.target.value} : null)}
-                                              className="bg-white border-amber-300 focus:border-amber-500 font-mono"
+                                              className="bg-input border-secondary/30 focus:border-secondary text-foreground font-mono"
                                               placeholder="Enter NAMASTE code..."
                                             />
                                           </div>
@@ -678,94 +829,179 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                       ) : (
                                         // Display mode
                                         <div className="space-y-2">
-                                          <p className="text-lg font-semibold text-amber-900">{record.namasteTerm}</p>
-                                          <div className="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-mono">
-                                            📋 {record.namasteCode}
+                                          <p className="text-lg font-semibold text-foreground">{record.namasteTerm}</p>
+                                          <div className="inline-block bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-mono">
+                                            🌿 {record.namasteCode}
+                                          </div>
+                                          <div className="mt-2 text-xs text-secondary">
+                                            Traditional Ayurvedic Classification
                                           </div>
                                         </div>
                                       )}
                                     </div>
                                     
-                                    {/* ICD-11 Mapping Section */}
-                                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4 border-l-4 border-green-400">
+                                    {/* Layer 3: ICD-11 International Standard */}
+                                    <div className="bg-gradient-to-r from-info/20 to-info/10 rounded-lg p-4 border border-info/30">
                                       <div className="flex items-center gap-2 mb-3">
-                                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                                          <span className="text-white text-xs font-bold">🏥</span>
+                                        <div className="w-6 h-6 bg-info rounded-full flex items-center justify-center">
+                                          <span className="text-white text-xs font-bold">3</span>
                                         </div>
-                                        <h5 className="font-semibold text-green-900">ICD-11 Mapping</h5>
+                                        <h5 className="font-semibold text-info-foreground">ICD-11 International Standard</h5>
                                       </div>
                                       
                                       {editingRecord === record._id ? (
                                         // Editable fields
                                         <div className="space-y-3">
                                           <div>
-                                            <label className="text-sm font-medium text-green-800 block mb-1">ICD Description:</label>
+                                            <label className="text-sm font-medium text-foreground block mb-1">ICD-11 Description:</label>
                                             <Input
                                               value={editingData?.icdTerm || ''}
                                               onChange={(e) => setEditingData(prev => prev ? {...prev, icdTerm: e.target.value} : null)}
-                                              className="bg-white border-green-300 focus:border-green-500"
-                                              placeholder="Enter ICD description..."
+                                              className="bg-input border-info/30 focus:border-info text-foreground"
+                                              placeholder="Enter ICD-11 description..."
                                             />
                                           </div>
                                           <div>
-                                            <label className="text-sm font-medium text-green-800 block mb-1">ICD Code:</label>
+                                            <label className="text-sm font-medium text-foreground block mb-1">ICD-11 Code:</label>
                                             <Input
                                               value={editingData?.icdCode || ''}
                                               onChange={(e) => setEditingData(prev => prev ? {...prev, icdCode: e.target.value} : null)}
-                                              className="bg-white border-green-300 focus:border-green-500 font-mono"
-                                              placeholder="Enter ICD code..."
+                                              className="bg-input border-info/30 focus:border-info text-foreground font-mono"
+                                              placeholder="Enter ICD-11 code..."
                                             />
                                           </div>
                                         </div>
                                       ) : (
                                         // Display mode
                                         <div className="space-y-2">
-                                          <p className="text-lg font-semibold text-green-900">{record.icdTerm}</p>
-                                          <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-mono">
-                                            🏷️ {record.icdCode}
+                                          <p className="text-lg font-semibold text-foreground">{record.icdTerm}</p>
+                                          <div className="inline-block bg-info/20 text-info px-3 py-1 rounded-full text-sm font-mono">
+                                            � {record.icdCode}
+                                          </div>
+                                          <div className="mt-2 text-xs text-info">
+                                            WHO International Classification
                                           </div>
                                         </div>
                                       )}
                                     </div>
                                     
-                                    {/* Prescription Section - Always visible */}
-                                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 border-l-4 border-blue-400">
+                                    {/* TM2 Bridge Layer */}
+                                    <div className="bg-gradient-to-r from-warning/20 to-warning/10 rounded-lg p-4 border border-warning/30">
                                       <div className="flex items-center gap-2 mb-3">
-                                        <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
-                                          <span className="text-white text-xs font-bold">💊</span>
+                                        <div className="w-6 h-6 bg-warning rounded-full flex items-center justify-center">
+                                          <span className="text-warning-foreground text-xs font-bold">2</span>
                                         </div>
-                                        <h5 className="font-semibold text-blue-900">Prescription & Treatment</h5>
+                                        <h5 className="font-semibold text-warning-foreground">TM2 Bridge Layer</h5>
+                                      </div>
+                                      
+                                      {editingRecord === record._id ? (
+                                        // Editable fields
+                                        <div className="space-y-3">
+                                          <div>
+                                            <label className="text-sm font-medium text-foreground block mb-1">TM2 Term:</label>
+                                            <Input
+                                              value={editingData?.tm2Title || ''}
+                                              onChange={(e) => setEditingData(prev => prev ? {...prev, tm2Title: e.target.value} : null)}
+                                              className="bg-input border-warning/30 focus:border-warning text-foreground"
+                                              placeholder="Enter TM2 bridge term..."
+                                            />
+                                          </div>
+                                          <div>
+                                            <label className="text-sm font-medium text-foreground block mb-1">TM2 Code:</label>
+                                            <Input
+                                              value={editingData?.tm2Code || ''}
+                                              onChange={(e) => setEditingData(prev => prev ? {...prev, tm2Code: e.target.value} : null)}
+                                              className="bg-input border-warning/30 focus:border-warning text-foreground font-mono"
+                                              placeholder="Enter TM2 code..."
+                                            />
+                                          </div>
+                                        </div>
+                                      ) : (
+                                        // Display mode
+                                        <div className="space-y-2">
+                                          <p className="text-lg font-semibold text-foreground">{record.tm2Title || 'TM2 Semantic Bridge'}</p>
+                                          <div className="inline-block bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-mono">
+                                            🔗 {record.tm2Code || 'TM2-XXX'}
+                                          </div>
+                                          <div className="mt-2 text-xs text-warning">
+                                            Traditional Medicine Semantic Bridge
+                                          </div>
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    {/* Three-Layer Architecture Visualization */}
+                                    <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                                      <h5 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                                        <div className="w-5 h-5 bg-primary rounded flex items-center justify-center">
+                                          <span className="text-primary-foreground text-xs">⚡</span>
+                                        </div>
+                                        Three-Layer Mapping Architecture
+                                      </h5>
+                                      <div className="flex items-center justify-center gap-3">
+                                        <div className="flex items-center gap-2 px-3 py-2 bg-secondary/20 rounded-lg border border-secondary/30">
+                                          <span className="text-secondary font-mono text-sm">{record.namasteCode}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1 text-primary">
+                                          <div className="w-6 h-px bg-primary"></div>
+                                          <span className="text-xs">→</span>
+                                          <div className="w-6 h-px bg-primary"></div>
+                                        </div>
+                                        <div className="flex items-center gap-2 px-3 py-2 bg-warning/20 rounded-lg border border-warning/30">
+                                          <span className="text-warning font-mono text-sm">{record.tm2Code || 'TM2-XXX'}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1 text-primary">
+                                          <div className="w-6 h-px bg-primary"></div>
+                                          <span className="text-xs">→</span>
+                                          <div className="w-6 h-px bg-primary"></div>
+                                        </div>
+                                        <div className="flex items-center gap-2 px-3 py-2 bg-info/20 rounded-lg border border-info/30">
+                                          <span className="text-info font-mono text-sm">{record.icdCode}</span>
+                                        </div>
+                                      </div>
+                                      <p className="text-center text-xs text-muted-foreground mt-2">
+                                        NAMASTE → TM2 → ICD-11 semantic mapping flow
+                                      </p>
+                                    </div>
+                                    
+                                    {/* Prescription Section - Always visible */}
+                                    <div className="bg-gradient-to-r from-accent/20 to-accent/10 rounded-lg p-4 border border-accent/30">
+                                      <div className="flex items-center gap-2 mb-3">
+                                        <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center">
+                                          <span className="text-accent-foreground text-xs">💊</span>
+                                        </div>
+                                        <h5 className="font-semibold text-accent-foreground">Prescription & Treatment Plan</h5>
                                       </div>
                                       
                                       {editingRecord === record._id ? (
                                         // Editable prescription
                                         <div>
-                                          <label className="text-sm font-medium text-blue-800 block mb-2">Prescription Details:</label>
+                                          <label className="text-sm font-medium text-foreground block mb-2">Prescription Details:</label>
                                           <Textarea
                                             value={editingData?.prescription || ''}
                                             onChange={(e) => setEditingData(prev => prev ? {...prev, prescription: e.target.value} : null)}
-                                            className="bg-white border-blue-300 focus:border-blue-500 min-h-[120px] resize-none"
+                                            className="bg-input border-accent/30 focus:border-accent text-foreground min-h-[120px] resize-none"
                                             placeholder="Enter detailed prescription including medications, dosages, instructions, and follow-up recommendations..."
                                           />
-                                          <p className="text-xs text-blue-600 mt-1">
+                                          <p className="text-xs text-accent mt-1">
                                             💡 Tip: Include medication names, dosages, frequency, duration, and any special instructions
                                           </p>
                                         </div>
                                       ) : (
                                         // Display mode - Enhanced prescription display
-                                        <div className="bg-white rounded-lg p-4 border border-blue-200">
+                                        <div className="bg-card rounded-lg p-4 border border-border">
                                           {record.prescription ? (
                                             <div className="space-y-2">
                                               <div className="flex items-start gap-2">
-                                                <span className="text-blue-500 mt-1">📝</span>
+                                                <span className="text-accent mt-1">📝</span>
                                                 <div className="flex-1">
-                                                  <pre className="text-sm text-gray-800 whitespace-pre-wrap font-sans leading-relaxed">
+                                                  <pre className="text-sm text-foreground whitespace-pre-wrap font-sans leading-relaxed">
 {record.prescription}
                                                   </pre>
                                                 </div>
                                               </div>
-                                              <div className="pt-2 border-t border-blue-100">
-                                                <p className="text-xs text-blue-600 flex items-center gap-1">
+                                              <div className="pt-2 border-t border-border">
+                                                <p className="text-xs text-accent flex items-center gap-1">
                                                   <span>⏰</span>
                                                   Prescribed on {new Date(record.date).toLocaleDateString('en-US', { 
                                                     weekday: 'long', 
@@ -777,7 +1013,7 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                               </div>
                                             </div>
                                           ) : (
-                                            <p className="text-gray-500 italic">No prescription details available</p>
+                                            <p className="text-muted-foreground italic">No prescription details available</p>
                                           )}
                                         </div>
                                       )}
@@ -785,8 +1021,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                     
                                     {/* Status Information */}
                                     {record.approvalStatus === 'pending' && (
-                                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
-                                        <p className="text-sm text-yellow-800 flex items-center gap-2">
+                                      <div className="bg-warning/10 border border-warning/30 rounded-lg p-3">
+                                        <p className="text-sm text-warning-foreground flex items-center gap-2">
                                           <span>⏳</span>
                                           <span className="font-medium">Awaiting curator approval</span>
                                         </p>
@@ -795,14 +1031,14 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                     
                                     {/* Curator Notes */}
                                     {record.curatorNotes && (
-                                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 border-l-4 border-purple-400">
+                                      <div className="bg-success/10 rounded-lg p-4 border border-success/30">
                                         <div className="flex items-center gap-2 mb-2">
-                                          <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
-                                            <span className="text-white text-xs font-bold">📋</span>
+                                          <div className="w-6 h-6 bg-success rounded-full flex items-center justify-center">
+                                            <span className="text-success-foreground text-xs">📋</span>
                                           </div>
-                                          <h5 className="font-semibold text-purple-900">Curator Notes</h5>
+                                          <h5 className="font-semibold text-success-foreground">Curator Review Notes</h5>
                                         </div>
-                                        <p className="text-sm text-purple-800 bg-white rounded p-3 border border-purple-200">
+                                        <p className="text-sm text-foreground bg-card rounded p-3 border border-border">
                                           {record.curatorNotes}
                                         </p>
                                       </div>
@@ -811,8 +1047,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                   
                                   {/* Footer with Doctor Info */}
                                   {record.doctorId && (
-                                    <div className="bg-gray-50 px-4 py-3 border-t border-gray-200">
-                                      <p className="text-xs text-gray-600 flex items-center gap-2">
+                                    <div className="bg-muted/30 px-4 py-3 border-t border-border">
+                                      <p className="text-xs text-muted-foreground flex items-center gap-2">
                                         <span>👨‍⚕️</span>
                                         <span><strong>Prescribed by:</strong> Dr. {user.name}</span>
                                         <span>•</span>
@@ -824,11 +1060,11 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                               ))
                             ) : (
                               <div className="text-center py-8">
-                                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                                   <span className="text-2xl">📋</span>
                                 </div>
-                                <p className="text-gray-500 font-medium">No medical history available</p>
-                                <p className="text-sm text-gray-400 mt-1">Patient records will appear here once submitted</p>
+                                <p className="text-foreground font-medium">No medical history available</p>
+                                <p className="text-sm text-muted-foreground mt-1">Patient records will appear here once submitted</p>
                               </div>
                             )}
                           </div>
@@ -838,6 +1074,8 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                   </Card>
                 )}
                 
+
+
                 {/* --- Stats --- */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                   <Card className="w-full">
@@ -870,8 +1108,15 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                         <TrendingUp className="w-6 h-6 text-success" />
                       </div>
                       <div>
-                        <p className="text-2xl font-bold">92%</p>
-                        <p className="text-muted-foreground">Mapping Accuracy</p>
+                        <p className="text-2xl font-bold">
+                          {useThreeLayer && tm2Stats ? 
+                            `${Math.round((tm2Stats.total / (tm2Stats.total + 6592)) * 100)}%` : 
+                            '92%'
+                          }
+                        </p>
+                        <p className="text-muted-foreground">
+                          {useThreeLayer ? 'TM2 Coverage' : 'Mapping Accuracy'}
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -882,10 +1127,71 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                   {/* Left: Search Panel */}
                   <Card className="h-full">
                     <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-3">
-                        <Search className="w-5 h-5 text-primary" />
-                        NAMASTE Term Search
-                      </CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="flex items-center gap-3">
+                          <Search className="w-5 h-5 text-primary" />
+                          NAMASTE Term Search
+                        </CardTitle>
+                        
+                        {/* Three-Layer Toggle */}
+                        <div className="flex items-center gap-2">
+                          <label className="text-sm text-muted-foreground">
+                            Three-Layer Mode
+                          </label>
+                          <div className="relative">
+                            <input
+                              type="checkbox"
+                              checked={useThreeLayer}
+                              onChange={(e) => {
+                                setUseThreeLayer(e.target.checked);
+                                console.log('🔄 Switched to', e.target.checked ? 'three-layer' : 'dual-layer', 'mode');
+                                // Clear search results when switching modes
+                                setSearchResults([]);
+                                setSelectedNAMASTE(null);
+                                setSearchTerm("");
+                              }}
+                              className="sr-only"
+                            />
+                            <div
+                              className={`w-12 h-6 rounded-full cursor-pointer transition-colors ${
+                                useThreeLayer 
+                                  ? 'bg-green-500' 
+                                  : 'bg-gray-300'
+                              }`}
+                              onClick={() => {
+                                const newMode = !useThreeLayer;
+                                setUseThreeLayer(newMode);
+                                console.log('🔄 Switched to', newMode ? 'three-layer' : 'dual-layer', 'mode');
+                                // Clear search results when switching modes
+                                setSearchResults([]);
+                                setSelectedNAMASTE(null);
+                                setSearchTerm("");
+                              }}
+                            >
+                              <div
+                                className={`w-5 h-5 bg-white rounded-full shadow-md transition-transform ${
+                                  useThreeLayer 
+                                    ? 'translate-x-6' 
+                                    : 'translate-x-0.5'
+                                } mt-0.5`}
+                              />
+                            </div>
+                          </div>
+                          {useThreeLayer && (
+                            <Badge className="bg-green-500 text-white text-xs">
+                              🩺 TM2
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {/* Mode Description */}
+                      <p className="text-sm text-muted-foreground mt-2">
+                        {useThreeLayer 
+                          ? '🩺 Using Traditional Medicine Module 2 for enhanced semantic mapping through NAMASTE → TM2 → ICD-11'
+                          : '⚡ Using direct NAMASTE → ICD-11 mapping for faster results'
+                        }
+                      </p>
                     </CardHeader>
 
                     <CardContent className="flex-1 flex flex-col space-y-6 overflow-y-auto">
@@ -1024,7 +1330,18 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                   {highlightMatch(result.display, searchTerm)}
                                 </div>
                                 <div className="text-sm text-muted-foreground">
-                                  {result.code} • {result.icdMappings.length} ICD mappings
+                                  {result.code} • {
+                                    useThreeLayer && result.tm2Mappings 
+                                      ? `${result.tm2Mappings.length} TM2 mappings`
+                                      : `${result.icdMappings.length} ICD mappings`
+                                  }
+                                  {useThreeLayer && result.tm2Mappings && result.tm2Mappings.length > 0 && (
+                                    <span className="ml-2">
+                                      <Badge variant="outline" className="text-xs">
+                                        {result.tm2Mappings[0].traditionalSystem}
+                                      </Badge>
+                                    </span>
+                                  )}
                                 </div>
                               </button>
                             ))}
@@ -1046,23 +1363,55 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                             synonyms: selectedNAMASTE.synonyms || "",
                           }}
                           icdMappings={
-                            Array.isArray(selectedNAMASTE.icdMappings) && selectedNAMASTE.icdMappings.length > 0 
-                              ? selectedNAMASTE.icdMappings.map(mapping => {
-                                  console.log('Processing mapping for preview:', mapping);
+                            useThreeLayer && selectedNAMASTE.tm2Mappings && selectedNAMASTE.tm2Mappings.length > 0
+                              ? selectedNAMASTE.tm2Mappings.map(tm2Mapping => {
+                                  console.log('🩺 Processing three-layer mapping for preview:', tm2Mapping);
                                   return {
-                                    icdCode: {
-                                      code: mapping.code,
-                                      title: mapping.title || 'Unknown Title',
-                                      module: mapping.module as "MMS" | "TM2",
-                                      system: "http://id.who.int/icd/entity"
-                                    },
-                                    confidence: typeof mapping.confidence === 'number' ? mapping.confidence : 0,
-                                    module: mapping.module as "MMS" | "TM2"
+                                    // Layer 3: ICD-11 MMS information (final biomedical layer)
+                                    code: tm2Mapping.icdCode,           // ICD-11 code
+                                    title: tm2Mapping.icdTitle,         // ICD-11 title
+                                    confidence: tm2Mapping.icdConfidence || tm2Mapping.overallConfidence,
+                                    module: "MMS" as "MMS" | "TM2",     // ICD-11 MMS module
+                                    
+                                    // Layer 2: TM2 Bridge information (middle layer)
+                                    tm2Code: tm2Mapping.tm2Code,
+                                    tm2Title: tm2Mapping.tm2Title,
+                                    tm2Confidence: tm2Mapping.tm2Confidence,
+                                    traditionalSystem: tm2Mapping.traditionalSystem,
                                   };
                                 })
-                              : []
+                              : Array.isArray(selectedNAMASTE.icdMappings) && selectedNAMASTE.icdMappings.length > 0 
+                                ? selectedNAMASTE.icdMappings.map(mapping => {
+                                    console.log('⚡ Processing dual-layer mapping for preview:', mapping);
+                                    return {
+                                      // Direct ICD-11 mapping (dual-layer)
+                                      code: mapping.code,
+                                      title: mapping.title || 'Unknown Title',
+                                      confidence: typeof mapping.confidence === 'number' ? mapping.confidence : 0,
+                                      module: mapping.module as "MMS" | "TM2"
+                                    };
+                                  })
+                                : []
                           }
+                          showThreeLayer={useThreeLayer}
                         />
+                        
+                        {/* Debug Info */}
+                        {selectedNAMASTE && (
+                          <div className="p-2 text-xs text-gray-500 border-t">
+                            <details className="cursor-pointer">
+                              <summary>Debug Info</summary>
+                              <div className="mt-2 space-y-1">
+                                <p>Three-layer mode: {useThreeLayer ? 'ON' : 'OFF'}</p>
+                                <p>TM2 mappings: {selectedNAMASTE.tm2Mappings?.length || 0}</p>
+                                <p>ICD mappings: {selectedNAMASTE.icdMappings?.length || 0}</p>
+                                {selectedNAMASTE.tm2Mappings?.length > 0 && (
+                                  <p>First TM2: {selectedNAMASTE.tm2Mappings[0].tm2Code} → {selectedNAMASTE.tm2Mappings[0].icdCode}</p>
+                                )}
+                              </div>
+                            </details>
+                          </div>
+                        )}
                       </Card>
                     )}
 
@@ -1142,31 +1491,91 @@ export function DoctorDashboard({ user, onLogout }: DoctorDashboardProps) {
                                         </div>
                                         
                                         <div className="text-xs text-muted-foreground space-y-1">
-                                          <div className="flex items-center gap-4">
-                                            <span>
-                                              <strong>NAMASTE:</strong> {problem.namasteCode}
-                                            </span>
-                                            <span>
-                                              <strong>ICD:</strong> {problem.icdCode}
-                                            </span>
-                                          </div>
-                                          
-                                          {problem.icdTerm && problem.icdTerm !== "No ICD Mapping" && (
-                                            <div className="text-xs">
-                                              <strong>ICD Description:</strong> {problem.icdTerm}
+                                          {/* Three-layer display */}
+                                          {useThreeLayer && problem.tm2Code ? (
+                                            <div className="space-y-2">
+                                              {/* Layer Flow */}
+                                              <div className="flex items-center gap-2 text-xs">
+                                                <span className="font-medium text-orange-600">NAMASTE</span>
+                                                <span>→</span>
+                                                <span className="font-medium text-green-600">TM2</span>
+                                                <span>→</span>
+                                                <span className="font-medium text-blue-600">ICD-11</span>
+                                                {problem.traditionalSystem && (
+                                                  <Badge variant="outline" className="text-xs ml-2">
+                                                    {problem.traditionalSystem}
+                                                  </Badge>
+                                                )}
+                                              </div>
+                                              
+                                              {/* Codes */}
+                                              <div className="grid grid-cols-3 gap-2 text-xs">
+                                                <div className="bg-orange-50 p-2 rounded border border-orange-200">
+                                                  <div className="font-medium text-orange-800">{problem.namasteCode}</div>
+                                                  <div className="text-orange-600 text-xs">Traditional</div>
+                                                </div>
+                                                <div className="bg-green-50 p-2 rounded border border-green-200">
+                                                  <div className="font-medium text-green-800">{problem.tm2Code}</div>
+                                                  <div className="text-green-600 text-xs">TM2 Bridge</div>
+                                                  {problem.tm2Confidence && (
+                                                    <div className="text-xs">
+                                                      {(problem.tm2Confidence * 100).toFixed(0)}%
+                                                    </div>
+                                                  )}
+                                                </div>
+                                                <div className="bg-blue-50 p-2 rounded border border-blue-200">
+                                                  <div className="font-medium text-blue-800">{problem.icdCode}</div>
+                                                  <div className="text-blue-600 text-xs">ICD-11</div>
+                                                  {problem.confidence && (
+                                                    <div className="text-xs">
+                                                      {(problem.confidence * 100).toFixed(0)}%
+                                                    </div>
+                                                  )}
+                                                </div>
+                                              </div>
+                                              
+                                              {/* Descriptions */}
+                                              {problem.tm2Title && (
+                                                <div className="text-xs">
+                                                  <strong>TM2 Pattern:</strong> {problem.tm2Title}
+                                                </div>
+                                              )}
+                                              {problem.icdTerm && problem.icdTerm !== "No ICD Mapping" && (
+                                                <div className="text-xs">
+                                                  <strong>ICD Description:</strong> {problem.icdTerm}
+                                                </div>
+                                              )}
                                             </div>
-                                          )}
-                                          
-                                          {problem.confidence !== undefined && problem.confidence > 0 && (
-                                            <div className="flex items-center gap-1">
-                                              <strong>Confidence:</strong>
-                                              <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                                                problem.confidence >= 0.8 ? 'bg-green-100 text-green-800' :
-                                                problem.confidence >= 0.6 ? 'bg-yellow-100 text-yellow-800' :
-                                                'bg-red-100 text-red-800'
-                                              }`}>
-                                                {(problem.confidence * 100).toFixed(0)}%
-                                              </span>
+                                          ) : (
+                                            /* Traditional dual-layer display */
+                                            <div>
+                                              <div className="flex items-center gap-4">
+                                                <span>
+                                                  <strong>NAMASTE:</strong> {problem.namasteCode}
+                                                </span>
+                                                <span>
+                                                  <strong>ICD:</strong> {problem.icdCode}
+                                                </span>
+                                              </div>
+                                              
+                                              {problem.icdTerm && problem.icdTerm !== "No ICD Mapping" && (
+                                                <div className="text-xs">
+                                                  <strong>ICD Description:</strong> {problem.icdTerm}
+                                                </div>
+                                              )}
+                                              
+                                              {problem.confidence !== undefined && problem.confidence > 0 && (
+                                                <div className="flex items-center gap-1">
+                                                  <strong>Confidence:</strong>
+                                                  <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${
+                                                    problem.confidence >= 0.8 ? 'bg-green-100 text-green-800' :
+                                                    problem.confidence >= 0.6 ? 'bg-yellow-100 text-yellow-800' :
+                                                    'bg-red-100 text-red-800'
+                                                  }`}>
+                                                    {(problem.confidence * 100).toFixed(0)}%
+                                                  </span>
+                                                </div>
+                                              )}
                                             </div>
                                           )}
                                         </div>

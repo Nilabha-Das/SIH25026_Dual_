@@ -1,0 +1,2057 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "namaste-siddha",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/CodeSystem/namaste-siddha",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "NAMASTE-SIDDHA"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NAMASTESiddhaCodeSystem",
+  "title": "NAMASTE Siddha Terminology CodeSystem",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:37:21.103Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 CodeSystem for NAMASTE Siddha terminology as per India EHR Standards 2016",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Standardized terminology for Siddha medical concepts in Indian healthcare systems",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "caseSensitive": true,
+  "valueSet": "http://ayush.gov.in/fhir/ValueSet/namaste-siddha",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 50,
+  "concept": [
+    {
+      "code": "NAM001",
+      "display": "Diabetes (Siddha)",
+      "definition": "Diabetes (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM004",
+      "display": "Anemia (Siddha)",
+      "definition": "Anemia (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM007",
+      "display": "Cough (Siddha)",
+      "definition": "Cough (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM010",
+      "display": "Back Pain (Siddha)",
+      "definition": "Back Pain (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM013",
+      "display": "Epilepsy (Siddha)",
+      "definition": "Epilepsy (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM016",
+      "display": "Psoriasis (Siddha)",
+      "definition": "Psoriasis (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Psoriasis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Psoriasis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Psoriasis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM019",
+      "display": "Gastritis (Siddha)",
+      "definition": "Gastritis (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gastritis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gastritis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gastritis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM022",
+      "display": "Anxiety (Siddha)",
+      "definition": "Anxiety (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anxiety"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anxiety Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anxiety Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM025",
+      "display": "Piles (Siddha)",
+      "definition": "Piles (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Piles"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Piles Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Piles Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM028",
+      "display": "Liver Disorder (Siddha)",
+      "definition": "Liver Disorder (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Liver Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Liver Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Liver Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM031",
+      "display": "Allergy (Siddha)",
+      "definition": "Allergy (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Allergy"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Allergy Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Allergy Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM034",
+      "display": "Flatulence (Siddha)",
+      "definition": "Flatulence (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Flatulence"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Flatulence Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Flatulence Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM037",
+      "display": "Dandruff (Siddha)",
+      "definition": "Dandruff (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dandruff"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dandruff Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dandruff Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM040",
+      "display": "PCOS (Siddha)",
+      "definition": "PCOS (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "PCOS"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "PCOS Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "PCOS Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM043",
+      "display": "Stroke Recovery (Siddha)",
+      "definition": "Stroke Recovery (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stroke Recovery"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stroke Recovery Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stroke Recovery Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM046",
+      "display": "Alzheimer’s (Siddha)",
+      "definition": "Alzheimer’s (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Alzheimer’s"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Alzheimer’s Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Alzheimer’s Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM049",
+      "display": "Sciatica (Siddha)",
+      "definition": "Sciatica (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sciatica"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sciatica Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sciatica Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM052",
+      "display": "Cataract (Siddha)",
+      "definition": "Cataract (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cataract"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cataract Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cataract Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM055",
+      "display": "Hearing Loss (Siddha)",
+      "definition": "Hearing Loss (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hearing Loss"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hearing Loss Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hearing Loss Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM058",
+      "display": "Sore Throat (Siddha)",
+      "definition": "Sore Throat (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sore Throat"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sore Throat Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sore Throat Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM061",
+      "display": "Tuberculosis (Siddha)",
+      "definition": "Tuberculosis (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tuberculosis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tuberculosis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tuberculosis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM064",
+      "display": "Chest Pain (Siddha)",
+      "definition": "Chest Pain (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chest Pain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chest Pain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chest Pain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM067",
+      "display": "Hemorrhage (Siddha)",
+      "definition": "Hemorrhage (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hemorrhage"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hemorrhage Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hemorrhage Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM070",
+      "display": "Snake Bite (Siddha)",
+      "definition": "Snake Bite (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snake Bite"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snake Bite Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snake Bite Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM073",
+      "display": "Typhoid (Siddha)",
+      "definition": "Typhoid (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Typhoid"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Typhoid Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Typhoid Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM076",
+      "display": "Viral Fever (Siddha)",
+      "definition": "Viral Fever (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Viral Fever"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Viral Fever Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Viral Fever Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM079",
+      "display": "Mumps (Siddha)",
+      "definition": "Mumps (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Mumps"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Mumps Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Mumps Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM082",
+      "display": "Leprosy (Siddha)",
+      "definition": "Leprosy (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leprosy"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leprosy Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leprosy Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM085",
+      "display": "Scabies (Siddha)",
+      "definition": "Scabies (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Scabies"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Scabies Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Scabies Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM088",
+      "display": "Hepatitis A (Siddha)",
+      "definition": "Hepatitis A (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis A"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis A Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis A Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM091",
+      "display": "HIV Infection (Siddha)",
+      "definition": "HIV Infection (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "HIV Infection"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "HIV Infection Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "HIV Infection Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM094",
+      "display": "Prostate Enlargement (Siddha)",
+      "definition": "Prostate Enlargement (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Prostate Enlargement"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Prostate Enlargement Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Prostate Enlargement Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM097",
+      "display": "Colic (Siddha)",
+      "definition": "Colic (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colic"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colic Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colic Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM100",
+      "display": "GERD (Siddha)",
+      "definition": "GERD (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "GERD"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "GERD Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "GERD Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM103",
+      "display": "Colitis (Siddha)",
+      "definition": "Colitis (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Colitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM106",
+      "display": "Obstructive Sleep Apnea (Siddha)",
+      "definition": "Obstructive Sleep Apnea (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obstructive Sleep Apnea"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obstructive Sleep Apnea Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obstructive Sleep Apnea Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM109",
+      "display": "Heat Stroke (Siddha)",
+      "definition": "Heat Stroke (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Heat Stroke"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Heat Stroke Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Heat Stroke Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM112",
+      "display": "Vertigo (Siddha)",
+      "definition": "Vertigo (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vertigo"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vertigo Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vertigo Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM115",
+      "display": "Neuralgia (Siddha)",
+      "definition": "Neuralgia (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Neuralgia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Neuralgia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Neuralgia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM118",
+      "display": "OCD (Siddha)",
+      "definition": "OCD (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "OCD"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "OCD Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "OCD Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM121",
+      "display": "Autism (Siddha)",
+      "definition": "Autism (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Autism"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Autism Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Autism Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM124",
+      "display": "Speech Disorder (Siddha)",
+      "definition": "Speech Disorder (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Speech Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Speech Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Speech Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM127",
+      "display": "Vitiligo (Siddha)",
+      "definition": "Vitiligo (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vitiligo"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vitiligo Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Vitiligo Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM130",
+      "display": "Dark Circles (Siddha)",
+      "definition": "Dark Circles (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dark Circles"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dark Circles Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dark Circles Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM133",
+      "display": "Obesity-Related Disorder (Siddha)",
+      "definition": "Obesity-Related Disorder (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity-Related Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity-Related Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity-Related Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM136",
+      "display": "Diabetes (Siddha)",
+      "definition": "Diabetes (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diabetes Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM139",
+      "display": "Anemia (Siddha)",
+      "definition": "Anemia (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anemia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM142",
+      "display": "Cough (Siddha)",
+      "definition": "Cough (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cough Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM145",
+      "display": "Back Pain (Siddha)",
+      "definition": "Back Pain (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Back Pain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    },
+    {
+      "code": "NAM148",
+      "display": "Epilepsy (Siddha)",
+      "definition": "Epilepsy (Siddha) - Siddha terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Epilepsy Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Siddha"
+        }
+      ]
+    }
+  ]
+}

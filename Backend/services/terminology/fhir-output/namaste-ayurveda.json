@@ -1,0 +1,2057 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "namaste-ayurveda",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/CodeSystem/namaste-ayurveda",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "NAMASTE-AYURVEDA"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NAMASTEAyurvedaCodeSystem",
+  "title": "NAMASTE Ayurveda Terminology CodeSystem",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:37:21.104Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 CodeSystem for NAMASTE Ayurveda terminology as per India EHR Standards 2016",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Standardized terminology for Ayurveda medical concepts in Indian healthcare systems",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "caseSensitive": true,
+  "valueSet": "http://ayush.gov.in/fhir/ValueSet/namaste-ayurveda",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 50,
+  "concept": [
+    {
+      "code": "NAM003",
+      "display": "Hypertension (Ayurveda)",
+      "definition": "Hypertension (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM006",
+      "display": "Migraine (Ayurveda)",
+      "definition": "Migraine (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM009",
+      "display": "Arthritis (Ayurveda)",
+      "definition": "Arthritis (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM012",
+      "display": "Jaundice (Ayurveda)",
+      "definition": "Jaundice (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM015",
+      "display": "Eczema (Ayurveda)",
+      "definition": "Eczema (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM018",
+      "display": "Diarrhea (Ayurveda)",
+      "definition": "Diarrhea (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diarrhea"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diarrhea Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Diarrhea Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM021",
+      "display": "Insomnia (Ayurveda)",
+      "definition": "Insomnia (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Insomnia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Insomnia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Insomnia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM024",
+      "display": "Ulcer (Ayurveda)",
+      "definition": "Ulcer (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ulcer"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ulcer Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ulcer Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM027",
+      "display": "Kidney Stones (Ayurveda)",
+      "definition": "Kidney Stones (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Kidney Stones"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Kidney Stones Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Kidney Stones Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM030",
+      "display": "Sinusitis (Ayurveda)",
+      "definition": "Sinusitis (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sinusitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sinusitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sinusitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM033",
+      "display": "Indigestion (Ayurveda)",
+      "definition": "Indigestion (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Indigestion"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Indigestion Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Indigestion Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM036",
+      "display": "Hair Loss (Ayurveda)",
+      "definition": "Hair Loss (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hair Loss"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hair Loss Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hair Loss Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM039",
+      "display": "Infertility (Ayurveda)",
+      "definition": "Infertility (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Infertility"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Infertility Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Infertility Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM042",
+      "display": "Fatigue (Ayurveda)",
+      "definition": "Fatigue (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fatigue"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fatigue Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fatigue Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM045",
+      "display": "Parkinsonism (Ayurveda)",
+      "definition": "Parkinsonism (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Parkinsonism"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Parkinsonism Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Parkinsonism Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM048",
+      "display": "Joint Pain (Ayurveda)",
+      "definition": "Joint Pain (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Joint Pain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Joint Pain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Joint Pain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM051",
+      "display": "Eye Strain (Ayurveda)",
+      "definition": "Eye Strain (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eye Strain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eye Strain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eye Strain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM054",
+      "display": "Ear Infection (Ayurveda)",
+      "definition": "Ear Infection (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ear Infection"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ear Infection Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ear Infection Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM057",
+      "display": "Tonsillitis (Ayurveda)",
+      "definition": "Tonsillitis (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tonsillitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tonsillitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tonsillitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM060",
+      "display": "Whooping Cough (Ayurveda)",
+      "definition": "Whooping Cough (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Whooping Cough"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Whooping Cough Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Whooping Cough Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM063",
+      "display": "Breathlessness (Ayurveda)",
+      "definition": "Breathlessness (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Breathlessness"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Breathlessness Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Breathlessness Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM066",
+      "display": "Varicose Veins (Ayurveda)",
+      "definition": "Varicose Veins (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Varicose Veins"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Varicose Veins Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Varicose Veins Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM069",
+      "display": "Wound Healing (Ayurveda)",
+      "definition": "Wound Healing (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wound Healing"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wound Healing Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wound Healing Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM072",
+      "display": "Malaria (Ayurveda)",
+      "definition": "Malaria (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Malaria"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Malaria Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Malaria Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM075",
+      "display": "Chikungunya (Ayurveda)",
+      "definition": "Chikungunya (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chikungunya"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chikungunya Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chikungunya Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM078",
+      "display": "Measles (Ayurveda)",
+      "definition": "Measles (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Measles"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Measles Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Measles Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM081",
+      "display": "Smallpox (Ayurveda)",
+      "definition": "Smallpox (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Smallpox"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Smallpox Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Smallpox Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM084",
+      "display": "Fungal Infection (Ayurveda)",
+      "definition": "Fungal Infection (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fungal Infection"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fungal Infection Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fungal Infection Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM087",
+      "display": "Herpes (Ayurveda)",
+      "definition": "Herpes (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Herpes"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Herpes Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Herpes Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM090",
+      "display": "Hepatitis C (Ayurveda)",
+      "definition": "Hepatitis C (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis C"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis C Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis C Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM093",
+      "display": "UTI (Ayurveda)",
+      "definition": "UTI (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "UTI"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "UTI Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "UTI Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM096",
+      "display": "Bedwetting (Ayurveda)",
+      "definition": "Bedwetting (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bedwetting"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bedwetting Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bedwetting Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM099",
+      "display": "Pancreatitis (Ayurveda)",
+      "definition": "Pancreatitis (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pancreatitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pancreatitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pancreatitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM102",
+      "display": "Crohn’s Disease (Ayurveda)",
+      "definition": "Crohn’s Disease (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Crohn’s Disease"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Crohn’s Disease Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Crohn’s Disease Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM105",
+      "display": "Bulimia (Ayurveda)",
+      "definition": "Bulimia (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bulimia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bulimia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bulimia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM108",
+      "display": "Night Sweats (Ayurveda)",
+      "definition": "Night Sweats (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Night Sweats"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Night Sweats Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Night Sweats Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM111",
+      "display": "Motion Sickness (Ayurveda)",
+      "definition": "Motion Sickness (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Motion Sickness"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Motion Sickness Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Motion Sickness Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM114",
+      "display": "Seizures (Ayurveda)",
+      "definition": "Seizures (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Seizures"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Seizures Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Seizures Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM117",
+      "display": "Phobia (Ayurveda)",
+      "definition": "Phobia (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Phobia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Phobia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Phobia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM120",
+      "display": "Schizophrenia (Ayurveda)",
+      "definition": "Schizophrenia (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Schizophrenia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Schizophrenia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Schizophrenia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM123",
+      "display": "Learning Disorder (Ayurveda)",
+      "definition": "Learning Disorder (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Learning Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Learning Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Learning Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM126",
+      "display": "Skin Burn (Ayurveda)",
+      "definition": "Skin Burn (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Burn"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Burn Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Burn Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM129",
+      "display": "Sunburn (Ayurveda)",
+      "definition": "Sunburn (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sunburn"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sunburn Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Sunburn Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM132",
+      "display": "Premature Aging (Ayurveda)",
+      "definition": "Premature Aging (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Premature Aging"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Premature Aging Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Premature Aging Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM135",
+      "display": "Fever (Ayurveda)",
+      "definition": "Fever (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fever"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fever Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Fever Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM138",
+      "display": "Hypertension (Ayurveda)",
+      "definition": "Hypertension (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypertension Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM141",
+      "display": "Migraine (Ayurveda)",
+      "definition": "Migraine (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Migraine Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM144",
+      "display": "Arthritis (Ayurveda)",
+      "definition": "Arthritis (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Arthritis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM147",
+      "display": "Jaundice (Ayurveda)",
+      "definition": "Jaundice (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Jaundice Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    },
+    {
+      "code": "NAM150",
+      "display": "Eczema (Ayurveda)",
+      "definition": "Eczema (Ayurveda) - Ayurveda terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Eczema Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Ayurveda"
+        }
+      ]
+    }
+  ]
+}

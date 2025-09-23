@@ -132,6 +132,8 @@ router.get('/:abhaId/approved-records', async (req, res) => {
                 curatorName: record.curatorId?.name,
                 namasteCode: record.namasteCode,
                 namasteTerm: record.namasteTerm,
+                tm2Code: record.tm2Code,
+                tm2Title: record.tm2Title,
                 icdCode: record.icdCode,
                 icdTerm: record.icdTerm,
                 prescription: record.prescription,
@@ -157,6 +159,8 @@ router.put('/:abhaId/records/:recordId', async (req, res) => {
         const {
             namasteTerm,
             namasteCode,
+            tm2Title,
+            tm2Code,
             icdTerm,
             icdCode,
             prescription
@@ -180,6 +184,8 @@ router.put('/:abhaId/records/:recordId', async (req, res) => {
         // Update the record fields
         if (namasteTerm !== undefined) record.namasteTerm = namasteTerm;
         if (namasteCode !== undefined) record.namasteCode = namasteCode;
+        if (tm2Title !== undefined) record.tm2Title = tm2Title;
+        if (tm2Code !== undefined) record.tm2Code = tm2Code;
         if (icdTerm !== undefined) record.icdTerm = icdTerm;
         if (icdCode !== undefined) record.icdCode = icdCode;
         if (prescription !== undefined) record.prescription = prescription;

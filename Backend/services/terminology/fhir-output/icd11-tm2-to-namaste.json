@@ -1,0 +1,506 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "icd11-tm2-to-namaste",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/ConceptMap"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/ConceptMap/icd11-tm2-to-namaste",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "ICD11-TM2-NAMASTE-MAP"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ICD11TM2ToNAMASTEConceptMap",
+  "title": "ICD-11 TM2 to NAMASTE ConceptMap",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:39:35.905Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 ConceptMap for mapping WHO ICD-11 TM2 codes to NAMASTE AYUSH terminologies",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Enable reverse mapping from international ICD-11 TM2 to Indian AYUSH traditional medicine concepts",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "sourceUri": "http://id.who.int/icd/entity/tm2",
+  "targetUri": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+  "group": [
+    {
+      "source": "http://id.who.int/icd/entity/tm2",
+      "target": "http://ayush.gov.in/fhir/ValueSet/namaste-all",
+      "element": [
+        {
+          "code": "TM2-003",
+          "display": "Prameha (Diabetes pattern)",
+          "target": [
+            {
+              "code": "NAM001",
+              "display": "Diabetes (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.579. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.579"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM136",
+              "display": "Diabetes (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.579. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.579"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-013",
+          "display": "Siddha Peenisam (Cold)",
+          "target": [
+            {
+              "code": "NAM007",
+              "display": "Cough (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.549. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.549"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM058",
+              "display": "Sore Throat (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.491. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.491"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM142",
+              "display": "Cough (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.549. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.549"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-009",
+          "display": "Sandhivata (Osteoarthritis)",
+          "target": [
+            {
+              "code": "NAM009",
+              "display": "Arthritis (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.482. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM144",
+              "display": "Arthritis (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.482. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.482"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-012",
+          "display": "Siddha Prameha",
+          "target": [
+            {
+              "code": "NAM010",
+              "display": "Back Pain (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.47. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM040",
+              "display": "PCOS (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.446. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.446"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM043",
+              "display": "Stroke Recovery (Siddha)",
+              "equivalence": "unmatched",
+              "comment": "Reverse semantic mapping with confidence 0.368. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.368"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM046",
+              "display": "Alzheimer’s (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.528. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.528"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM055",
+              "display": "Hearing Loss (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.43. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.43"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM094",
+              "display": "Prostate Enlargement (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.427. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.427"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM121",
+              "display": "Autism (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.47. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM124",
+              "display": "Speech Disorder (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.464. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.464"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM145",
+              "display": "Back Pain (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.47. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.47"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-005",
+          "display": "Ardita (Facial paralysis)",
+          "target": [
+            {
+              "code": "NAM044",
+              "display": "Paralysis (Unani)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.537. Target: Unani system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.537"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Unani"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-011",
+          "display": "Siddha Viral Fever Pattern",
+          "target": [
+            {
+              "code": "NAM061",
+              "display": "Tuberculosis (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.536. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.536"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM076",
+              "display": "Viral Fever (Siddha)",
+              "equivalence": "equivalent",
+              "comment": "Reverse semantic mapping with confidence 0.845. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.845"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM088",
+              "display": "Hepatitis A (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.504. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.504"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM091",
+              "display": "HIV Infection (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.598. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.598"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            },
+            {
+              "code": "NAM109",
+              "display": "Heat Stroke (Siddha)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.5. Target: Siddha system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.5"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Siddha"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-006",
+          "display": "Kustha (Skin disorder)",
+          "target": [
+            {
+              "code": "NAM069",
+              "display": "Wound Healing (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.412. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.412"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            },
+            {
+              "code": "NAM126",
+              "display": "Skin Burn (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.53. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.53"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TM2-007",
+          "display": "Jwara (Fever)",
+          "target": [
+            {
+              "code": "NAM135",
+              "display": "Fever (Ayurveda)",
+              "equivalence": "narrower",
+              "comment": "Reverse semantic mapping with confidence 0.594. Target: Ayurveda system.",
+              "dependsOn": [
+                {
+                  "property": "confidence",
+                  "value": "0.594"
+                },
+                {
+                  "property": "target_system",
+                  "value": "Ayurveda"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

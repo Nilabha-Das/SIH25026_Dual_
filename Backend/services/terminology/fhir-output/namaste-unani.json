@@ -1,0 +1,2057 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "namaste-unani",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+    ]
+  },
+  "url": "http://ayush.gov.in/fhir/CodeSystem/namaste-unani",
+  "identifier": [
+    {
+      "system": "http://ayush.gov.in/fhir/terminology",
+      "value": "NAMASTE-UNANI"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NAMASTEUnaniCodeSystem",
+  "title": "NAMASTE Unani Terminology CodeSystem",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-22T17:37:21.104Z",
+  "publisher": "Ministry of AYUSH, Government of India",
+  "contact": [
+    {
+      "name": "AYUSH Digital Health Mission",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ayush.gov.in"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 CodeSystem for NAMASTE Unani terminology as per India EHR Standards 2016",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "IN",
+          "display": "India"
+        }
+      ]
+    }
+  ],
+  "purpose": "Standardized terminology for Unani medical concepts in Indian healthcare systems",
+  "copyright": "© Ministry of AYUSH, Government of India",
+  "caseSensitive": true,
+  "valueSet": "http://ayush.gov.in/fhir/ValueSet/namaste-unani",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 50,
+  "concept": [
+    {
+      "code": "NAM002",
+      "display": "Asthma (Unani)",
+      "definition": "Asthma (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM005",
+      "display": "Headache (Unani)",
+      "definition": "Headache (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM008",
+      "display": "Cold (Unani)",
+      "definition": "Cold (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM011",
+      "display": "Obesity (Unani)",
+      "definition": "Obesity (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM014",
+      "display": "Skin Rash (Unani)",
+      "definition": "Skin Rash (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM017",
+      "display": "Constipation (Unani)",
+      "definition": "Constipation (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Constipation"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Constipation Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Constipation Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM020",
+      "display": "Bronchitis (Unani)",
+      "definition": "Bronchitis (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bronchitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bronchitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bronchitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM023",
+      "display": "Depression (Unani)",
+      "definition": "Depression (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Depression"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Depression Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Depression Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM026",
+      "display": "Gallstones (Unani)",
+      "definition": "Gallstones (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gallstones"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gallstones Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gallstones Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM029",
+      "display": "Thyroid Disorder (Unani)",
+      "definition": "Thyroid Disorder (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Thyroid Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Thyroid Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Thyroid Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM032",
+      "display": "Acidity (Unani)",
+      "definition": "Acidity (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acidity"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acidity Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acidity Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM035",
+      "display": "Acne (Unani)",
+      "definition": "Acne (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acne"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acne Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Acne Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM038",
+      "display": "Menstrual Pain (Unani)",
+      "definition": "Menstrual Pain (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Menstrual Pain"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Menstrual Pain Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Menstrual Pain Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM041",
+      "display": "Low Immunity (Unani)",
+      "definition": "Low Immunity (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Low Immunity"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Low Immunity Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Low Immunity Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM044",
+      "display": "Paralysis (Unani)",
+      "definition": "Paralysis (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Paralysis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Paralysis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Paralysis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM047",
+      "display": "Memory Loss (Unani)",
+      "definition": "Memory Loss (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Memory Loss"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Memory Loss Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Memory Loss Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM050",
+      "display": "Gout (Unani)",
+      "definition": "Gout (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gout"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gout Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Gout Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM053",
+      "display": "Glaucoma (Unani)",
+      "definition": "Glaucoma (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Glaucoma"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Glaucoma Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Glaucoma Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM056",
+      "display": "Nasal Polyp (Unani)",
+      "definition": "Nasal Polyp (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Nasal Polyp"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Nasal Polyp Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Nasal Polyp Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM059",
+      "display": "Laryngitis (Unani)",
+      "definition": "Laryngitis (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Laryngitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Laryngitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Laryngitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM062",
+      "display": "Pneumonia (Unani)",
+      "definition": "Pneumonia (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pneumonia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pneumonia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Pneumonia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM065",
+      "display": "Palpitation (Unani)",
+      "definition": "Palpitation (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Palpitation"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Palpitation Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Palpitation Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM068",
+      "display": "Burn Injury (Unani)",
+      "definition": "Burn Injury (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Burn Injury"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Burn Injury Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Burn Injury Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM071",
+      "display": "Food Poisoning (Unani)",
+      "definition": "Food Poisoning (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Food Poisoning"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Food Poisoning Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Food Poisoning Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM074",
+      "display": "Dengue (Unani)",
+      "definition": "Dengue (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dengue"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dengue Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Dengue Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM077",
+      "display": "Chickenpox (Unani)",
+      "definition": "Chickenpox (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chickenpox"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chickenpox Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Chickenpox Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM080",
+      "display": "Polio (Unani)",
+      "definition": "Polio (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Polio"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Polio Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Polio Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM083",
+      "display": "Ringworm (Unani)",
+      "definition": "Ringworm (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ringworm"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ringworm Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Ringworm Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM086",
+      "display": "Warts (Unani)",
+      "definition": "Warts (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Warts"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Warts Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Warts Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM089",
+      "display": "Hepatitis B (Unani)",
+      "definition": "Hepatitis B (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis B"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis B Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hepatitis B Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM092",
+      "display": "STD (Unani)",
+      "definition": "STD (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "STD"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "STD Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "STD Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM095",
+      "display": "Bladder Stone (Unani)",
+      "definition": "Bladder Stone (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bladder Stone"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bladder Stone Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bladder Stone Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM098",
+      "display": "Appendicitis (Unani)",
+      "definition": "Appendicitis (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Appendicitis"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Appendicitis Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Appendicitis Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM101",
+      "display": "IBS (Unani)",
+      "definition": "IBS (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "IBS"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "IBS Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "IBS Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM104",
+      "display": "Anorexia (Unani)",
+      "definition": "Anorexia (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anorexia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anorexia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Anorexia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM107",
+      "display": "Snoring (Unani)",
+      "definition": "Snoring (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snoring"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snoring Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Snoring Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM110",
+      "display": "Hypothermia (Unani)",
+      "definition": "Hypothermia (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypothermia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypothermia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Hypothermia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM113",
+      "display": "Tinnitus (Unani)",
+      "definition": "Tinnitus (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tinnitus"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tinnitus Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Tinnitus Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM116",
+      "display": "Trigeminal Neuralgia (Unani)",
+      "definition": "Trigeminal Neuralgia (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Trigeminal Neuralgia"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Trigeminal Neuralgia Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Trigeminal Neuralgia Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM119",
+      "display": "Bipolar Disorder (Unani)",
+      "definition": "Bipolar Disorder (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bipolar Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bipolar Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Bipolar Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM122",
+      "display": "ADHD (Unani)",
+      "definition": "ADHD (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "ADHD"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "ADHD Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "ADHD Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM125",
+      "display": "Stammering (Unani)",
+      "definition": "Stammering (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stammering"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stammering Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Stammering Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM128",
+      "display": "Leukoderma (Unani)",
+      "definition": "Leukoderma (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leukoderma"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leukoderma Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Leukoderma Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM131",
+      "display": "Wrinkles (Unani)",
+      "definition": "Wrinkles (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wrinkles"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wrinkles Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Wrinkles Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM134",
+      "display": "Lifestyle Disorder (Unani)",
+      "definition": "Lifestyle Disorder (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Lifestyle Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Lifestyle Disorder Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Lifestyle Disorder Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM137",
+      "display": "Asthma (Unani)",
+      "definition": "Asthma (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Asthma Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM140",
+      "display": "Headache (Unani)",
+      "definition": "Headache (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Headache Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM143",
+      "display": "Cold (Unani)",
+      "definition": "Cold (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Cold Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM146",
+      "display": "Obesity (Unani)",
+      "definition": "Obesity (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Obesity Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    },
+    {
+      "code": "NAM149",
+      "display": "Skin Rash (Unani)",
+      "definition": "Skin Rash (Unani) - Unani terminology concept",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash Disorder"
+        },
+        {
+          "language": "en",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000013009",
+            "display": "Synonym"
+          },
+          "value": "Skin Rash Syndrome"
+        }
+      ],
+      "property": [
+        {
+          "code": "system",
+          "valueString": "Unani"
+        }
+      ]
+    }
+  ]
+}

@@ -121,6 +121,16 @@
     color: hsl(var(--destructive-foreground));
   }
 
+  .text-info {
+    color: hsl(var(--info));
+  }
+  .text-info-foreground {
+    color: hsl(var(--foreground));
+  }
+  .bg-info {
+    background: hsl(var(--info));
+  }
+
   .medical-input {
     @apply rounded-lg px-3 py-2 border border-border transition-all duration-200;
     background: hsl(var(--input));

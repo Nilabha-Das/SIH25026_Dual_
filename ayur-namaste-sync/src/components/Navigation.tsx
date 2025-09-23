@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Menu,
   Shield,
@@ -22,6 +22,7 @@ export function Navigation() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -30,6 +31,7 @@ export function Navigation() {
       href: "#",
       dropdown: [
         { name: "ABHA Login", href: "/login", icon: Heart },
+        { name: "Live Demo", href: "/terminology", icon: Code },
         { name: "API", href: "/api", icon: Cpu }
       ]
     },
@@ -43,6 +45,7 @@ export function Navigation() {
         { name: "Support", href: "/support", icon: MessageCircle }
       ]
     },
+    { name: "Terminology", href: "/terminology" },
     { name: "Docs", href: "/docs" },
   ];
 
@@ -60,6 +63,12 @@ export function Navigation() {
   };
 
   const handleMouseEnter = (itemName: string) => {
+    // Clear any existing timeout
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    
     const item = navItems.find(nav => nav.name === itemName);
     if (item?.dropdown) {
       setActiveDropdown(itemName);
@@ -67,8 +76,35 @@ export function Navigation() {
   };
 
   const handleMouseLeave = () => {
+    // Add a delay before hiding the dropdown to make it easier to navigate
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 300); // 300ms delay before hiding
+    
+    setDropdownTimeout(timeout);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    // Clear timeout when mouse enters dropdown
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
+    // Hide dropdown immediately when mouse leaves dropdown area
     setActiveDropdown(null);
   };
+
+  // Cleanup timeout on component unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeout) {
+        clearTimeout(dropdownTimeout);
+      }
+    };
+  }, [dropdownTimeout]);
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-gray-900/95 backdrop-blur-lg border-b border-gray-800/50 shadow-xl">
@@ -112,12 +148,16 @@ export function Navigation() {
 
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-56 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 py-2 opacity-100 visible transition-all duration-500 transform translate-y-0 z-50"
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleDropdownMouseLeave}
+                  >
                     {item.dropdown.map((dropdownItem, index) => (
                       <button
                         key={index}
                         onClick={() => scrollToSection(dropdownItem.href)}
-                        className="flex items-center space-x-3 w-full px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all duration-200"
+                        className="flex items-center space-x-3 w-full px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all duration-300"
                       >
                         <dropdownItem.icon className="h-5 w-5 text-cyan-400" />
                         <span>{dropdownItem.name}</span>
