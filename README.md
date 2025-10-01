@@ -20,6 +20,26 @@ Lightweight FHIR R4 terminology microservice that dual‑codes NAMASTE ↔ ICD�
 
 ---
 
+## 🎥 Product Demo
+
+<div align="center">
+  <a href="https://youtu.be/YKlkmNSDGuk" target="_blank">
+    <img src="docs/images/video-thumbnail.png" alt="Product Demo Video" width="600px"/>
+  </a>
+  <p><em>Click the image above to watch our product demo video</em></p>
+</div>
+
+### Key Highlights in the Demo
+- 🔄 Real-time code mapping demonstration
+- 👨‍⚕️ Doctor's workflow walkthrough
+- 📊 Analytics and reporting features
+- 🔍 Advanced search capabilities
+- 🏥 EMR system integration
+
+> **Note**: Replace `your_video_id` in the URL with your actual YouTube video ID, and add your video thumbnail as `video-thumbnail.png` in the docs/images directory.
+
+---
+
 ## 📱 Application Pages
 
 ### 🏠 Home Page
@@ -90,8 +110,6 @@ Lightweight FHIR R4 terminology microservice that dual‑codes NAMASTE ↔ ICD�
 - Quality assurance tools
 - Audit trail viewing
 - Bulk operations support
-
-> **Note**: Create a `docs/images` directory and add your screenshots there. Image dimensions should be 1600x900px (16:9 ratio) for consistency.
 
 ---
 
@@ -212,6 +230,3 @@ Service available at `http://localhost:3001` (default)
 - Contact: `support@swasthalink.org` or open an issue on the GitHub repo
 
 ---
-
-*README generated & modernized. Diagram provided as Mermaid block — export SVG via mermaid.live for presentation graphics.*
-
