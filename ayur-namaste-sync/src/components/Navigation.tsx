@@ -10,7 +10,8 @@ import {
   Github,
   MessageCircle,
   Database,
-  X
+  X,
+  Code
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
