@@ -16,29 +16,50 @@ The backend service provides a RESTful API for the NAMASTE-ICD11 dual-coding sys
 
 ## Project Structure
 
-\`\`\`
+```
 Backend/
-├── middleware/           # Express middleware
-│   ├── auth.js          # Authentication middleware
-│   └── validateRole.js  # Role validation
-├── models/              # MongoDB schemas
-│   ├── icd.js          # ICD-11 code schema
-│   ├── mapping.js      # NAMASTE-ICD mapping schema
-│   ├── namaste.js      # NAMASTE code schema
-│   └── User.js         # User model
-├── routes/             # API routes
-│   ├── route.auth.js   # Authentication routes
-│   ├── route.curator.js # Curator specific routes
-│   ├── route.fhir.js   # FHIR compliant endpoints
-│   ├── route.icd.js    # ICD-11 related routes
-│   ├── route.mapping.js # Mapping management
-│   ├── route.namaste.js # NAMASTE code endpoints
-│   ├── route.patient.js # Patient specific routes
-│   └── route.search.js  # Search functionality
-├── index.js           # Server entry point
-├── db.js             # Database connection
-└── package.json      # Dependencies
-\`\`\`
+├── config/
+│   └── passport.js         # Passport.js configuration for authentication
+├── middleware/
+│   ├── auditLogger.js      # Middleware for logging audit trails
+│   ├── auth.js             # Authentication middleware (e.g., JWT verification)
+│   └── validateRole.js     # Role-based access control middleware
+├── models/
+│   ├── AuditLog.js         # Schema for audit logs
+│   ├── icd.js              # Schema for ICD-11 codes
+│   ├── mapping.js          # Schema for NAMASTE-ICD11 mappings
+│   ├── namaste.js          # Schema for NAMASTE codes
+│   ├── tm2.js              # Schema for TM2 codes
+│   └── User.js             # User schema for authentication and roles
+├── routes/
+│   ├── route.audit.js      # Routes for accessing audit logs
+│   ├── route.auth.js       # Authentication routes (e.g., login, logout)
+│   ├── route.curator.js    # Routes for curator-specific actions
+│   ├── route.fhir.js       # FHIR-compliant endpoints
+│   ├── route.icd.js        # Routes for ICD-11 data
+│   ├── route.mapping.js    # Routes for managing mappings
+│   ├── route.namaste.js    # Routes for NAMASTE data
+│   ├── route.oauth.js      # OAuth specific routes
+│   ├── route.otp.js        # OTP generation and verification routes
+│   ├── route.patient.js    # Routes for patient-related data
+│   ├── route.search.js     # Search endpoints
+│   └── route.tm2.js        # Routes for TM2 data
+├── services/
+│   ├── otpService.js       # Service for handling OTP logic
+│   └── terminology/
+│       ├── confidenceEnhancer.js # Logic to enhance mapping confidence
+│       ├── fhirConceptMap.js   # Service for creating FHIR ConceptMaps
+│       ├── namasteIngestion.js # Service for ingesting NAMASTE data
+│       ├── terminologyService.js # Core terminology service
+│       └── whoIcd11Api.js      # Client for WHO ICD-11 API
+├── utils/
+│   └── semanticMatching.js # Utility for semantic matching algorithms
+├── .env.example            # Example environment variables
+├── db.js                   # MongoDB connection setup
+├── index.js                # Main server entry point
+├── package.json            # Project dependencies and scripts
+└── README.md               # This documentation file
+```
 
 ## API Endpoints
 
@@ -63,33 +84,33 @@ Backend/
 ## Environment Setup
 
 Required environment variables:
-\`\`\`env
+```env
 MONGODB_URI=mongodb://localhost:27017/namaste_icd
 GOOGLE_CLIENT_ID=your_client_id
 GOOGLE_CLIENT_SECRET=your_client_secret
 JWT_SECRET=your_jwt_secret
 REDIS_URL=redis://localhost:6379
 WHO_API_KEY=your_who_api_key
-\`\`\`
+```
 
 ## Development Setup
 
 1. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 2. Start development server:
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 ## Testing
 
 Run tests:
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
 ## API Documentation
 
