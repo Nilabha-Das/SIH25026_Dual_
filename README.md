@@ -151,7 +151,6 @@ graph LR
   class Frontend,APIGW,Auth,TS,FHIRS,Analytics,MongoDB,Redis,WHO orange;
 ```
 
-> **Tip:** Paste the Mermaid block into [https://mermaid.live](https://mermaid.live) or GitHub (if your repo supports Mermaid) to generate a polished SVG.
 
 ---
 
