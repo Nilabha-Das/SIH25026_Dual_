@@ -7,7 +7,54 @@
 **Team:** SIH25026_Dual_  
 **Solution:** Complete NAMASTE-ICD11 dual-coding terminology infrastructure
 
+## 📋 Table of Contents
+
+- [System Architecture](#-system-architecture)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Development](#-development)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+
 ---
+
+## 🏗 System Architecture
+
+Our system follows a microservices architecture with the following components:
+
+1. **Frontend Service (React + TypeScript)**
+   - User Interface
+   - State Management
+   - API Integration
+   - Real-time Updates
+
+2. **Backend Service (Node.js + Express)**
+   - RESTful API
+   - Authentication
+   - Data Processing
+   - FHIR Integration
+
+3. **Database Layer**
+   - MongoDB (Primary Storage)
+   - Redis (Caching)
+
+4. **External Services**
+   - WHO ICD-11 API
+   - FHIR Server
+   - Google OAuth
+
+## ✨ Features
+
+- 🔄 Real-time NAMASTE-ICD mapping
+- 🔍 Advanced search functionality
+- 📊 Interactive visualizations
+- 🔐 Secure authentication
+- 📱 Responsive design
+- 🌐 FHIR R4 compliance
+- 🔄 Real-time synchronization
+- 📈 Analytics dashboard
 
 ## 🌟 Key Achievements
 
